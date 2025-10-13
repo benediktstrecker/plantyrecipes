@@ -1,0 +1,12 @@
+id;name;unit_code
+1;Energie;kcal
+2;Makronährstoffe;g
+3;Vitamine;ug
+4;Mineralstoffe;mg
+5;Spurenelemente;ug
+6;Kohlenhydrate;mg
+7;essentielle Aminosäuren;mg
+8;nicht-essentielle Aminosäuren;mg
+9;Fettsäuren;mg
+10;Ballaststoffe;mg
+11;Sonstige;g

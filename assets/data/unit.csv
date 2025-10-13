@@ -1,0 +1,15 @@
+code;label;dimension;baseFactor
+Stk;Stück;count;1
+kcal;Kilokalorien;energy;1
+g;Gramm;mass;1
+kg;Kilogramm;mass;1000
+mg;Milligramm;mass;0.001
+ug;Mikrogramm;mass;0.000001
+L;Liter;volume;1000
+ml;Milliliter;volume;1
+EL;Esslöffel;volume;15
+TL;Teelöffel;volume;5
+Pkg;Packung;count;1
+Port;Portion;count;1
+Pr;Prise;count;1
+%;Prozent;count;1
