@@ -1,3 +1,4 @@
+// lib/utils/easy_swipe_nav.dart
 import 'package:flutter/material.dart';
 
 mixin EasySwipeNav<T extends StatefulWidget> on State<T> {

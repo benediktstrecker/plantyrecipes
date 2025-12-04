@@ -1,10 +1,11 @@
-id;title;image
+﻿﻿id;title;image
 1;Vollkorn-Basis;assets/images/Vollkorn-Basis.jpg
 2;Pasta;assets/images/Pasta.jpg
 3;Eintöpfe & Suppen;assets/images/Eintoepfe.jpg
 4;Specials;assets/images/Specials.jpg
 5;Beilagen;assets/images/Beilagen.jpg
-6;Salate;assets/images/Salate.jpg
-7;Bowls;assets/images/Bowls.jpg
-8;Dips & Saucen;assets/images/Saucen.jpg
-9;Snacks;assets/images/Snacks.jpg
+6;Wraps;assets/images/Wraps.jpg
+7;Salate;assets/images/Salate.jpg
+8;Bowls;assets/images/Bowls.jpg
+9;Saucen & Dipps;assets/images/Saucen.jpg
+10;Snacks;assets/images/Snacks.jpg

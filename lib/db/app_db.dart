@@ -21,16 +21,39 @@ LazyDatabase _openConnection() {
   tables: [
     Months,
     Units,
-    UnitConversions,
-    IngredientUnitOverrides,
+    Countries,
     NutrientsCategorie,
     Nutrient,
+    Trafficlight,
+    Shopshelf,
+    StorageCategories,
     IngredientCategories,
-    IngredientProperties,
     Ingredients,
     IngredientNutrients,
+    IngredientUnits,
     Seasonality,
     IngredientSeasonality,
+    Alternatives,
+    IngredientAlternatives,
+    RecipeCategories,
+    Recipes,
+    RecipeIngredients,
+    TagCategories,
+    Tags,
+    RecipeTags,
+    IngredientTags,
+    Markets,
+    Producers,
+    Products,
+    ProductMarkets,
+    IngredientMarket,
+    ProductCountry,
+    IngredientMarketCountry,
+    ShoppingList,
+    ShoppingListIngredient,
+    Storage,
+    IngredientStorage,
+    Stock,
   ],
 )
 class AppDb extends _$AppDb {
@@ -38,4 +61,7 @@ class AppDb extends _$AppDb {
 
   @override
   int get schemaVersion => 1;
-} //  <-- diese schließende Klammer MUSS da sein. Keine weitere Klammer mehr nötig.
+} 
+
+
+//flutter pub run build_runner build --delete-conflicting-outputs

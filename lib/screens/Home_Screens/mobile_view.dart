@@ -1,8 +1,18 @@
+// lib/screens/Home_Screens/mobile_view.dart
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:drift/drift.dart' as d;
+
 import 'package:planty_flutter_starter/design/layout.dart';
 import 'package:planty_flutter_starter/utils/easy_swipe_nav.dart';
 import 'package:planty_flutter_starter/design/drawer.dart';
+
+// DB
+import 'package:planty_flutter_starter/db/db_singleton.dart';
+import 'package:planty_flutter_starter/db/app_db.dart' as db;
+
+// Import-Helfer
+import 'package:planty_flutter_starter/db/import_units.dart';
 
 // Zielseiten
 import 'package:planty_flutter_starter/screens/Home_Screens/ingredients.dart';
@@ -10,24 +20,6 @@ import 'package:planty_flutter_starter/screens/Home_Screens/shopping.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/nutrition.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/settings.dart';
 import 'package:planty_flutter_starter/screens/recipe/recipe_list_screen.dart';
-
-// NEU: Import-Helper für CSV-Imports
-import 'package:planty_flutter_starter/db/import_units.dart';
-
-// Kategorien (Startseite)
-final List<Map<String, String>> categories = [
-  {"title": "Vollkorn-Basis", "image": "assets/images/Vollkorn-Basis.jpg"},
-  {"title": "Pasta", "image": "assets/images/Pasta.jpg"},
-  {"title": "Eintöpfe & Suppen", "image": "assets/images/Eintoepfe.jpg"},
-  {"title": "Specials", "image": "assets/images/Specials.jpg"},
-  {"title": "Beilagen", "image": "assets/images/Beilagen.jpg"},
-  {"title": "Salate", "image": "assets/images/Salate.jpg"},
-  {"title": "Bowls", "image": "assets/images/Bowls.jpg"},
-  {"title": "Saucen & Dipps", "image": "assets/images/Saucen.jpg"},
-  {"title": "Snacks", "image": "assets/images/Snacks.jpg"},
-  // ✅ Neue Kachel ganz unten:
-  {"title": "Alle Rezepte", "image": "assets/images/all_recipes.jpg"},
-];
 
 class MobileView extends StatefulWidget {
   const MobileView({super.key});
@@ -37,22 +29,19 @@ class MobileView extends StatefulWidget {
 }
 
 class _MobileViewState extends State<MobileView> with EasySwipeNav {
-  int _selectedIndex = 0; // 0 = Rezepte
+  int _selectedIndex = 0;
   static const Duration _slideDuration = Duration(milliseconds: 280);
-
   bool _bootstrapDone = false;
 
-  // Für programmatic Drawer-Open
+  // Drawer-Steuerung
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
-  // Swipe-Tracking
   double _dragStartX = 0;
   double _dragStartY = 0;
   bool _drawerGesture = false;
 
-  // Schwellwerte für Gesten
-  static const double _horizontalOpenThreshold = 30; // Pixel nach rechts
-  static const double _verticalTolerance = 24; // Verhindert "diagonal"
+  // Schwellwerte
+  static const double _horizontalOpenThreshold = 30;
+  static const double _verticalTolerance = 24;
 
   @override
   void initState() {
@@ -92,7 +81,6 @@ class _MobileViewState extends State<MobileView> with EasySwipeNav {
   void _slideToIndex(int index, {required bool fromRight}) {
     if (!mounted || index < 0 || index > 4) return;
     final target = _widgetForIndex(index);
-
     Navigator.of(context).pushReplacement(
       PageRouteBuilder(
         pageBuilder: (_, __, ___) => target,
@@ -107,7 +95,6 @@ class _MobileViewState extends State<MobileView> with EasySwipeNav {
         },
       ),
     );
-
     setState(() => _selectedIndex = index);
   }
 
@@ -133,42 +120,36 @@ class _MobileViewState extends State<MobileView> with EasySwipeNav {
     }
 
     return GestureDetector(
-      // WICHTIG: Wir erlauben Drawer-Open bei *jedem* links→rechts-Swipe,
-      // und lassen rechts→links weiterhin an EasySwipeNav (Ingredients) gehen.
+      // ✅ Drawer öffnet sich bei jedem Links->Rechts-Swipe (wie Original)
       onHorizontalDragStart: (details) {
         _dragStartX = details.globalPosition.dx;
         _dragStartY = details.globalPosition.dy;
         _drawerGesture = false;
-
-        // Für EasySwipeNav immer starten (damit ← weiterhin funktioniert)
         onSwipeStart(details);
       },
       onHorizontalDragUpdate: (details) {
         final dx = details.globalPosition.dx - _dragStartX;
         final dy = (details.globalPosition.dy - _dragStartY).abs();
 
-        // Wenn die Bewegung weitgehend horizontal ist und deutlich nach rechts geht:
-        if (!_drawerGesture && dy < _verticalTolerance && dx > _horizontalOpenThreshold) {
+        if (!_drawerGesture &&
+            dy < _verticalTolerance &&
+            dx > _horizontalOpenThreshold) {
           _drawerGesture = true;
-
           final state = _scaffoldKey.currentState;
           if (state != null && !state.isDrawerOpen) {
             state.openDrawer();
           }
-          // Drawer hat Priorität — NICHT an EasySwipeNav weiterreichen
           return;
         }
 
-        // Für rechts→links (dx < 0) oder wenn Drawer nicht aktiv ist:
         if (!_drawerGesture) {
           onSwipeUpdate(details);
         }
       },
       onHorizontalDragEnd: (details) {
         if (!_drawerGesture) {
-          onSwipeEnd(details); // für den Ingredients-Linkswisch
+          onSwipeEnd(details);
         }
-        // Drawer-Geste beendet: nichts weiter tun
       },
       child: Scaffold(
         key: _scaffoldKey,
@@ -184,12 +165,9 @@ class _MobileViewState extends State<MobileView> with EasySwipeNav {
             ),
           ),
           backgroundColor: darkgreen,
+          iconTheme: const IconThemeData(color: Colors.white), // 👈 HINZUFÜGEN
         ),
         drawer: const AppDrawer(currentIndex: 0),
-
-        // ACHTUNG: Nicht "drawerEdgeDragWidth" auf volle Breite setzen,
-        // da das nur Edge-Drags verbreitert. Wir nutzen unsere eigene Geste.
-
         bottomNavigationBar: Container(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
           child: GNav(
@@ -203,19 +181,24 @@ class _MobileViewState extends State<MobileView> with EasySwipeNav {
               GButton(icon: Icons.list_alt, text: 'Rezepte'),
               GButton(icon: Icons.eco, text: 'Zutaten'),
               GButton(icon: Icons.shopping_bag, text: 'Einkauf'),
-              GButton(icon: Icons.incomplete_circle_rounded, text: 'Nährwerte'),
+              GButton(icon: Icons.stacked_bar_chart, text: 'Nährwerte'),
               GButton(icon: Icons.settings, text: 'Einstellungen'),
             ],
           ),
         ),
-
         body: const _HomeGrid(),
       ),
     );
   }
 }
 
-/// Ausgelagerter Body (unverändert)
+// ----------------------------------------------------------------------
+// 🔹 GRID: Rezeptkategorien aus DB + 10. Kachel „Alle Rezepte“
+// ----------------------------------------------------------------------
+// ----------------------------------------------------------------------
+// 🔹 GRID: Rezeptkategorien aus DB
+// 🔹 Wischbewegung nach oben öffnet "Alle Rezepte"
+// ----------------------------------------------------------------------
 class _HomeGrid extends StatelessWidget {
   const _HomeGrid();
 
@@ -225,78 +208,154 @@ class _HomeGrid extends StatelessWidget {
       bottom: true,
       child: Padding(
         padding: const EdgeInsets.all(16),
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            const cross = 2;
-            // 10 Kacheln = 5 Reihen bei 2 Spalten
-            final rows = ((categories.length + cross - 1) / cross).floor();
+        child: StreamBuilder<List<db.RecipeCategory>>(
+          stream: (appDb.select(appDb.recipeCategories)
+                ..orderBy([(t) => d.OrderingTerm.asc(t.id)]))
+              .watch(),
+          builder: (context, snap) {
+            if (snap.connectionState == ConnectionState.waiting) {
+              return const Center(
+                  child: CircularProgressIndicator(color: Colors.white));
+            }
 
+            // 🔧 Fix: Liste immer modifizierbar halten
+            final categories = List.of(snap.data ?? const <db.RecipeCategory>[]);
+
+            // Layout-Berechnung
+            const cross = 2;
             const spacingV = 12.0;
             const spacingH = 12.0;
-            const epsilon = 1.0; // winzige Sicherheitsmarge
+            const epsilon = 1.0;
 
-            // Nach Padding/ SafeArea ist das hier die *echte* verfügbare Höhe
-            final availableH = constraints.maxHeight;
+            double dragStartY = 0;
+            const double swipeThreshold = 80; // minimale Wischhöhe
 
-            // Exakte Kachelhöhe so, dass 5 Reihen + Abstände perfekt reinpassen
-            final itemH = (availableH - spacingV * (rows - 1)) / rows - epsilon;
+            return LayoutBuilder(
+              builder: (context, constraints) {
+                final rows = ((categories.length + cross - 1) ~/ cross);
+final availableH = constraints.maxHeight;
 
-            return GridView.builder(
-              itemCount: categories.length,
-              padding: EdgeInsets.zero,
-              physics: const NeverScrollableScrollPhysics(), // alles sichtbar, kein Scroll
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: cross,
-                crossAxisSpacing: spacingH,
-                mainAxisSpacing: spacingV,
-                mainAxisExtent: itemH, // <- der Schlüssel
-              ),
-              itemBuilder: (context, index) {
-                final cat = categories[index];
-                final title = cat['title']!;
-                final imagePath = cat['image'];
+// sichere Berechnung
+double itemH = (availableH - spacingV * (rows - 1)) / rows - epsilon;
+if (itemH.isNaN || itemH.isInfinite || itemH < 0) {
+  itemH = 100; // Fallback-Höhe
+}
+
 
                 return GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => RecipeListScreen(
-                          category: title == 'Alle Rezepte' ? null : title,
-                        ),
-                        transitionDuration: const Duration(milliseconds: 280),
-                        reverseTransitionDuration: const Duration(milliseconds: 280),
-                        transitionsBuilder: (_, a, __, child) =>
-                            FadeTransition(opacity: a, child: child),
-                      ),
-                    );
+                  // 🔹 Nach-oben-Wisch öffnet "Alle Rezepte"
+                  onVerticalDragStart: (details) {
+                    dragStartY = details.globalPosition.dy;
                   },
-                  child: Container(
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
-                    clipBehavior: Clip.antiAlias,
-                    child: Stack(
-                      children: [
-                        if ((imagePath ?? '').isNotEmpty)
-                          Positioned.fill(
-                            child: Image.asset(imagePath!, fit: BoxFit.cover),
-                          )
-                        else
-                          const Positioned.fill(child: ColoredBox(color: Colors.black26)),
-                        Positioned(
-                          left: 0, right: 0, bottom: 0,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-                            color: Colors.black.withOpacity(0.5),
-                            child: Text(
-                              title,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold,
-                              ),
+                  onVerticalDragEnd: (details) {
+                    final endYVelocity = details.velocity.pixelsPerSecond.dy;
+                    if (dragStartY > 0 && endYVelocity < -swipeThreshold) {
+                      Navigator.of(context).push(
+                        PageRouteBuilder(
+                          pageBuilder: (_, __, ___) =>
+                              const RecipeListScreen(category: null),
+                          transitionDuration:
+                              const Duration(milliseconds: 280),
+                          reverseTransitionDuration:
+                              const Duration(milliseconds: 280),
+                          transitionsBuilder: (_, animation, __, child) {
+                            final offsetAnimation = Tween<Offset>(
+                                    begin: const Offset(0, 0.08),
+                                    end: Offset.zero)
+                                .animate(CurvedAnimation(
+                                    parent: animation,
+                                    curve: Curves.easeOutCubic));
+                            return FadeTransition(
+                              opacity: animation,
+                              child: SlideTransition(
+                                  position: offsetAnimation, child: child),
+                            );
+                          },
+                        ),
+                      );
+                    }
+                  },
+
+                  child: GridView.builder(
+                    itemCount: categories.length,
+                    padding: EdgeInsets.zero,
+                    physics: const NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: cross,
+                      crossAxisSpacing: spacingH,
+                      mainAxisSpacing: spacingV,
+                      mainAxisExtent: itemH,
+                    ),
+                    itemBuilder: (context, index) {
+                      final cat = categories[index];
+                      final title = cat.title;
+                      final imagePath = cat.image ?? '';
+
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            PageRouteBuilder(
+                              pageBuilder: (_, __, ___) =>
+                                  RecipeListScreen(category: title),
+                              transitionDuration:
+                                  const Duration(milliseconds: 280),
+                              reverseTransitionDuration:
+                                  const Duration(milliseconds: 280),
+                              transitionsBuilder: (_, animation, __, child) {
+                                final offsetAnimation = Tween<Offset>(
+                                        begin: const Offset(0, 0.05),
+                                        end: Offset.zero)
+                                    .animate(CurvedAnimation(
+                                        parent: animation,
+                                        curve: Curves.easeOutCubic));
+                                return FadeTransition(
+                                  opacity: animation,
+                                  child: SlideTransition(
+                                      position: offsetAnimation, child: child),
+                                );
+                              },
                             ),
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          clipBehavior: Clip.antiAlias,
+                          child: Stack(
+                            children: [
+                              if (imagePath.isNotEmpty)
+                                Positioned.fill(
+                                  child:
+                                      Image.asset(imagePath, fit: BoxFit.cover),
+                                )
+                              else
+                                const Positioned.fill(
+                                    child: ColoredBox(color: Colors.black26)),
+                              Positioned(
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 8, horizontal: 8),
+                                  color: Colors.black.withOpacity(0.5),
+                                  child: Text(
+                                    title,
+                                    textAlign: TextAlign.center,
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
+                      );
+                    },
                   ),
                 );
               },

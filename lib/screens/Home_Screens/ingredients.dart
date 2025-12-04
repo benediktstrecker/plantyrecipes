@@ -118,11 +118,39 @@ class _IngredientsState extends State<Ingredients> with EasySwipeNav {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // EasySwipeNav (rechts→links etc.)
-      onHorizontalDragStart: onSwipeStart,
-      onHorizontalDragUpdate: onSwipeUpdate,
-      onHorizontalDragEnd: onSwipeEnd,
-      child: Scaffold(
+  // EasySwipeNav (rechts→links etc.)
+  onHorizontalDragStart: onSwipeStart,
+  onHorizontalDragUpdate: onSwipeUpdate,
+  onHorizontalDragEnd: onSwipeEnd,
+
+  // 👇 NEU: Vertikaler Swipe (nach oben = alle Zutaten)
+  onVerticalDragEnd: (details) {
+    final velocity = details.velocity.pixelsPerSecond.dy;
+    if (velocity < -300) {
+      Navigator.of(context).push(
+        PageRouteBuilder(
+          pageBuilder: (_, __, ___) =>
+              const IngredientsListScreen(category: 'Alle Zutaten'),
+          transitionDuration: _slideDuration,
+          reverseTransitionDuration: _slideDuration,
+          transitionsBuilder: (_, animation, __, child) {
+            final offsetAnimation = Tween<Offset>(
+              begin: const Offset(0, 0.1),
+              end: Offset.zero,
+            ).animate(CurvedAnimation(
+              parent: animation,
+              curve: Curves.easeOutCubic,
+            ));
+            return FadeTransition(
+              opacity: animation,
+              child: SlideTransition(position: offsetAnimation, child: child),
+            );
+          },
+        ),
+      );
+    }
+  },
+  child: Scaffold(
         backgroundColor: darkgreen,
         appBar: AppBar(
           title: const Text(
@@ -164,7 +192,7 @@ class _IngredientsState extends State<Ingredients> with EasySwipeNav {
               GButton(icon: Icons.list_alt, text: 'Rezepte'),
               GButton(icon: Icons.eco, text: 'Zutaten'),
               GButton(icon: Icons.shopping_bag, text: 'Einkauf'),
-              GButton(icon: Icons.incomplete_circle_rounded, text: 'Nährwerte'),
+              GButton(icon: Icons.stacked_bar_chart, text: 'Nährwerte'),
               GButton(icon: Icons.settings, text: 'Einstellungen'),
             ],
           ),
@@ -232,8 +260,17 @@ class _IngredientsState extends State<Ingredients> with EasySwipeNav {
                                   IngredientsListScreen(category: title),
                               transitionDuration: _slideDuration,
                               reverseTransitionDuration: _slideDuration,
-                              transitionsBuilder: (_, animation, __, child) =>
-                                  FadeTransition(opacity: animation, child: child),
+                              transitionsBuilder: (_, animation, __, child) {
+  final offsetAnimation =
+      Tween<Offset>(begin: const Offset(0, 0.05), end: Offset.zero)
+          .animate(CurvedAnimation(
+              parent: animation, curve: Curves.easeOutCubic));
+  return FadeTransition(
+    opacity: animation,
+    child: SlideTransition(position: offsetAnimation, child: child),
+  );
+},
+
                             ),
                           );
                         },

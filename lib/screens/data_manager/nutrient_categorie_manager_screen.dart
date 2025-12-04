@@ -1,4 +1,4 @@
-// lib/screens/nutrient_categorie_manager_screen.dart
+// lib/screens/data_manager/nutrient_categorie_manager_screen.dart
 import 'package:flutter/material.dart';
 import 'package:drift/drift.dart' as d;
 import 'package:planty_flutter_starter/design/layout.dart';

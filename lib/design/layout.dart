@@ -1,3 +1,4 @@
+// lib/design/layout.dart
 import "package:flutter/material.dart";
 
 class Design extends StatefulWidget {

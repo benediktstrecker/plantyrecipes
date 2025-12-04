@@ -1,453 +1,475 @@
-﻿id;name;ingredient_category;unit_id;picture;
-1;Ackerbohnen;4;2;assets/images/ingredients/ackerbohnen.webp;1
-2;Ackerbohnen, gefroren;4;2;assets/images/ingredients/ackerbohnen__gefroren.webp;2
-3;Alfala-Sprossen;1;2;assets/images/ingredients/alfala-sprossen.webp;3
-4;Amaranth;3;2;assets/images/ingredients/amaranth.webp;4
-5;Ananas;2;2;assets/images/ingredients/ananas.webp;5
-6;Anis;6;2;assets/images/ingredients/anis.webp;6
-7;Äpfel;2;2;assets/images/ingredients/aepfel.webp;7
-8;Apfel-Essig;6;2;assets/images/ingredients/apfel-essig.webp;8
-9;Aprikosen;2;2;assets/images/ingredients/aprikosen.webp;9
-10;Artischoken;1;2;assets/images/ingredients/artischoken.webp;10
-11;Auberginen;1;2;assets/images/ingredients/auberginen.webp;11
-12;Auberginen weiß;1;2;assets/images/ingredients/auberginen_weiss.webp;12
-13;Augenbohnen;4;2;assets/images/ingredients/augenbohnen.webp;13
-14;Austernpilze;1;2;assets/images/ingredients/austernpilze.webp;14
-15;Avocado;1;1;assets/images/ingredients/avocado.webp;15
-16;Azuki-Bohnen;4;2;assets/images/ingredients/azuki-bohnen.webp;16
-17;Baby-Mangold;1;2;assets/images/ingredients/baby-mangold.webp;17
-18;Baby-Spinat;1;2;assets/images/ingredients/baby-spinat.webp;18
-19;Backpulver;3;2;assets/images/ingredients/backpulver.webp;19
-20;Baharat;6;2;assets/images/ingredients/baharat.webp;20
-21;Balsamico-Essig;6;2;assets/images/ingredients/balsamico-essig.webp;21
-22;Bananen;2;2;assets/images/ingredients/bananen.webp;22
-23;Basilikum;6;2;assets/images/ingredients/basilikum.webp;23
-24;Basilikum, getrocknet;6;2;assets/images/ingredients/basilikum__getrocknet.webp;24
-25;Batavia-Salat;1;1;assets/images/ingredients/batavia-salat.webp;25
-26;Beeren;2;2;assets/images/ingredients/beeren.webp;26
-27;Beeren, gefroren;2;2;assets/images/ingredients/beeren__gefroren.webp;27
-28;Belugalinsen;4;2;assets/images/ingredients/belugalinsen.webp;28
-29;Birnen;2;2;assets/images/ingredients/birnen.webp;29
-30;Blattkohl;1;2;assets/images/ingredients/blattkohl.webp;30
-31;Blattsalat;1;1;assets/images/ingredients/blattsalat.webp;31
-32;Blumenkohl;1;2;assets/images/ingredients/blumenkohl.webp;32
-33;Blumenkohl gelb;1;2;assets/images/ingredients/blumenkohl_gelb.webp;33
-34;Blumenkohl grün;1;2;assets/images/ingredients/blumenkohl_gruen.webp;34
-35;Blumenkohl violett;1;2;assets/images/ingredients/blumenkohl_violett.webp;35
-36;Blutorangen;2;2;assets/images/ingredients/blutorangen.webp;36
-37;Bohnenkraut;6;2;assets/images/ingredients/bohnenkraut.webp;37
-38;Braunhirse;3;2;assets/images/ingredients/braunhirse.webp;38
-39;Brechbohnen, gefroren;4;2;assets/images/ingredients/brechbohnen__gefroren.webp;39
-40;Brokkoli;1;2;assets/images/ingredients/brokkoli.webp;40
-41;Brokkoli-Sprossen;1;2;assets/images/ingredients/brokkoli-sprossen.webp;41
-42;Brombeeren;2;2;assets/images/ingredients/brombeeren.webp;42
-43;Brunnenkresse;1;2;assets/images/ingredients/brunnenkresse.webp;43
-44;Buchweizen;3;2;assets/images/ingredients/buchweizen.webp;44
-45;Buchweizenflocken;3;2;assets/images/ingredients/buchweizenflocken.webp;45
-46;Buchweizenmehl;3;2;assets/images/ingredients/buchweizenmehl.webp;46
-47;Buchweizen-Spaghetti;3;2;assets/images/ingredients/buchweizen-spaghetti.webp;47
-48;Buchweizen-Sprossen;3;2;assets/images/ingredients/buchweizen-sprossen.webp;48
-49;Bulgur;3;2;assets/images/ingredients/bulgur.webp;49
-50;Buschbohnen;4;2;assets/images/ingredients/buschbohnen.webp;50
-51;Buschbohnen borlotto;4;2;assets/images/ingredients/buschbohnen_borlotto.webp;51
-52;Buschbohnen gelb;4;2;assets/images/ingredients/buschbohnen_gelb.webp;52
-53;Buschbohnen violett;4;2;assets/images/ingredients/buschbohnen_violett.webp;53
-54;Cannellinibohnen;4;2;assets/images/ingredients/cannellinibohnen.webp;54
-55;Cashewkerne;5;2;assets/images/ingredients/cashewkerne.webp;55
-56;Cashewmilch;5;2;assets/images/ingredients/cashewmilch.webp;56
-57;Cashewmus;5;2;assets/images/ingredients/cashewmus.webp;57
-58;Cayennepfeffer;6;2;assets/images/ingredients/cayennepfeffer.webp;58
-59;Champignons braun;1;2;assets/images/ingredients/champignons_braun.webp;59
-60;Champignons weiß;1;2;assets/images/ingredients/champignons_weiss.webp;60
-61;Chana-Dal;4;2;assets/images/ingredients/chana-dal.webp;61
-62;Cherimoya;2;2;assets/images/ingredients/cherimoya.webp;62
-63;Chiasamen;5;2;assets/images/ingredients/chiasamen.webp;63
-64;Chicoree;1;2;assets/images/ingredients/chicoree.webp;64
-65;Chili;6;2;assets/images/ingredients/chili.webp;65
-66;Chiliflocken;6;2;assets/images/ingredients/chiliflocken.webp;66
-67;Chilischoten;1;2;assets/images/ingredients/chilischoten.webp;67
-68;Chinakohl;1;2;assets/images/ingredients/chinakohl.webp;68
-69;Clementinen;2;2;assets/images/ingredients/clementinen.webp;69
-70;Couscous;3;2;assets/images/ingredients/couscous.webp;70
-71;Cranberries;2;2;assets/images/ingredients/cranberries.webp;71
-72;Curry;6;2;assets/images/ingredients/curry.webp;72
-73;Curry rot;6;2;assets/images/ingredients/curry_rot.webp;73
-74;Datteln, getrocknet;2;2;assets/images/ingredients/datteln__getrocknet.webp;74
-75;Dill;6;2;assets/images/ingredients/dill.webp;75
-76;Dill, getrocknet;6;2;assets/images/ingredients/dill__getrocknet.webp;76
-77;Dinkel;3;2;assets/images/ingredients/dinkel.webp;77
-78;Dinkelflocken;3;2;assets/images/ingredients/dinkelflocken.webp;78
-79;Dinkelmehl;3;2;assets/images/ingredients/dinkelmehl.webp;79
-80;Dinkelmilch;3;2;assets/images/ingredients/dinkelmilch.webp;80
-81;Dinkel-Vollkorn Bandnudeln;3;2;assets/images/ingredients/dinkel-vollkorn_bandnudeln.webp;81
-82;Dinkel-Vollkorn Farfalle;3;2;assets/images/ingredients/dinkel-vollkorn_farfalle.webp;82
-83;Dinkel-Vollkorn Fusilli;3;2;assets/images/ingredients/dinkel-vollkorn_fusilli.webp;83
-84;Dinkel-Vollkorn Linguine;3;2;assets/images/ingredients/dinkel-vollkorn_linguine.webp;84
-85;Dinkel-Vollkorn Penne;3;2;assets/images/ingredients/dinkel-vollkorn_penne.webp;85
-86;Dinkel-Vollkorn Pipette Rigate;3;2;assets/images/ingredients/dinkel-vollkorn_pipette_rigate.webp;86
-87;Drachenfrucht;2;2;assets/images/ingredients/drachenfrucht.webp;87
-88;Edamame;4;2;assets/images/ingredients/edamame.webp;88
-89;Einkorn;3;2;assets/images/ingredients/einkorn.webp;89
-90;Eisbergsalat;1;1;assets/images/ingredients/eisbergsalat.webp;90
-91;Emmer;3;2;assets/images/ingredients/emmer.webp;91
-92;Emmer-Vollkorn Fusilli;3;2;assets/images/ingredients/emmer-vollkorn_fusilli.webp;92
-93;Emmer-Vollkorn Penne;3;2;assets/images/ingredients/emmer-vollkorn_penne.webp;93
-94;Endivien-Salat;1;1;assets/images/ingredients/endivien-salat.webp;94
-95;Enoki;1;2;assets/images/ingredients/enoki.webp;95
-96;Erbsen gelb;4;2;assets/images/ingredients/erbsen_gelb.webp;96
-97;Erbsen grün;4;2;assets/images/ingredients/erbsen_gruen.webp;97
-98;Erbsen grün, gefroren;4;2;assets/images/ingredients/erbsen_gruen__gefroren.webp;98
-99;Erbsen grün, gekocht;4;2;assets/images/ingredients/erbsen_gruen__gekocht.webp;99
-100;Erbsenmilch;4;2;assets/images/ingredients/erbsenmilch.webp;100
-101;Erbsennudeln;4;2;assets/images/ingredients/erbsennudeln.webp;101
-102;Erbsen-Sprossen;4;2;assets/images/ingredients/erbsen-sprossen.webp;102
-103;Erdbeeren;2;2;assets/images/ingredients/erdbeeren.webp;103
-104;Erdbeeren, gefroren;2;2;assets/images/ingredients/erdbeeren__gefroren.webp;104
-105;Erdmandeln;5;2;assets/images/ingredients/erdmandeln.webp;105
-106;Erdnüsse;5;2;assets/images/ingredients/erdnuesse.webp;106
-107;Erdnussmus;5;2;assets/images/ingredients/erdnussmus.webp;107
-108;Estragon;6;2;assets/images/ingredients/estragon.webp;108
-109;Estragon, getrocknet;6;2;assets/images/ingredients/estragon__getrocknet.webp;109
-110;Feigen;2;2;assets/images/ingredients/feigen.webp;110
-111;Feldsalat;1;2;assets/images/ingredients/feldsalat.webp;111
-112;Felsenbirnen;2;2;assets/images/ingredients/felsenbirnen.webp;112
-113;Fenchel;1;2;assets/images/ingredients/fenchel.webp;113
-114;Fenchelsamen;6;2;assets/images/ingredients/fenchelsamen.webp;114
-115;Flohsamenschalen;3;2;assets/images/ingredients/flohsamenschalen.webp;115
-116;Frisee-Salat;1;1;assets/images/ingredients/frisee-salat.webp;116
-117;Frühlingszwiebeln;1;2;assets/images/ingredients/fruehlingszwiebeln.webp;117
-118;Garam Massala;6;2;assets/images/ingredients/garam_massala.webp;118
-119;Gelbe Beete;1;2;assets/images/ingredients/gelbe_beete.webp;119
-120;Gelbe Linsennudeln;4;2;assets/images/ingredients/gelbe_linsennudeln.webp;120
-121;Gerste;3;2;assets/images/ingredients/gerste.webp;121
-122;Gerstenflocken;3;2;assets/images/ingredients/gerstenflocken.webp;122
-123;Gewürzgurken;1;2;assets/images/ingredients/gewuerzgurken.webp;123
-124;Goji-Beeren, getrocknet;2;2;assets/images/ingredients/goji-beeren__getrocknet.webp;124
-125;Granatapfel;2;2;assets/images/ingredients/granatapfel.webp;125
-126;Grapefruit rot;2;2;assets/images/ingredients/grapefruit_rot.webp;126
-127;Grapefruit weiß;2;2;assets/images/ingredients/grapefruit_weiss.webp;127
-128;Grünkern;3;2;assets/images/ingredients/gruenkern.webp;128
-129;Grünkernflocken;3;2;assets/images/ingredients/gruenkernflocken.webp;129
-130;Grünkohl;1;2;assets/images/ingredients/gruenkohl.webp;130
-131;Grünkohl rot;1;2;assets/images/ingredients/gruenkohl_rot.webp;131
-132;Grünkohl, gefroren;1;2;assets/images/ingredients/gruenkohl__gefroren.webp;132
-133;Grünkohl-Sprossen;1;2;assets/images/ingredients/gruenkohl-sprossen.webp;133
-134;Guaven;2;2;assets/images/ingredients/guaven.webp;134
-135;Gurken;1;2;assets/images/ingredients/gurken.webp;135
-136;Gyrosgewürz;6;2;assets/images/ingredients/gyrosgewuerz.webp;136
-137;Hafer;3;2;assets/images/ingredients/hafer.webp;137
-138;Haferflocken;3;2;assets/images/ingredients/haferflocken.webp;138
-139;Haferjoghurt;3;2;assets/images/ingredients/haferjoghurt.webp;139
-140;Haferkleie;3;2;assets/images/ingredients/haferkleie.webp;140
-141;Hafermehl;3;2;assets/images/ingredients/hafermehl.webp;141
-142;Hafermilch;3;2;assets/images/ingredients/hafermilch.webp;142
-143;Hanfmilch;5;2;assets/images/ingredients/hanfmilch.webp;143
-144;Hanfsamen;5;2;assets/images/ingredients/hanfsamen.webp;144
-145;Harissa;6;2;assets/images/ingredients/harissa.webp;145
-146;Hartweizengrieß;3;2;assets/images/ingredients/hartweizengriess.webp;146
-147;Haselnusskerne;5;2;assets/images/ingredients/haselnusskerne.webp;147
-148;Haselnussmilch;5;2;assets/images/ingredients/haselnussmilch.webp;148
-149;Haselnussmus;5;2;assets/images/ingredients/haselnussmus.webp;149
-150;Hefe;6;2;assets/images/ingredients/hefe.webp;150
-151;Hefeflocken;6;2;assets/images/ingredients/hefeflocken.webp;151
-152;Heidelbeeren;2;2;assets/images/ingredients/heidelbeeren.webp;152
-153;Heidelbeeren, gefroren;2;2;assets/images/ingredients/heidelbeeren__gefroren.webp;153
-154;Himbeeren;2;2;assets/images/ingredients/himbeeren.webp;154
-155;Himbeeren, gefroren;2;2;assets/images/ingredients/himbeeren__gefroren.webp;155
-156;Hirse;3;2;assets/images/ingredients/hirse.webp;156
-157;Honigmelone;2;2;assets/images/ingredients/honigmelone.webp;157
-158;Ingwer;1;2;assets/images/ingredients/ingwer.webp;158
-159;Ingwer, gemahlen;6;2;assets/images/ingredients/ingwer__gemahlen.webp;159
-160;Italienische Kräuter;6;2;assets/images/ingredients/italienische_kraeuter.webp;160
-161;Jalapenos;1;2;assets/images/ingredients/jalapenos.webp;161
-162;Johannisbeeren rot;2;2;assets/images/ingredients/johannisbeeren_rot.webp;162
-163;Johannisbeeren rot, gefroren;2;2;assets/images/ingredients/johannisbeeren_rot__gefroren.webp;163
-164;Johannisbeeren schwarz;2;2;assets/images/ingredients/johannisbeeren_schwarz.webp;164
-165;Johannisbeeren schwarz, gefroren;2;2;assets/images/ingredients/johannisbeeren_schwarz__gefroren.webp;165
-166;Jostabeeren;2;2;assets/images/ingredients/jostabeeren.webp;166
-167;Kakaopulver, stark entölt;6;2;assets/images/ingredients/kakaopulver__stark_entoelt.webp;167
-168;Kaki;2;2;assets/images/ingredients/kaki.webp;168
-169;Kamut;3;2;assets/images/ingredients/kamut.webp;169
-170;Kardamon;6;2;assets/images/ingredients/kardamon.webp;170
-171;Kartoffeln;1;2;assets/images/ingredients/kartoffeln.webp;171
-172;Kartoffeln rot;1;2;assets/images/ingredients/kartoffeln_rot.webp;172
-173;Kartoffeln violett;1;2;assets/images/ingredients/kartoffeln_violett.webp;173
-174;Kerbel;6;2;assets/images/ingredients/kerbel.webp;174
-175;Kerbel, getrocknet;6;2;assets/images/ingredients/kerbel__getrocknet.webp;175
-176;Kichererbsen;4;2;assets/images/ingredients/kichererbsen.webp;176
-177;Kichererbsen, gekocht;4;2;assets/images/ingredients/kichererbsen__gekocht.webp;177
-178;Kichererbsenmehl;4;2;assets/images/ingredients/kichererbsenmehl.webp;178
-179;Kichererbsennudeln;4;2;assets/images/ingredients/kichererbsennudeln.webp;179
-180;Kichererbsen-Sprossen;4;2;assets/images/ingredients/kichererbsen-sprossen.webp;180
-181;Kichererbsenwaffeln;4;2;assets/images/ingredients/kichererbsenwaffeln.webp;181
-182;Kidneybohnen;4;2;assets/images/ingredients/kidneybohnen.webp;182
-183;Kidneybohnen, gekocht;4;2;assets/images/ingredients/kidneybohnen__gekocht.webp;183
-184;Kimchi;1;2;assets/images/ingredients/kimchi.webp;184
-185;Kirschen;2;2;assets/images/ingredients/kirschen.webp;185
-186;Kirschen, gefroren;2;2;assets/images/ingredients/kirschen__gefroren.webp;186
-187;Kirschpflaumen;2;2;assets/images/ingredients/kirschpflaumen.webp;187
-188;Kiwi gold;2;2;assets/images/ingredients/kiwi_gold.webp;188
-189;Kiwi grün;2;2;assets/images/ingredients/kiwi_gruen.webp;189
-190;Knoblauch;1;1;assets/images/ingredients/knoblauch.webp;190
-191;Knoblauchpulver;6;2;assets/images/ingredients/knoblauchpulver.webp;191
-192;Knollensellerie;1;2;assets/images/ingredients/knollensellerie.webp;192
-193;Kohlrabi;1;2;assets/images/ingredients/kohlrabi.webp;193
-194;Kohlrabi violett;1;2;assets/images/ingredients/kohlrabi_violett.webp;194
-195;Kokosjoghurt;5;2;assets/images/ingredients/kokosjoghurt.webp;195
-196;Kokosmilch;5;2;assets/images/ingredients/kokosmilch.webp;196
-197;Kokosmus;5;2;assets/images/ingredients/kokosmus.webp;197
-198;Kokosnuss;5;2;assets/images/ingredients/kokosnuss.webp;198
-199;Kokosraspeln;5;2;assets/images/ingredients/kokosraspeln.webp;199
-200;Kombuflocken;6;2;assets/images/ingredients/kombuflocken.webp;200
-201;Kopfsalat;1;1;assets/images/ingredients/kopfsalat.webp;201
-202;Koriander;6;2;assets/images/ingredients/koriander.webp;202
-203;Koriandersamen;6;2;assets/images/ingredients/koriandersamen.webp;203
-204;Korianderkraut, getrocknet;6;2;assets/images/ingredients/korianderkraut__getrocknet.webp;204
-205;Kräuter der Provence;6;2;assets/images/ingredients/kraeuter_der_provence.webp;205
-206;Kräuterseitlinge;1;2;assets/images/ingredients/kraeuterseitlinge.webp;206
-207;Kresse-Sprossen;1;2;assets/images/ingredients/kresse-sprossen.webp;207
-208;Kreuzkümmel;6;2;assets/images/ingredients/kreuzkuemmel.webp;208
-209;Kreuzkümmel, gemahlen;6;2;assets/images/ingredients/kreuzkuemmel__gemahlen.webp;209
-210;Kümmel;6;2;assets/images/ingredients/kuemmel.webp;210
-211;Kürbis, Butternut;1;2;assets/images/ingredients/kuerbis__butternut.webp;211
-212;Kürbis, Hokkaido;1;2;assets/images/ingredients/kuerbis__hokkaido.webp;212
-213;Kürbis, Muskat;1;2;assets/images/ingredients/kuerbis__muskat.webp;213
-214;Kürbis, Spaghetti;1;2;assets/images/ingredients/kuerbis__spaghetti.webp;214
-215;Kürbisgewürz;6;2;assets/images/ingredients/kuerbisgewuerz.webp;215
-216;Kürbiskerne;5;2;assets/images/ingredients/kuerbiskerne.webp;216
-217;Kurkuma;6;2;assets/images/ingredients/kurkuma.webp;217
-218;Kurkuma, ganz;1;2;assets/images/ingredients/kurkuma__ganz.webp;218
-219;Lauch;1;1;assets/images/ingredients/lauch.webp;219
-220;Lavendel;6;2;assets/images/ingredients/lavendel.webp;220
-221;Leinöl;6;2;assets/images/ingredients/leinoel.webp;221
-222;Leinsamen;5;2;assets/images/ingredients/leinsamen.webp;222
-223;Leinsamen-Sprossen;5;2;assets/images/ingredients/leinsamen-sprossen.webp;223
-224;Liebstöckel;6;2;assets/images/ingredients/liebstoeckel.webp;224
-225;Liebstöckel, getrocknet;6;2;assets/images/ingredients/liebstoeckel__getrocknet.webp;225
-226;Limetten;2;2;assets/images/ingredients/limetten.webp;226
-227;Linsen braun;4;2;assets/images/ingredients/linsen_braun.webp;227
-228;Linsen gelb;4;2;assets/images/ingredients/linsen_gelb.webp;228
-229;Linsen grün;4;2;assets/images/ingredients/linsen_gruen.webp;229
-230;Linsen rot;4;2;assets/images/ingredients/linsen_rot.webp;230
-231;Linsen-Sprossen;4;2;assets/images/ingredients/linsen-sprossen.webp;231
-232;Linsenwaffeln;4;2;assets/images/ingredients/linsenwaffeln.webp;232
-233;Lorbeerblätter;6;2;assets/images/ingredients/lorbeerblaetter.webp;233
-234;Lupinenkerne;4;2;assets/images/ingredients/lupinenkerne.webp;234
-235;Lupinenkerne, gekocht;4;2;assets/images/ingredients/lupinenkerne__gekocht.webp;235
-236;Lupinenmilch;4;2;assets/images/ingredients/lupinenmilch.webp;236
-237;Lupinenschrot;4;2;assets/images/ingredients/lupinenschrot.webp;237
-238;Macadamiennüsse;5;2;assets/images/ingredients/macadamiennuesse.webp;238
-239;Mais;3;2;assets/images/ingredients/mais.webp;239
-240;Mais, gekocht;3;2;assets/images/ingredients/mais__gekocht.webp;240
-241;Maisgrieß;3;2;assets/images/ingredients/maisgriess.webp;241
-242;Maiswaffeln;3;2;assets/images/ingredients/maiswaffeln.webp;242
-243;Maitake;1;2;assets/images/ingredients/maitake.webp;243
-244;Majoran;6;2;assets/images/ingredients/majoran.webp;244
-245;Majoran, getrocknet;6;2;assets/images/ingredients/majoran__getrocknet.webp;245
-246;Mandarinen;2;2;assets/images/ingredients/mandarinen.webp;246
-247;Mandeljoghurt;5;2;assets/images/ingredients/mandeljoghurt.webp;247
-248;Mandelmilch;5;2;assets/images/ingredients/mandelmilch.webp;248
-249;Mandelmus braun;5;2;assets/images/ingredients/mandelmus_braun.webp;249
-250;Mandelmus weiß;5;2;assets/images/ingredients/mandelmus_weiss.webp;250
-251;Mandeln;5;2;assets/images/ingredients/mandeln.webp;251
-252;Mango;2;2;assets/images/ingredients/mango.webp;252
-253;Mango, gefroren;2;2;assets/images/ingredients/mango__gefroren.webp;253
-254;Mango, getrocknet;2;2;assets/images/ingredients/mango__getrocknet.webp;254
-255;Mangold;1;2;assets/images/ingredients/mangold.webp;255
-256;Maronen;5;2;assets/images/ingredients/maronen.webp;256
-257;Maulbeeren;2;2;assets/images/ingredients/maulbeeren.webp;257
-258;Minze;6;2;assets/images/ingredients/minze.webp;258
-259;Mirabellen;2;2;assets/images/ingredients/mirabellen.webp;259
-260;Möhren gelb;1;2;assets/images/ingredients/moehren_gelb.webp;260
-261;Möhren orange;1;2;assets/images/ingredients/moehren_orange.webp;261
-262;Möhren rot;1;2;assets/images/ingredients/moehren_rot.webp;262
-263;Möhren violett;1;2;assets/images/ingredients/moehren_violett.webp;263
-264;Mugi Miso;6;2;assets/images/ingredients/mugi_miso.webp;264
-265;Mungbohnen;4;2;assets/images/ingredients/mungbohnen.webp;265
-266;Mungbohnen-Sprossen;4;2;assets/images/ingredients/mungbohnen-sprossen.webp;266
-267;Mung-Dal;4;2;assets/images/ingredients/mung-dal.webp;267
-268;Muskatnuss;6;2;assets/images/ingredients/muskatnuss.webp;268
-269;Naturreis;3;2;assets/images/ingredients/naturreis.webp;269
-270;Natur-Tofu;4;2;assets/images/ingredients/natur-tofu.webp;270
-271;Nektarinen;2;2;assets/images/ingredients/nektarinen.webp;271
-272;Nelken;6;2;assets/images/ingredients/nelken.webp;272
-273;Norialgen-Blätter;1;2;assets/images/ingredients/norialgen-blaetter.webp;273
-274;Noriflocken;6;2;assets/images/ingredients/noriflocken.webp;274
-275;Nussmus;5;2;assets/images/ingredients/nussmus.webp;275
-276;Okra;1;2;assets/images/ingredients/okra.webp;276
-277;Oliven;1;2;assets/images/ingredients/oliven.webp;277
-278;Olivenöl;6;2;assets/images/ingredients/olivenoel.webp;278
-279;Orangen;2;2;assets/images/ingredients/orangen.webp;279
-280;Oregano;6;2;assets/images/ingredients/oregano.webp;280
-281;Oregano, getrocknet;6;2;assets/images/ingredients/oregano__getrocknet.webp;281
-282;Oyster Sauce;6;2;assets/images/ingredients/oyster_sauce.webp;282
-283;Pak-Choi;1;2;assets/images/ingredients/pak-choi.webp;283
-284;Papaya;2;2;assets/images/ingredients/papaya.webp;284
-285;Paprika edelsüß;6;2;assets/images/ingredients/paprika_edelsuess.webp;285
-286;Paprika gelb;1;1;assets/images/ingredients/paprika_gelb.webp;286
-287;Paprika geräuchert;6;2;assets/images/ingredients/paprika_geraeuchert.webp;287
-288;Paprika grün;1;1;assets/images/ingredients/paprika_gruen.webp;288
-289;Paprika orange;1;1;assets/images/ingredients/paprika_orange.webp;289
-290;Paprika rosenscharf;6;2;assets/images/ingredients/paprika_rosenscharf.webp;290
-291;Paprika rot;1;1;assets/images/ingredients/paprika_rot.webp;291
-292;Paranüsse;5;2;assets/images/ingredients/paranuesse.webp;292
-293;Passionsfrucht;2;2;assets/images/ingredients/passionsfrucht.webp;293
-294;Pastinaken;1;2;assets/images/ingredients/pastinaken.webp;294
-295;Pekannüsse;5;2;assets/images/ingredients/pekannuesse.webp;295
-296;Petersilie;6;2;assets/images/ingredients/petersilie.webp;296
-297;Petersilie, getrocknet;6;2;assets/images/ingredients/petersilie__getrocknet.webp;297
-298;Pfeffer;6;2;assets/images/ingredients/pfeffer.webp;298
-299;Pfefferminze;6;2;assets/images/ingredients/pfefferminze.webp;299
-300;Pfifferlinge;1;2;assets/images/ingredients/pfifferlinge.webp;300
-301;Pfirsich;2;2;assets/images/ingredients/pfirsich.webp;301
-302;Pflaumen;2;2;assets/images/ingredients/pflaumen.webp;302
-303;Physalis;2;2;assets/images/ingredients/physalis.webp;303
-304;Pilze;1;2;assets/images/ingredients/pilze.webp;304
-305;Piment;6;2;assets/images/ingredients/piment.webp;305
-306;Pinienkerne;5;2;assets/images/ingredients/pinienkerne.webp;306
-307;Pintobohnen;4;2;assets/images/ingredients/pintobohnen.webp;307
-308;Pistazien;5;2;assets/images/ingredients/pistazien.webp;308
-309;Pistazienmus;5;2;assets/images/ingredients/pistazienmus.webp;309
-310;Puy-Linsen;4;2;assets/images/ingredients/puy-linsen.webp;310
-311;Quinoa;3;2;assets/images/ingredients/quinoa.webp;311
-312;Quinoa rot;3;2;assets/images/ingredients/quinoa_rot.webp;312
-313;Quinoa schwarz;3;2;assets/images/ingredients/quinoa_schwarz.webp;313
-314;Quinoa weiß;3;2;assets/images/ingredients/quinoa_weiss.webp;314
-315;Quinoa-Sprossen;3;2;assets/images/ingredients/quinoa-sprossen.webp;315
-316;Radicchio;1;2;assets/images/ingredients/radicchio.webp;316
-317;Radieschen;1;2;assets/images/ingredients/radieschen.webp;317
-318;Radieschen-Sprossen;1;2;assets/images/ingredients/radieschen-sprossen.webp;318
-319;Rapsöl;6;2;assets/images/ingredients/rapsoel.webp;319
-320;Ras el Hanout;6;2;assets/images/ingredients/ras_el_hanout.webp;320
-321;Räucher-Tofu;4;2;assets/images/ingredients/raeucher-tofu.webp;321
-322;Reis schwarz;3;2;assets/images/ingredients/reis_schwarz.webp;322
-323;Reis-Essig;6;2;assets/images/ingredients/reis-essig.webp;323
-324;Reismilch;3;2;assets/images/ingredients/reismilch.webp;324
-325;Reispapier;3;2;assets/images/ingredients/reispapier.webp;325
-326;Rettich;1;2;assets/images/ingredients/rettich.webp;326
-327;Rhabarber;2;2;assets/images/ingredients/rhabarber.webp;327
-328;Riesenchampignons;1;1;assets/images/ingredients/riesenchampignons.webp;328
-329;Ringelbeete;1;2;assets/images/ingredients/ringelbeete.webp;329
-330;Roggen;3;2;assets/images/ingredients/roggen.webp;330
-331;Roggenflocken;3;2;assets/images/ingredients/roggenflocken.webp;331
-332;Roggenmehl;3;2;assets/images/ingredients/roggenmehl.webp;332
-333;Roggenmilch;3;2;assets/images/ingredients/roggenmilch.webp;333
-334;Romanesco;1;2;assets/images/ingredients/romanesco.webp;334
-335;Rosenkohl;1;2;assets/images/ingredients/rosenkohl.webp;335
-336;Rosenkohl rot;1;2;assets/images/ingredients/rosenkohl_rot.webp;336
-337;Rosmarin;6;2;assets/images/ingredients/rosmarin.webp;337
-338;Rosmarin, getrocknet;6;2;assets/images/ingredients/rosmarin__getrocknet.webp;338
-339;Rote Beete;1;2;assets/images/ingredients/rote_beete.webp;339
-340;Rote Linsennudeln;4;2;assets/images/ingredients/rote_linsennudeln.webp;340
-341;Rotkohl;1;2;assets/images/ingredients/rotkohl.webp;341
-342;Rucola;1;2;assets/images/ingredients/rucola.webp;342
-343;Rucola-Sprossen;1;2;assets/images/ingredients/rucola-sprossen.webp;343
-344;Safran;6;2;assets/images/ingredients/safran.webp;344
-345;Salbei;6;2;assets/images/ingredients/salbei.webp;345
-346;Salbei, getrocknet;6;2;assets/images/ingredients/salbei__getrocknet.webp;346
-347;Salz, jodiert;6;2;assets/images/ingredients/salz__jodiert.webp;347
-348;Sambal Oelek;6;2;assets/images/ingredients/sambal_oelek.webp;348
-349;Sauerkraut;1;2;assets/images/ingredients/sauerkraut.webp;349
-350;Schnittlauch;1;2;assets/images/ingredients/schnittlauch.webp;350
-351;Schwarze Bohnen;4;2;assets/images/ingredients/schwarze_bohnen.webp;351
-352;Schwarze Bohnen, gekocht;4;2;assets/images/ingredients/schwarze_bohnen__gekocht.webp;352
-353;Schwarzkohl;1;2;assets/images/ingredients/schwarzkohl.webp;353
-354;Schwarzwurzel;1;2;assets/images/ingredients/schwarzwurzel.webp;354
-355;Seiden-Tofu;4;2;assets/images/ingredients/seiden-tofu.webp;355
-356;Seitan;3;2;assets/images/ingredients/seitan.webp;356
-357;Selleriesamen;6;2;assets/images/ingredients/selleriesamen.webp;357
-358;Senf;6;2;assets/images/ingredients/senf.webp;358
-359;Senfkörner;6;2;assets/images/ingredients/senfkoerner.webp;359
-360;Senf-Sprossen;1;2;assets/images/ingredients/senf-sprossen.webp;360
-361;Sesamkerne;5;2;assets/images/ingredients/sesamkerne.webp;361
-362;Shiitake;1;2;assets/images/ingredients/shiitake.webp;362
-363;Shiro Miso;6;2;assets/images/ingredients/shiro_miso.webp;363
-364;Shoyu;6;2;assets/images/ingredients/shoyu.webp;364
-365;Sojabohnen;4;2;assets/images/ingredients/sojabohnen.webp;365
-366;Sojabohnen-Sprossen;4;2;assets/images/ingredients/sojabohnen-sprossen.webp;366
-367;Sojaflocken;4;2;assets/images/ingredients/sojaflocken.webp;367
-368;Sojajoghurt;4;2;assets/images/ingredients/sojajoghurt.webp;368
-369;Sojamehl;4;2;assets/images/ingredients/sojamehl.webp;369
-370;Sojamilch;4;2;assets/images/ingredients/sojamilch.webp;370
-371;Sojasoße;6;2;assets/images/ingredients/sojasosse.webp;371
-372;Sonnenblumenkerne;5;2;assets/images/ingredients/sonnenblumenkerne.webp;372
-373;Sonnenblumenkerne-Sprossen;5;2;assets/images/ingredients/sonnenblumenkerne-sprossen.webp;373
-374;Spargel grün;1;2;assets/images/ingredients/spargel_gruen.webp;374
-375;Spargel weiß;1;2;assets/images/ingredients/spargel_weiss.webp;375
-376;Spekulatius;6;2;assets/images/ingredients/spekulatius.webp;376
-377;Spinat;1;2;assets/images/ingredients/spinat.webp;377
-378;Spinat, gefroren;1;2;assets/images/ingredients/spinat__gefroren.webp;378
-379;Spirulina-Pulver;6;2;assets/images/ingredients/spirulina-pulver.webp;379
-380;Spitzkohl;1;2;assets/images/ingredients/spitzkohl.webp;380
-381;Stachelbeeren;2;2;assets/images/ingredients/stachelbeeren.webp;381
-382;Stangensellerie;1;2;assets/images/ingredients/stangensellerie.webp;382
-383;Steinpilz;1;2;assets/images/ingredients/steinpilz.webp;383
-384;Sternanis;6;2;assets/images/ingredients/sternanis.webp;384
-385;Süßkartoffeln orange;1;2;assets/images/ingredients/suesskartoffeln_orange.webp;385
-386;Süßkartoffeln violett;1;2;assets/images/ingredients/suesskartoffeln_violett.webp;386
-387;Szechuanpfeffer;6;2;assets/images/ingredients/szechuanpfeffer.webp;387
-388;Tabasco;6;2;assets/images/ingredients/tabasco.webp;388
-389;Tahini;5;2;assets/images/ingredients/tahini.webp;389
-390;Tamari;6;2;assets/images/ingredients/tamari.webp;390
-391;Teff;3;2;assets/images/ingredients/teff.webp;391
-392;Teller-Pfirsich;2;2;assets/images/ingredients/teller-pfirsich.webp;392
-393;Tempeh;4;2;assets/images/ingredients/tempeh.webp;393
-394;Teriyaki Sauce;6;2;assets/images/ingredients/teriyaki_sauce.webp;394
-395;Thymian;6;2;assets/images/ingredients/thymian.webp;395
-396;Thymian, getrocknet;6;2;assets/images/ingredients/thymian__getrocknet.webp;396
-397;Tomaten;1;2;assets/images/ingredients/tomaten.webp;397
-398;Tomaten cherry;1;2;assets/images/ingredients/tomaten_cherry.webp;398
-399;Tomaten gelb;1;2;assets/images/ingredients/tomaten_gelb.webp;399
-400;Tomaten Passata;1;2;assets/images/ingredients/tomaten_passata.webp;400
-401;Tomaten schwarz;1;2;assets/images/ingredients/tomaten_schwarz.webp;401
-402;Tomaten, getrocknet;1;2;assets/images/ingredients/tomaten__getrocknet.webp;402
-403;Tomatenmark;1;2;assets/images/ingredients/tomatenmark.webp;403
-404;Tomatenstücke;1;2;assets/images/ingredients/tomatenstuecke.webp;404
-405;Tonkabohne;6;2;assets/images/ingredients/tonkabohne.webp;405
-406;Topinambur;1;2;assets/images/ingredients/topinambur.webp;406
-407;Trauben grün;2;2;assets/images/ingredients/trauben_gruen.webp;407
-408;Trauben rot;2;2;assets/images/ingredients/trauben_rot.webp;408
-409;Trüffel;1;2;assets/images/ingredients/trueffel.webp;409
-410;Vanille;6;2;assets/images/ingredients/vanille.webp;410
-411;Vollkorn-Bandnudeln;3;2;assets/images/ingredients/vollkorn-bandnudeln.webp;411
-412;Vollkorn-Fadennudeln;3;2;assets/images/ingredients/vollkorn-fadennudeln.webp;412
-413;Vollkornflocken;3;2;assets/images/ingredients/vollkornflocken.webp;413
-414;Vollkorngetreide;3;2;assets/images/ingredients/vollkorngetreide.webp;414
-415;Vollkornmehl;3;2;assets/images/ingredients/vollkornmehl.webp;415
-416;Vollkornnudeln;3;2;assets/images/ingredients/vollkornnudeln.webp;416
-417;Vollkorn-Spaghetti;3;2;assets/images/ingredients/vollkorn-spaghetti.webp;417
-418;Vollkorn-Wraps;3;2;assets/images/ingredients/vollkorn-wraps.webp;418
-419;Wakame;6;2;assets/images/ingredients/wakame.webp;419
-420;Walnusskerne;5;2;assets/images/ingredients/walnusskerne.webp;420
-421;Wasabi;6;2;assets/images/ingredients/wasabi.webp;421
-422;Wassermelone;2;2;assets/images/ingredients/wassermelone.webp;422
-423;Weiße Beete;1;2;assets/images/ingredients/weisse_beete.webp;423
-424;Weiße Bohnen;4;2;assets/images/ingredients/weisse_bohnen.webp;424
-425;Weiße Bohnen, gekocht;4;2;assets/images/ingredients/weisse_bohnen__gekocht.webp;425
-426;Weißkohl;1;2;assets/images/ingredients/weisskohl.webp;426
-427;Weizen;3;2;assets/images/ingredients/weizen.webp;427
-428;Weizenflocken;3;2;assets/images/ingredients/weizenflocken.webp;428
-429;Weizenkeime;3;2;assets/images/ingredients/weizenkeime.webp;429
-430;Weizenmehl;3;2;assets/images/ingredients/weizenmehl.webp;430
-431;Weizen-Sprossen;3;2;assets/images/ingredients/weizen-sprossen.webp;431
-432;Weizen-Vollkorn Farfalle;3;2;assets/images/ingredients/weizen-vollkorn_farfalle.webp;432
-433;Weizen-Vollkorn Fusilli;3;2;assets/images/ingredients/weizen-vollkorn_fusilli.webp;433
-434;Weizen-Vollkorn Lasagne;3;2;assets/images/ingredients/weizen-vollkorn_lasagne.webp;434
-435;Weizen-Vollkorn Linguine;3;2;assets/images/ingredients/weizen-vollkorn_linguine.webp;435
-436;Weizen-Vollkorn Penne;3;2;assets/images/ingredients/weizen-vollkorn_penne.webp;436
-437;Weizen-Vollkorn Pipette Rigate;3;2;assets/images/ingredients/weizen-vollkorn_pipette_rigate.webp;437
-438;Wirsing;1;2;assets/images/ingredients/wirsing.webp;438
-439;Zimtstangen;6;2;assets/images/ingredients/zimtstangen.webp;439
-440;Zimt, gemahlen;6;2;assets/images/ingredients/zimt__gemahlen.webp;440
-441;Zitrone;2;1;assets/images/ingredients/zitrone.webp;441
-442;Zitronengras;6;2;assets/images/ingredients/zitronengras.webp;442
-443;Zitronenmelisse;6;2;assets/images/ingredients/zitronenmelisse.webp;443
-444;Zitronenmelisse, getrocknet;6;2;assets/images/ingredients/zitronenmelisse__getrocknet.webp;444
-445;Zucchini gelb;1;2;assets/images/ingredients/zucchini_gelb.webp;445
-446;Zucchini grün;1;2;assets/images/ingredients/zucchini_gruen.webp;446
-447;Zucchini rund;1;2;assets/images/ingredients/zucchini_rund.webp;447
-448;Zucker;6;2;assets/images/ingredients/zucker.webp;448
-449;Zwetschgen;2;2;assets/images/ingredients/zwetschgen.webp;449
-450;Zwiebeln gelb;1;2;assets/images/ingredients/zwiebeln_gelb.webp;450
-451;Zwiebeln rot;1;2;assets/images/ingredients/zwiebeln_rot.webp;451
-452;Zwiebelpulver;6;2;assets/images/ingredients/zwiebelpulver.webp;452
+﻿id;name;ingredient_category;picture;singular;favorite;bookmark;last_updated;trafficlight_id;storage_cat_id;shelf_id;description;tip;intolerant;daily_dozen_portion_id
+1;Ackerbohnen;4;assets/images/ingredients/ackerbohnen.webp;Ackerbohne;0;0;;1;2;6;;;0;1
+2;Ackerbohnen, gefroren;4;assets/images/ingredients/ackerbohnen__gefroren.webp;Ackerbohne, gefroren;0;0;;2;2;7;;;0;2
+3;Alfala-Sprossen;1;assets/images/ingredients/alfala-sprossen.webp;Alfala-Sprosse;0;0;;1;2;5;;;0;
+4;Amaranth;3;assets/images/ingredients/amaranth.webp;;0;0;;1;2;3;;;0;23
+5;Ananas;2;assets/images/ingredients/ananas.webp;;0;0;;1;2;1;;;0;8
+6;Anis;6;assets/images/ingredients/anis.webp;;0;0;;2;2;9;;;0;22
+7;Äpfel;2;assets/images/ingredients/aepfel.webp;Apfel;0;0;;1;2;1;;;0;8
+8;Apfel-Essig;6;assets/images/ingredients/apfel-essig.webp;;0;0;;3;1;8;;;0;
+9;Aprikosen;2;assets/images/ingredients/aprikosen.webp;Aprikose;0;0;;1;2;1;;;0;8
+10;Artischoken;1;assets/images/ingredients/artischoken.webp;Artischoke;0;0;;1;2;1;;;0;18
+11;Auberginen;1;assets/images/ingredients/auberginen.webp;Aubergine;0;0;;1;2;1;;;0;18
+12;Auberginen weiß;1;assets/images/ingredients/auberginen_weiss.webp;Aubergine weiß;0;0;;1;2;1;;;0;18
+13;Augenbohnen;4;assets/images/ingredients/augenbohnen.webp;Augenbohne;0;0;;2;2;6;;;0;1
+14;Austernpilze;1;assets/images/ingredients/austernpilze.webp;Austernpilz;0;0;;1;2;1;;;0;18
+15;Avocado;1;assets/images/ingredients/avocado.webp;;0;0;;1;2;1;;;0;18
+16;Azuki-Bohnen;4;assets/images/ingredients/azuki-bohnen.webp;Azuki-Bohne;0;0;;1;2;6;;;0;1
+17;Baby-Mangold;1;assets/images/ingredients/baby-mangold.webp;;0;0;;1;2;1;;;0;16
+18;Baby-Spinat;1;assets/images/ingredients/baby-spinat.webp;Baby-Spinat;0;0;;1;2;1;;;0;16
+19;Backpulver;3;assets/images/ingredients/backpulver.webp;;0;0;;4;2;12;;;0;
+20;Baharat;6;assets/images/ingredients/baharat.webp;;0;0;;3;2;9;;;0;22
+21;Balsamico-Essig;6;assets/images/ingredients/balsamico-essig.webp;;0;0;;3;1;8;;;0;
+22;Bananen;2;assets/images/ingredients/bananen.webp;Banane;0;0;;1;2;1;;;0;8
+23;Bärlauch;1;assets/images/ingredients/baerlauch.webp;;0;0;;1;2;1;;;0;18
+24;Basilikum;6;assets/images/ingredients/basilikum.webp;;0;0;;1;2;1;;;0;18
+25;Basilikum, getrocknet;6;assets/images/ingredients/basilikum__getrocknet.webp;;0;0;;2;1;9;;;0;22
+26;Batavia-Salat;1;assets/images/ingredients/batavia-salat.webp;;0;0;;1;2;1;;;0;16
+27;Beeren;2;assets/images/ingredients/beeren.webp;Beere;0;0;;1;2;1;;;0;6
+28;Beeren, gefroren;2;assets/images/ingredients/beeren__gefroren.webp;Beere, gefroren;0;0;;2;2;11;;;0;6
+29;Belugalinsen;4;assets/images/ingredients/belugalinsen.webp;Belugalinse;0;0;;1;1;6;;;0;1
+30;Birnen;2;assets/images/ingredients/birnen.webp;Birne;0;0;;1;2;1;;;0;8
+31;Blattkohl;1;assets/images/ingredients/blattkohl.webp;;0;0;;1;2;1;;;0;12
+32;Blattsalat;1;assets/images/ingredients/blattsalat.webp;;0;0;;1;2;1;;;0;16
+33;Blumenkohl;1;assets/images/ingredients/blumenkohl.webp;;0;0;;1;2;1;;;0;11
+34;Blumenkohl gelb;1;assets/images/ingredients/blumenkohl_gelb.webp;;0;0;;1;2;1;;;0;11
+35;Blumenkohl grün;1;assets/images/ingredients/blumenkohl_gruen.webp;;0;0;;1;2;1;;;0;11
+36;Blumenkohl violett;1;assets/images/ingredients/blumenkohl_violett.webp;;0;0;;1;2;1;;;0;11
+37;Blumenkohl, gefroren;1;assets/images/ingredients/blumenkohl__gefroren.webp;;0;0;;2;2;11;;;0;11
+38;Blutorangen;2;assets/images/ingredients/blutorangen.webp;Blutorange;0;0;;1;2;1;;;0;8
+39;Bohnenkraut;6;assets/images/ingredients/bohnenkraut.webp;;0;0;;2;2;9;;;0;
+40;Bratpaprika;1;assets/images/ingredients/bratpaprika.webp;;0;0;;1;2;1;;;0;18
+41;Braunhirse;3;assets/images/ingredients/braunhirse.webp;;0;0;;1;2;3;;;0;23
+42;Brechbohnen, gefroren;4;assets/images/ingredients/brechbohnen__gefroren.webp;Brechbohne, gefroren;0;0;;2;2;7;;;0;2
+43;Brokkoli;1;assets/images/ingredients/brokkoli.webp;;0;0;;1;2;1;;;0;11
+44;Brokkoli, gefroren;1;assets/images/ingredients/brokkoli__gefroren.webp;;0;0;;2;2;11;;;0;11
+45;Brokkoli-Sprossen;1;assets/images/ingredients/brokkoli-sprossen.webp;;0;0;;1;2;5;;;0;13
+46;Brombeeren;2;assets/images/ingredients/brombeeren.webp;Brombeere;0;0;;1;2;1;;;0;6
+47;Brunnenkresse;1;assets/images/ingredients/brunnenkresse.webp;;0;0;;1;2;1;;;0;13
+48;Buchweizen;3;assets/images/ingredients/buchweizen.webp;;0;0;;1;1;3;;;0;23
+49;Buchweizenflocken;3;assets/images/ingredients/buchweizenflocken.webp;Buchweizenflocke;0;0;;3;2;3;;;0;25
+50;Buchweizenmehl;3;assets/images/ingredients/buchweizenmehl.webp;;0;0;;4;2;12;;;0;23
+51;Buchweizen-Spaghetti;3;assets/images/ingredients/buchweizen-spaghetti.webp;;0;0;;4;2;4;;;0;23
+52;Buchweizen-Sprossen;3;assets/images/ingredients/buchweizen-sprossen.webp;Buchweizen-Sprosse;0;0;;1;2;5;;;0;
+53;Bulgur;3;assets/images/ingredients/bulgur.webp;;0;0;;3;1;3;;;0;23
+54;Buschbohnen;4;assets/images/ingredients/buschbohnen.webp;Buschbohne;0;0;;1;2;1;;;0;1
+55;Buschbohnen borlotto;4;assets/images/ingredients/buschbohnen_borlotto.webp;Buschbohne borlotto;0;0;;1;2;1;;;0;1
+56;Buschbohnen gelb;4;assets/images/ingredients/buschbohnen_gelb.webp;Buschbohne gelb;0;0;;1;2;1;;;0;1
+57;Buschbohnen violett;4;assets/images/ingredients/buschbohnen_violett.webp;Buschbohne violett;0;0;;1;2;1;;;0;1
+58;Cannellinibohnen;4;assets/images/ingredients/cannellinibohnen.webp;Cannellinibohne;0;0;;1;2;6;;;0;1
+59;Cashewkerne;5;assets/images/ingredients/cashewkerne.webp;Cashewkern;0;0;;2;2;2;;;0;21
+60;Cashewmilch;5;assets/images/ingredients/cashewmilch.webp;;0;0;;4;2;11;;;0;
+61;Cashewmus;5;assets/images/ingredients/cashewmus.webp;;0;0;;3;2;2;;;0;21
+62;Cayennepfeffer;6;assets/images/ingredients/cayennepfeffer.webp;;0;0;;3;1;9;;;0;22
+63;Champignons braun;1;assets/images/ingredients/champignons_braun.webp;Champignon braun;0;0;;1;2;1;;;0;18
+64;Champignons weiß;1;assets/images/ingredients/champignons_weiss.webp;Champignon weiß;0;0;;1;2;1;;;0;18
+65;Chana-Dal;4;assets/images/ingredients/chana-dal.webp;;0;0;;3;2;6;;;0;1
+66;Cherimoya;2;assets/images/ingredients/cherimoya.webp;;0;0;;1;2;1;;;0;8
+67;Chiasamen;5;assets/images/ingredients/chiasamen.webp;;0;0;;1;1;2;;;0;21
+68;Chicoree;1;assets/images/ingredients/chicoree.webp;;0;0;;1;2;1;;;0;16
+69;Chili;6;assets/images/ingredients/chili.webp;;0;0;;3;1;9;;;0;22
+70;Chiliflocken;6;assets/images/ingredients/chiliflocken.webp;Chiliflocke;0;0;;2;1;9;;;0;22
+71;Chilischoten;1;assets/images/ingredients/chilischoten.webp;Chilischote;0;0;;1;2;1;;;0;18
+72;Chinakohl;1;assets/images/ingredients/chinakohl.webp;;0;0;;1;2;1;;;0;12
+73;Chinakohl violett;1;assets/images/ingredients/chinakohl_violett.webp;;0;0;;1;2;1;;;0;12
+74;Clementinen;2;assets/images/ingredients/clementinen.webp;Clementine;0;0;;1;2;1;;;0;8
+75;Couscous;3;assets/images/ingredients/couscous.webp;;0;0;;3;2;3;;;0;23
+76;Cranberries;2;assets/images/ingredients/cranberries.webp;Cranberry;0;0;;1;2;1;;;0;6
+77;Curry;6;assets/images/ingredients/curry.webp;;0;0;;3;1;9;;;0;22
+78;Curry rot;6;assets/images/ingredients/curry_rot.webp;;0;0;;3;2;9;;;0;22
+79;Datteln, getrocknet;2;assets/images/ingredients/datteln__getrocknet.webp;Dattel, getrocknet;0;0;;2;2;2;;;0;9
+80;Dill;6;assets/images/ingredients/dill.webp;;0;0;;1;2;1;;;0;18
+81;Dill, getrocknet;6;assets/images/ingredients/dill__getrocknet.webp;;0;0;;2;1;9;;;0;22
+82;Dinkel;3;assets/images/ingredients/dinkel.webp;;0;0;;1;1;3;;;0;23
+83;Dinkelflocken;3;assets/images/ingredients/dinkelflocken.webp;Dinkelflocke;0;0;;3;2;3;;;0;25
+84;Dinkelmehl;3;assets/images/ingredients/dinkelmehl.webp;;0;0;;4;2;12;;;0;23
+85;Dinkelmilch;3;assets/images/ingredients/dinkelmilch.webp;;0;0;;3;2;11;;;0;
+86;Dinkel-Vollkorn Bandnudeln;3;assets/images/ingredients/dinkel-vollkorn_bandnudeln.webp;Dinkel-Vollkorn Bandnudel;0;0;;3;2;4;;;0;23
+87;Dinkel-Vollkorn Farfalle;3;assets/images/ingredients/dinkel-vollkorn_farfalle.webp;;0;0;;3;2;4;;;0;23
+88;Dinkel-Vollkorn Fusilli;3;assets/images/ingredients/dinkel-vollkorn_fusilli.webp;;0;0;;3;2;4;;;0;23
+89;Dinkel-Vollkorn Linguine;3;assets/images/ingredients/dinkel-vollkorn_linguine.webp;;0;0;;3;2;4;;;0;23
+90;Dinkel-Vollkorn Penne;3;assets/images/ingredients/dinkel-vollkorn_penne.webp;;0;0;;3;2;4;;;0;23
+91;Dinkel-Vollkorn Pipette Rigate;3;assets/images/ingredients/dinkel-vollkorn_pipette_rigate.webp;;0;0;;3;2;4;;;0;23
+92;Drachenfrucht;2;assets/images/ingredients/drachenfrucht.webp;;0;0;;1;2;1;;;0;8
+93;Edamame;4;assets/images/ingredients/edamame.webp;;0;0;;2;2;11;;;0;2
+94;Einkorn;3;assets/images/ingredients/einkorn.webp;;0;0;;1;2;3;;;0;23
+95;Eisbergsalat;1;assets/images/ingredients/eisbergsalat.webp;;0;0;;1;2;1;;;0;18
+96;Emmer;3;assets/images/ingredients/emmer.webp;;0;0;;1;2;3;;;0;23
+97;Emmer-Vollkorn Fusilli;3;assets/images/ingredients/emmer-vollkorn_fusilli.webp;;0;0;;3;2;4;;;0;23
+98;Emmer-Vollkorn Penne;3;assets/images/ingredients/emmer-vollkorn_penne.webp;;0;0;;3;2;4;;;0;23
+99;Endivien-Salat;1;assets/images/ingredients/endivien-salat.webp;;0;0;;1;2;1;;;0;16
+100;Enoki;1;assets/images/ingredients/enoki.webp;;0;0;;1;2;1;;;0;18
+101;Erbsen gelb;4;assets/images/ingredients/erbsen_gelb.webp;Erbse gelb;0;0;;1;2;6;;;0;1
+102;Erbsen grün;4;assets/images/ingredients/erbsen_gruen.webp;Erbse grün;0;0;;1;1;6;;;0;1
+103;Erbsen grün, gefroren;4;assets/images/ingredients/erbsen_gruen__gefroren.webp;Erbse grün, gefroren;0;0;;2;2;11;;;0;1
+104;Erbsen grün, gekocht;4;assets/images/ingredients/erbsen_gruen__gekocht.webp;Erbse grün, gekocht;0;0;;3;2;7;;;0;2
+105;Erbsenmilch;4;assets/images/ingredients/erbsenmilch.webp;;0;0;;3;2;11;;;0;
+106;Erbsennudeln;4;assets/images/ingredients/erbsennudeln.webp;Erbsennudel;0;0;;3;2;4;;;0;
+107;Erbsen-Sprossen;4;assets/images/ingredients/erbsen-sprossen.webp;Erbsen-Sprosse;0;0;;1;2;5;;;0;4
+108;Erdbeeren;2;assets/images/ingredients/erdbeeren.webp;Erdbeere;0;0;;1;2;1;;;0;6
+109;Erdbeeren, gefroren;2;assets/images/ingredients/erdbeeren__gefroren.webp;Erdbeere, gefroren;0;0;;2;2;11;;;0;6
+110;Erdmandeln;5;assets/images/ingredients/erdmandeln.webp;Erdmandel;0;0;;1;2;2;;;0;21
+111;Erdnüsse;5;assets/images/ingredients/erdnuesse.webp;Erdnuss;0;0;;1;2;2;;;0;21
+112;Erdnussmus;5;assets/images/ingredients/erdnussmus.webp;;0;0;;3;2;2;;;0;21
+113;Estragon;6;assets/images/ingredients/estragon.webp;;0;0;;1;2;1;;;0;18
+114;Estragon, getrocknet;6;assets/images/ingredients/estragon__getrocknet.webp;;0;0;;2;2;9;;;0;22
+115;Feigen;2;assets/images/ingredients/feigen.webp;Feige;0;0;;1;2;1;;;0;8
+116;Feldsalat;1;assets/images/ingredients/feldsalat.webp;;0;0;;1;2;1;;;0;16
+117;Felsenbirnen;2;assets/images/ingredients/felsenbirnen.webp;Felsenbirne;0;0;;1;2;1;;;0;6
+118;Fenchel;1;assets/images/ingredients/fenchel.webp;;0;0;;1;2;1;;;0;18
+119;Fenchelsamen;6;assets/images/ingredients/fenchelsamen.webp;;0;0;;2;2;9;;;0;22
+120;Flohsamenschalen;3;assets/images/ingredients/flohsamenschalen.webp;Flohsamenschale;0;0;;2;2;12;;;0;
+121;Frisee-Salat;1;assets/images/ingredients/frisee-salat.webp;;0;0;;1;2;1;;;0;16
+122;Frühlingszwiebeln;1;assets/images/ingredients/fruehlingszwiebeln.webp;Frühlingszwiebel;0;0;;1;2;1;;;0;18
+123;Garam Massala;6;assets/images/ingredients/garam_massala.webp;;0;0;;3;1;9;;;0;22
+124;Gelbe Beete;1;assets/images/ingredients/gelbe_beete.webp;;0;0;;1;2;1;;;0;18
+125;Gelbe Linsennudeln;4;assets/images/ingredients/gelbe_linsennudeln.webp;Gelbe Linsennudel;0;0;;3;2;4;;;0;1
+126;Gerste;3;assets/images/ingredients/gerste.webp;;0;0;;1;2;3;;;0;23
+127;Gerstenflocken;3;assets/images/ingredients/gerstenflocken.webp;Gerstenflocke;0;0;;3;2;3;;;0;25
+128;Gewürzgurken;1;assets/images/ingredients/gewuerzgurken.webp;Gewürzgurke;0;0;;3;2;7;;;0;18
+129;Goji-Beeren, getrocknet;2;assets/images/ingredients/goji-beeren__getrocknet.webp;Goji-Beere, getrocknet;0;0;;2;2;2;;;0;7
+130;Granatapfel;2;assets/images/ingredients/granatapfel.webp;;0;0;;1;2;1;;;0;8
+131;Grapefruit rot;2;assets/images/ingredients/grapefruit_rot.webp;;0;0;;1;2;1;;;0;8
+132;Grapefruit weiß;2;assets/images/ingredients/grapefruit_weiss.webp;;0;0;;1;2;1;;;0;8
+133;Grünkern;3;assets/images/ingredients/gruenkern.webp;;0;0;;1;1;3;;;0;23
+134;Grünkernflocken;3;assets/images/ingredients/gruenkernflocken.webp;Grünkernflocke;0;0;;3;2;3;;;0;25
+135;Grünkohl;1;assets/images/ingredients/gruenkohl.webp;;0;0;;1;2;1;;;0;12
+136;Grünkohl rot;1;assets/images/ingredients/gruenkohl_rot.webp;;0;0;;1;2;1;;;0;12
+137;Grünkohl, gefroren;1;assets/images/ingredients/gruenkohl__gefroren.webp;;0;0;;2;2;11;;;0;12
+138;Grünkohl-Sprossen;1;assets/images/ingredients/gruenkohl-sprossen.webp;Grünkohl-Sprosse;0;0;;1;2;5;;;0;13
+139;Guaven;2;assets/images/ingredients/guaven.webp;Guave;0;0;;1;2;1;;;0;8
+140;Gurken;1;assets/images/ingredients/gurken.webp;Gurke;0;0;;1;2;1;;;0;18
+141;Gyrosgewürz;6;assets/images/ingredients/gyrosgewuerz.webp;;0;0;;3;2;9;;;0;22
+142;Hafer;3;assets/images/ingredients/hafer.webp;;0;0;;1;1;3;;;0;23
+143;Haferflocken;3;assets/images/ingredients/haferflocken.webp;Haferflocke;0;0;;3;2;3;;;0;25
+144;Haferjoghurt;3;assets/images/ingredients/haferjoghurt.webp;;0;0;;4;2;11;;;0;
+145;Haferkleie;3;assets/images/ingredients/haferkleie.webp;;0;0;;3;2;3;;;0;
+146;Hafermehl;3;assets/images/ingredients/hafermehl.webp;;0;0;;4;2;12;;;0;23
+147;Hafermilch;3;assets/images/ingredients/hafermilch.webp;;0;0;;3;2;11;;;0;
+148;Hanfmilch;5;assets/images/ingredients/hanfmilch.webp;;0;0;;3;2;11;;;0;
+149;Hanfsamen;5;assets/images/ingredients/hanfsamen.webp;;0;0;;1;2;5;;;0;21
+150;Harissa;6;assets/images/ingredients/harissa.webp;;0;0;;3;2;9;;;0;22
+151;Hartweizengrieß;3;assets/images/ingredients/hartweizengriess.webp;;0;0;;3;2;3;;;0;
+152;Haselnusskerne;5;assets/images/ingredients/haselnusskerne.webp;Haselnusskern;0;0;;2;2;2;;;0;21
+153;Haselnussmilch;5;assets/images/ingredients/haselnussmilch.webp;;0;0;;3;2;7;;;0;
+154;Haselnussmus;5;assets/images/ingredients/haselnussmus.webp;;0;0;;3;2;2;;;0;21
+155;Hefe;6;assets/images/ingredients/hefe.webp;;0;0;;3;1;12;;;0;
+156;Hefeflocken;6;assets/images/ingredients/hefeflocken.webp;Hefeflocke;0;0;;3;1;9;;;0;22
+157;Heidelbeeren;2;assets/images/ingredients/heidelbeeren.webp;Heidelbeere;0;0;;1;2;1;;;0;6
+158;Heidelbeeren, gefroren;2;assets/images/ingredients/heidelbeeren__gefroren.webp;Heidelbeere, gefroren;0;0;;2;2;11;;;0;6
+159;Himbeeren;2;assets/images/ingredients/himbeeren.webp;Himbeere;0;0;;1;2;1;;;0;6
+160;Himbeeren, gefroren;2;assets/images/ingredients/himbeeren__gefroren.webp;Himbeere, gefroren;0;0;;2;2;11;;;0;6
+161;Hirse;3;assets/images/ingredients/hirse.webp;;0;0;;1;2;3;;;0;23
+162;Honigmelone;2;assets/images/ingredients/honigmelone.webp;;0;0;;1;2;1;;;0;8
+163;Ingwer;1;assets/images/ingredients/ingwer.webp;;0;0;;1;2;1;;;0;18
+164;Ingwer, gemahlen;6;assets/images/ingredients/ingwer__gemahlen.webp;;0;0;;2;1;9;;;0;22
+165;Italienische Kräuter;6;assets/images/ingredients/italienische_kraeuter.webp;;0;0;;2;1;9;;;0;22
+166;Jalapenos;1;assets/images/ingredients/jalapenos.webp;Jalapeno;0;0;;1;2;1;;;0;18
+167;Johannisbeeren rot;2;assets/images/ingredients/johannisbeeren_rot.webp;Johannisbeere rot;0;0;;1;2;1;;;0;6
+168;Johannisbeeren rot, gefroren;2;assets/images/ingredients/johannisbeeren_rot__gefroren.webp;Johannisbeere rot, gefroren;0;0;;2;2;11;;;0;6
+169;Johannisbeeren schwarz;2;assets/images/ingredients/johannisbeeren_schwarz.webp;Johannisbeere schwarz;0;0;;1;2;1;;;0;6
+170;Johannisbeeren schwarz, gefroren;2;assets/images/ingredients/johannisbeeren_schwarz__gefroren.webp;Johannisbeere schwarz, gefroren;0;0;;2;2;11;;;0;6
+171;Jostabeeren;2;assets/images/ingredients/jostabeeren.webp;Jostabeere;0;0;;1;2;1;;;0;6
+172;Kakaopulver;6;assets/images/ingredients/kakaopulver.webp;;0;0;;3;1;12;;;0;
+173;Kaki;2;assets/images/ingredients/kaki.webp;;0;0;;1;2;1;;;0;8
+174;Kamut;3;assets/images/ingredients/kamut.webp;;0;0;;1;2;3;;;0;23
+175;Kardamon;6;assets/images/ingredients/kardamon.webp;;0;0;;1;2;9;;;0;22
+176;Kartoffeln;1;assets/images/ingredients/kartoffeln.webp;Kartoffel;0;0;;1;2;1;;;0;18
+177;Kartoffeln rot;1;assets/images/ingredients/kartoffeln_rot.webp;Kartoffel rot;0;0;;1;2;1;;;0;18
+178;Kartoffeln violett;1;assets/images/ingredients/kartoffeln_violett.webp;Kartoffel violett;0;0;;1;2;1;;;0;18
+179;Kerbel;6;assets/images/ingredients/kerbel.webp;;0;0;;1;2;1;;;0;18
+180;Kerbel, getrocknet;6;assets/images/ingredients/kerbel__getrocknet.webp;;0;0;;2;2;9;;;0;22
+181;Kichererbsen;4;assets/images/ingredients/kichererbsen.webp;Kichererbse;0;0;;1;1;6;;;0;1
+182;Kichererbsen, gekocht;4;assets/images/ingredients/kichererbsen__gekocht.webp;Kichererbse, gekocht;0;0;;2;2;7;;;0;2
+183;Kichererbsenmehl;4;assets/images/ingredients/kichererbsenmehl.webp;;0;0;;3;2;12;;;0;
+184;Kichererbsennudeln;4;assets/images/ingredients/kichererbsennudeln.webp;Kichererbsennudel;0;0;;3;2;4;;;0;1
+185;Kichererbsen-Sprossen;4;assets/images/ingredients/kichererbsen-sprossen.webp;Kichererbsen-Sprosse;0;0;;1;2;5;;;0;4
+186;Kichererbsenwaffeln;4;assets/images/ingredients/kichererbsenwaffeln.webp;Kichererbsenwaffel;0;0;;4;2;3;;;0;
+187;Kidneybohnen;4;assets/images/ingredients/kidneybohnen.webp;Kidneybohne;0;0;;1;1;6;;;0;1
+188;Kidneybohnen, gekocht;4;assets/images/ingredients/kidneybohnen__gekocht.webp;Kidneybohne, gekocht;0;0;;2;2;7;;;0;2
+189;Kimchi;1;assets/images/ingredients/kimchi.webp;;0;0;;3;2;1;;;0;18
+190;Kirschen, gefroren;2;assets/images/ingredients/kirschen__gefroren.webp;Kirsche, gefroren;0;0;;2;2;11;;;0;6
+191;Kirschpflaumen;2;assets/images/ingredients/kirschpflaumen.webp;Kirschpflaume;0;0;;1;2;1;;;0;8
+192;Kiwi gold;2;assets/images/ingredients/kiwi_gold.webp;;0;0;;1;2;1;;;0;8
+193;Kiwi grün;2;assets/images/ingredients/kiwi_gruen.webp;;0;0;;1;2;1;;;0;8
+194;Knoblauch;1;assets/images/ingredients/knoblauch.webp;;0;0;;1;1;1;;;0;18
+195;Knoblauchpulver;6;assets/images/ingredients/knoblauchpulver.webp;;0;0;;3;1;9;;;0;22
+196;Knollensellerie;1;assets/images/ingredients/knollensellerie.webp;;0;0;;1;2;1;;;0;18
+197;Kohlrabi;1;assets/images/ingredients/kohlrabi.webp;;0;0;;1;2;1;;;0;11
+198;Kohlrabi violett;1;assets/images/ingredients/kohlrabi_violett.webp;;0;0;;1;2;1;;;0;11
+199;Kokosjoghurt;5;assets/images/ingredients/kokosjoghurt.webp;;0;0;;4;2;11;;;0;
+200;Kokosmilch;5;assets/images/ingredients/kokosmilch.webp;;0;0;;3;2;11;;;0;
+201;Kokosmus;5;assets/images/ingredients/kokosmus.webp;;0;0;;3;2;2;;;0;
+202;Kokosnüsse;5;assets/images/ingredients/kokosnuesse.webp;;0;0;;1;2;1;;;0;
+203;Kokosraspeln;5;assets/images/ingredients/kokosraspeln.webp;Kokosraspel;0;0;;3;2;12;;;0;
+204;Kombuflocken;6;assets/images/ingredients/kombuflocken.webp;Kombuflocke;0;0;;3;2;10;;;0;
+205;Kopfsalat;1;assets/images/ingredients/kopfsalat.webp;;0;0;;1;2;1;;;0;16
+206;Koriander;6;assets/images/ingredients/koriander.webp;;0;0;;1;2;1;;;0;18
+207;Koriander, gemahlen;6;assets/images/ingredients/koriander__gemahlen.webp;;0;0;;2;1;9;;;0;22
+208;Koriandersamen;6;assets/images/ingredients/koriandersamen.webp;;0;0;;1;2;9;;;0;22
+209;Korianderkraut, getrocknet;6;assets/images/ingredients/korianderkraut__getrocknet.webp;;0;0;;2;1;9;;;0;22
+210;Kräuter der Provence;6;assets/images/ingredients/kraeuter_der_provence.webp;;0;0;;2;1;9;;;0;22
+211;Kräuterseitlinge;1;assets/images/ingredients/kraeuterseitlinge.webp;Kräuterseitling;0;0;;1;2;1;;;0;18
+212;Kresse-Sprossen;1;assets/images/ingredients/kresse-sprossen.webp;Kresse-Sprosse;0;0;;1;2;5;;;0;13
+213;Kreuzkümmel;6;assets/images/ingredients/kreuzkuemmel.webp;;0;0;;1;2;9;;;0;22
+214;Kreuzkümmel, gemahlen;6;assets/images/ingredients/kreuzkuemmel__gemahlen.webp;;0;0;;2;1;9;;;0;22
+215;Kümmel;6;assets/images/ingredients/kuemmel.webp;;0;0;;1;2;9;;;0;22
+216;Kürbis, Butternut;1;assets/images/ingredients/kuerbis__butternut.webp;;0;0;;1;2;1;;;0;18
+217;Kürbis, Hokkaido;1;assets/images/ingredients/kuerbis__hokkaido.webp;;0;0;;1;2;1;;;0;18
+218;Kürbis, Muskat;1;assets/images/ingredients/kuerbis__muskat.webp;;0;0;;1;2;1;;;0;18
+219;Kürbis, Spaghetti;1;assets/images/ingredients/kuerbis__spaghetti.webp;;0;0;;1;2;1;;;0;18
+220;Kürbisgewürz;6;assets/images/ingredients/kuerbisgewuerz.webp;;0;0;;2;2;9;;;0;22
+221;Kürbiskerne;5;assets/images/ingredients/kuerbiskerne.webp;Kürbiskern;0;0;;2;2;5;;;0;21
+222;Kurkuma, gemahlen;6;assets/images/ingredients/kurkuma__gemahlen.webp;;0;0;;2;1;9;;;0;22
+223;Kurkuma;1;assets/images/ingredients/kurkuma.webp;;0;0;;1;2;1;;;0;18
+224;Lauch;1;assets/images/ingredients/lauch.webp;;0;0;;1;2;1;;;0;18
+225;Lavendel;6;assets/images/ingredients/lavendel.webp;;0;0;;2;2;9;;;0;22
+226;Leinöl;6;assets/images/ingredients/leinoel.webp;;0;0;;5;2;8;;;0;
+227;Leinsamen;5;assets/images/ingredients/leinsamen.webp;;0;0;;1;1;5;;;0;20
+228;Leinsamen-Sprossen;5;assets/images/ingredients/leinsamen-sprossen.webp;Leinsamen-Sprosse;0;0;;1;2;5;;;0;
+229;Liebstöckel;6;assets/images/ingredients/liebstoeckel.webp;;0;0;;1;2;1;;;0;18
+230;Liebstöckel, getrocknet;6;assets/images/ingredients/liebstoeckel__getrocknet.webp;;0;0;;2;2;9;;;0;22
+231;Limetten;2;assets/images/ingredients/limetten.webp;Limette;0;0;;1;2;1;;;0;8
+232;Linsen braun;4;assets/images/ingredients/linsen_braun.webp;Linse braun;0;0;;1;1;6;;;0;1
+233;Linsen gelb;4;assets/images/ingredients/linsen_gelb.webp;Linse gelb;0;0;;1;2;6;;;0;1
+234;Linsen grün;4;assets/images/ingredients/linsen_gruen.webp;Linse grü;0;0;;1;2;6;;;0;1
+235;Linsen rot;4;assets/images/ingredients/linsen_rot.webp;Linse rot;0;0;;1;1;6;;;0;1
+236;Linsen-Sprossen;4;assets/images/ingredients/linsen-sprossen.webp;Linsen-Sprosse;0;0;;1;2;5;;;0;4
+237;Linsenwaffeln;4;assets/images/ingredients/linsenwaffeln.webp;Linsenwaffel;0;0;;4;2;3;;;0;
+238;Lorbeerblätter;6;assets/images/ingredients/lorbeerblaetter.webp;Lorbeerblatt;0;0;;1;1;9;;;0;22
+239;Löwenzahn;1;assets/images/ingredients/loewenzahn.webp;;0;0;;1;2;1;;;0;16
+240;Lupinenkerne;4;assets/images/ingredients/lupinenkerne.webp;Lupinenkern;0;0;;1;2;5;;;0;1
+241;Lupinenkerne, gekocht;4;assets/images/ingredients/lupinenkerne__gekocht.webp;Lupinenkern, gekocht;0;0;;2;2;7;;;0;2
+242;Lupinenmilch;4;assets/images/ingredients/lupinenmilch.webp;;0;0;;3;2;11;;;0;
+243;Lupinenschrot;4;assets/images/ingredients/lupinenschrot.webp;;0;0;;2;2;3;;;0;
+244;Macadamiennüsse;5;assets/images/ingredients/macadamiennuesse.webp;Macadamiennuss;0;0;;1;2;2;;;0;21
+245;Mais;3;assets/images/ingredients/mais.webp;;0;0;;1;1;3;;;0;23
+246;Mais, gekocht;3;assets/images/ingredients/mais__gekocht.webp;;0;0;;2;2;7;;;0;24
+247;Maisgrieß;3;assets/images/ingredients/maisgriess.webp;;0;0;;3;2;3;;;0;
+248;Maiswaffeln;3;assets/images/ingredients/maiswaffeln.webp;Maiswaffel;0;0;;4;2;3;;;0;
+249;Maitake;1;assets/images/ingredients/maitake.webp;;0;0;;1;2;1;;;0;18
+250;Majoran;6;assets/images/ingredients/majoran.webp;;0;0;;1;2;1;;;0;18
+251;Majoran, getrocknet;6;assets/images/ingredients/majoran__getrocknet.webp;;0;0;;2;2;9;;;0;22
+252;Mandarinen;2;assets/images/ingredients/mandarinen.webp;Mandarine;0;0;;1;2;1;;;0;8
+253;Mandeljoghurt;5;assets/images/ingredients/mandeljoghurt.webp;;0;0;;3;2;11;;;0;
+254;Mandelmilch;5;assets/images/ingredients/mandelmilch.webp;;0;0;;3;2;11;;;0;
+255;Mandelmus braun;5;assets/images/ingredients/mandelmus_braun.webp;;0;0;;3;2;2;;;0;21
+256;Mandelmus weiß;5;assets/images/ingredients/mandelmus_weiss.webp;;0;0;;3;2;2;;;0;21
+257;Mandeln;5;assets/images/ingredients/mandeln.webp;Mandel;0;0;;1;2;2;;;0;21
+258;Mango;2;assets/images/ingredients/mango.webp;;0;0;;1;2;1;;;0;8
+259;Mango, gefroren;2;assets/images/ingredients/mango__gefroren.webp;;0;0;;2;2;11;;;0;8
+260;Mango, getrocknet;2;assets/images/ingredients/mango__getrocknet.webp;;0;0;;2;2;2;;;0;7
+261;Mangold;1;assets/images/ingredients/mangold.webp;;0;0;;1;2;1;;;0;16
+262;Maronen;5;assets/images/ingredients/maronen.webp;Marone;0;0;;1;2;2;;;0;21
+263;Maulbeeren;2;assets/images/ingredients/maulbeeren.webp;Maulbeere;0;0;;1;2;1;;;0;6
+264;Minze;6;assets/images/ingredients/minze.webp;;0;0;;1;2;1;;;0;18
+265;Mirabellen;2;assets/images/ingredients/mirabellen.webp;Mirabelle;0;0;;1;2;1;;;0;8
+266;Möhren gelb;1;assets/images/ingredients/moehren_gelb.webp;Möhre gelb;0;0;;1;2;1;;;0;18
+267;Möhren orange;1;assets/images/ingredients/moehren_orange.webp;Möhre orange;0;0;;1;2;1;;;0;18
+268;Möhren rot;1;assets/images/ingredients/moehren_rot.webp;Möhre rot;0;0;;1;2;1;;;0;18
+269;Möhren violett;1;assets/images/ingredients/moehren_violett.webp;Möhren violett;0;0;;1;2;1;;;0;18
+270;Mugi Miso;6;assets/images/ingredients/mugi_miso.webp;;0;0;;3;2;10;;;0;
+271;Mungbohnen;4;assets/images/ingredients/mungbohnen.webp;Mungbohne;0;0;;1;1;6;;;0;1
+272;Mungbohnen-Sprossen;4;assets/images/ingredients/mungbohnen-sprossen.webp;Mungbohnen-Sprosse;0;0;;1;2;5;;;0;4
+273;Mung-Dal;4;assets/images/ingredients/mung-dal.webp;;0;0;;2;2;6;;;0;1
+274;Muskatnuss;6;assets/images/ingredients/muskatnuss.webp;Muskatnuss;0;0;;1;1;9;;;0;22
+275;Naturreis;3;assets/images/ingredients/naturreis.webp;;0;0;;1;2;3;;;0;23
+276;Natur-Tofu;4;assets/images/ingredients/natur-tofu.webp;;0;0;;3;2;11;;;0;3
+277;Nektarinen;2;assets/images/ingredients/nektarinen.webp;Nektarine;0;0;;1;2;1;;;0;8
+278;Nelken;6;assets/images/ingredients/nelken.webp;Nelke;0;0;;1;2;9;;;0;22
+279;Norialgen-Blätter;1;assets/images/ingredients/norialgen-blaetter.webp;Norialgen-Blatt;0;0;;3;2;10;;;0;
+280;Noriflocken;6;assets/images/ingredients/noriflocken.webp;Noriflocke;0;0;;3;2;10;;;0;
+281;Nussmus;5;assets/images/ingredients/nussmus.webp;;0;0;;3;1;2;;;0;21
+282;Ochsenherztomaten;1;assets/images/ingredients/ochsenherztomaten.webp;Ochsenherztomate;0;0;;1;2;1;;;0;18
+283;Okra;1;assets/images/ingredients/okra.webp;;0;0;;1;2;1;;;0;18
+284;Oliven;1;assets/images/ingredients/oliven.webp;Olive;0;0;;1;2;7;;;0;18
+285;Olivenöl;6;assets/images/ingredients/olivenoel.webp;;0;0;;5;1;8;;;0;
+286;Orangen;2;assets/images/ingredients/orangen.webp;Orange;0;0;;1;2;1;;;0;8
+287;Oregano;6;assets/images/ingredients/oregano.webp;;0;0;;1;2;1;;;0;18
+288;Oregano, getrocknet;6;assets/images/ingredients/oregano__getrocknet.webp;;0;0;;2;1;9;;;0;22
+289;Oyster Sauce;6;assets/images/ingredients/oyster_sauce.webp;;0;0;;3;2;10;;;0;
+290;Pak-Choi;1;assets/images/ingredients/pak-choi.webp;;0;0;;1;2;1;;;0;11
+291;Papaya;2;assets/images/ingredients/papaya.webp;;0;0;;1;2;1;;;0;8
+292;Paprika edelsüß;6;assets/images/ingredients/paprika_edelsuess.webp;;0;0;;2;2;9;;;0;22
+293;Paprika gelb;1;assets/images/ingredients/paprika_gelb.webp;;0;0;;1;2;1;;;0;18
+294;Paprika geräuchert;6;assets/images/ingredients/paprika_geraeuchert.webp;;0;0;;2;1;9;;;0;22
+295;Paprika grün;1;assets/images/ingredients/paprika_gruen.webp;;0;0;;1;2;1;;;0;18
+296;Paprika orange;1;assets/images/ingredients/paprika_orange.webp;;0;0;;1;2;1;;;0;18
+297;Paprika rosenscharf;6;assets/images/ingredients/paprika_rosenscharf.webp;;0;0;;2;2;9;;;0;22
+298;Paprika rot;1;assets/images/ingredients/paprika_rot.webp;;0;0;;1;2;1;;;0;18
+299;Paranüsse;5;assets/images/ingredients/paranuesse.webp;Paranuss;0;0;;1;2;2;;;0;21
+300;Passionsfrüchte;2;assets/images/ingredients/passionsfruechte.webp;Passionsfrucht;0;0;;1;2;1;;;0;8
+301;Pastinaken;1;assets/images/ingredients/pastinaken.webp;Pastinake;0;0;;1;2;1;;;0;18
+302;Pekannüsse;5;assets/images/ingredients/pekannuesse.webp;Pekannuss;0;0;;1;2;2;;;0;21
+303;Petersilie;6;assets/images/ingredients/petersilie.webp;;0;0;;1;2;1;;;0;18
+304;Petersilie, getrocknet;6;assets/images/ingredients/petersilie__getrocknet.webp;;0;0;;2;2;9;;;0;22
+305;Pfeffer;6;assets/images/ingredients/pfeffer.webp;;0;0;;1;1;9;;;0;22
+306;Pfeffer rot;6;assets/images/ingredients/pfeffer_rot.webp;;0;0;;1;2;9;;;0;22
+307;Pfeffer weiß;6;assets/images/ingredients/pfeffer_weiss.webp;;0;0;;1;2;9;;;0;22
+308;Pfefferminze;6;assets/images/ingredients/pfefferminze.webp;;0;0;;1;2;1;;;0;18
+309;Pfifferlinge;1;assets/images/ingredients/pfifferlinge.webp;Pfifferling;0;0;;1;2;1;;;0;18
+310;Pfirsich;2;assets/images/ingredients/pfirsich.webp;;0;0;;1;2;1;;;0;8
+311;Pflaumen;2;assets/images/ingredients/pflaumen.webp;Pflaume;0;0;;1;2;1;;;0;8
+312;Physalis;2;assets/images/ingredients/physalis.webp;;0;0;;1;2;1;;;0;8
+313;Pilze;1;assets/images/ingredients/pilze.webp;Pilz;0;0;;1;2;1;;;0;18
+314;Piment;6;assets/images/ingredients/piment.webp;;0;0;;1;2;9;;;0;22
+315;Pinienkerne;5;assets/images/ingredients/pinienkerne.webp;Pinienkern;0;0;;1;2;5;;;0;21
+316;Pintobohnen;4;assets/images/ingredients/pintobohnen.webp;Pintobohne;0;0;;1;2;6;;;0;1
+317;Pistazien;5;assets/images/ingredients/pistazien.webp;Pistazie;0;0;;1;2;2;;;0;21
+318;Pistazienmus;5;assets/images/ingredients/pistazienmus.webp;;0;0;;3;2;2;;;0;21
+319;Portulak;1;assets/images/ingredients/portulak.webp;;0;0;;1;2;1;;;0;16
+320;Puy-Linsen;4;assets/images/ingredients/puy-linsen.webp;Puy-Linse;0;0;;1;2;6;;;0;1
+321;Quinoa;3;assets/images/ingredients/quinoa.webp;;0;0;;1;1;3;;;0;23
+322;Quinoa rot;3;assets/images/ingredients/quinoa_rot.webp;;0;0;;1;2;3;;;0;23
+323;Quinoa schwarz;3;assets/images/ingredients/quinoa_schwarz.webp;;0;0;;1;2;3;;;0;23
+324;Quinoa weiß;3;assets/images/ingredients/quinoa_weiss.webp;;0;0;;1;2;3;;;0;23
+325;Quinoa-Sprossen;3;assets/images/ingredients/quinoa-sprossen.webp;Quinoa-Sprosse;0;0;;1;2;5;;;0;
+326;Radicchio;1;assets/images/ingredients/radicchio.webp;;0;0;;1;2;1;;;0;16
+327;Radieschen;1;assets/images/ingredients/radieschen.webp;;0;0;;1;2;1;;;0;11
+328;Radieschen-Sprossen;1;assets/images/ingredients/radieschen-sprossen.webp;Radieschen-Sprosse;0;0;;1;2;5;;;0;13
+329;Rapsöl;6;assets/images/ingredients/rapsoel.webp;;0;0;;5;2;8;;;0;
+330;Ras el Hanout;6;assets/images/ingredients/ras_el_hanout.webp;;0;0;;2;2;9;;;0;22
+331;Räucher-Tofu;4;assets/images/ingredients/raeucher-tofu.webp;;0;0;;3;2;11;;;0;3
+332;Reis schwarz;3;assets/images/ingredients/reis_schwarz.webp;;0;0;;1;2;3;;;0;23
+333;Reis-Essig;6;assets/images/ingredients/reis-essig.webp;;0;0;;3;1;8;;;0;
+334;Reismilch;3;assets/images/ingredients/reismilch.webp;;0;0;;4;2;11;;;0;
+335;Reispapier;3;assets/images/ingredients/reispapier.webp;;0;0;;4;2;10;;;0;
+336;Rettich;1;assets/images/ingredients/rettich.webp;;0;0;;1;2;1;;;0;11
+337;Rhabarber;2;assets/images/ingredients/rhabarber.webp;;0;0;;1;2;1;;;0;8
+338;Riesenchampignons;1;assets/images/ingredients/riesenchampignons.webp;Riesenchampignon;0;0;;1;2;1;;;0;18
+339;Ringelbeete;1;assets/images/ingredients/ringelbeete.webp;;0;0;;1;2;1;;;0;18
+340;Roggen;3;assets/images/ingredients/roggen.webp;;0;0;;1;1;3;;;0;23
+341;Roggenflocken;3;assets/images/ingredients/roggenflocken.webp;Roggenflocke;0;0;;3;2;3;;;0;25
+342;Roggenmehl;3;assets/images/ingredients/roggenmehl.webp;;0;0;;4;2;12;;;0;23
+343;Roggenmilch;3;assets/images/ingredients/roggenmilch.webp;;0;0;;3;2;11;;;0;
+344;Romanasalat;1;assets/images/ingredients/romanasalat.webp;;0;0;;1;2;1;;;0;16
+345;Roma-Tomaten;1;assets/images/ingredients/roma-tomaten.webp;Roma-Tomate;0;0;;1;2;1;;;0;18
+346;Romanesco;1;assets/images/ingredients/romanesco.webp;;0;0;;1;2;1;;;0;11
+347;Rosenkohl;1;assets/images/ingredients/rosenkohl.webp;;0;0;;1;2;1;;;0;11
+348;Rosenkohl rot;1;assets/images/ingredients/rosenkohl_rot.webp;;0;0;;1;2;1;;;0;11
+349;Rosenkohl, gefroren;1;assets/images/ingredients/rosenkohl__gefroren.webp;;0;0;;1;2;11;;;0;11
+350;Rosmarin;6;assets/images/ingredients/rosmarin.webp;;0;0;;1;2;1;;;0;18
+351;Rosmarin, getrocknet;6;assets/images/ingredients/rosmarin__getrocknet.webp;;0;0;;2;1;9;;;0;22
+352;Rote Beete;1;assets/images/ingredients/rote_beete.webp;;0;0;;1;2;1;;;0;18
+353;Rote Linsennudeln;4;assets/images/ingredients/rote_linsennudeln.webp;Rote Linsennudel;0;0;;3;2;4;;;0;1
+354;Rotkohl;1;assets/images/ingredients/rotkohl.webp;;0;0;;1;2;1;;;0;11
+355;Rucola;1;assets/images/ingredients/rucola.webp;;0;0;;1;2;1;;;0;12
+356;Rucola-Sprossen;1;assets/images/ingredients/rucola-sprossen.webp;Rucola-Sprosse;0;0;;1;2;5;;;0;13
+357;Safran;6;assets/images/ingredients/safran.webp;;0;0;;1;2;9;;;0;22
+358;Salbei;6;assets/images/ingredients/salbei.webp;;0;0;;1;2;1;;;0;18
+359;Salbei, getrocknet;6;assets/images/ingredients/salbei__getrocknet.webp;;0;0;;2;2;9;;;0;22
+360;Salz, jodiert;6;assets/images/ingredients/salz__jodiert.webp;;0;0;;4;2;9;;;0;
+361;Sambal Oelek;6;assets/images/ingredients/sambal_oelek.webp;;0;0;;4;2;10;;;0;
+362;Sauerkirschen;2;assets/images/ingredients/sauerkirschen.webp;Sauerkirsche;0;0;;1;2;1;;;0;6
+363;Sauerkraut;1;assets/images/ingredients/sauerkraut.webp;;0;0;;2;2;11;;;0;15
+364;Schnittlauch;1;assets/images/ingredients/schnittlauch.webp;;0;0;;1;2;1;;;0;18
+365;Schwarze Bohnen;4;assets/images/ingredients/schwarze_bohnen.webp;Schwarze Bohne;0;0;;1;1;6;;;0;1
+366;Schwarze Bohnen, gekocht;4;assets/images/ingredients/schwarze_bohnen__gekocht.webp;Schwarze Bohne, gekocht;0;0;;2;2;7;;;0;2
+367;Schwarzkohl;1;assets/images/ingredients/schwarzkohl.webp;;0;0;;1;2;1;;;0;12
+368;Schwarzwurzel;1;assets/images/ingredients/schwarzwurzel.webp;;0;0;;1;2;1;;;0;18
+369;Seiden-Tofu;4;assets/images/ingredients/seiden-tofu.webp;;0;0;;3;2;11;;;0;3
+370;Seitan;3;assets/images/ingredients/seitan.webp;;0;0;;3;2;10;;;0;
+371;Selleriesamen;6;assets/images/ingredients/selleriesamen.webp;;0;0;;1;2;9;;;0;22
+372;Senf;6;assets/images/ingredients/senf.webp;;0;0;;3;2;9;;;0;
+373;Senfkörner;6;assets/images/ingredients/senfkoerner.webp;Senfkorn;0;0;;1;2;9;;;0;
+374;Senf-Sprossen;1;assets/images/ingredients/senf-sprossen.webp;Senf-Sprosse;0;0;;1;2;5;;;0;13
+375;Sesamkerne;5;assets/images/ingredients/sesamkerne.webp;Sesamkern;0;0;;1;2;5;;;0;21
+376;Shiitake;1;assets/images/ingredients/shiitake.webp;;0;0;;1;2;1;;;0;18
+377;Shiro Miso;6;assets/images/ingredients/shiro_miso.webp;;0;0;;3;2;10;;;0;
+378;Shoyu;6;assets/images/ingredients/shoyu.webp;;0;0;;3;2;10;;;0;
+379;Sojabohnen;4;assets/images/ingredients/sojabohnen.webp;Sojabohne;0;0;;1;1;6;;;0;1
+380;Sojabohnen-Sprossen;4;assets/images/ingredients/sojabohnen-sprossen.webp;Sojabohnen-Sprosse;0;0;;1;2;5;;;0;4
+381;Sojaflocken;4;assets/images/ingredients/sojaflocken.webp;Sojaflocke;0;0;;3;2;3;;;0;
+382;Sojajoghurt;4;assets/images/ingredients/sojajoghurt.webp;;0;0;;3;2;11;;;0;
+383;Sojamehl;4;assets/images/ingredients/sojamehl.webp;;0;0;;4;2;12;;;0;
+384;Sojamilch;4;assets/images/ingredients/sojamilch.webp;;0;0;;3;2;11;;;0;
+385;Sojasoße;6;assets/images/ingredients/sojasosse.webp;;0;0;;3;1;10;;;0;
+386;Sonnenblumenkerne;5;assets/images/ingredients/sonnenblumenkerne.webp;Sonnenblumenkern;0;0;;1;1;5;;;0;21
+387;Sonnenblumenkerne-Sprossen;5;assets/images/ingredients/sonnenblumenkerne-sprossen.webp;Sonnenblumenkerne-Sprosse;0;0;;1;2;5;;;0;
+388;Spargel grün;1;assets/images/ingredients/spargel_gruen.webp;;0;0;;1;2;1;;;0;18
+389;Spargel weiß;1;assets/images/ingredients/spargel_weiss.webp;;0;0;;1;2;1;;;0;18
+390;Spekulatius;6;assets/images/ingredients/spekulatius.webp;;0;0;;3;2;9;;;0;
+391;Spinat;1;assets/images/ingredients/spinat.webp;;0;0;;1;2;1;;;0;16
+392;Spinat, gefroren;1;assets/images/ingredients/spinat__gefroren.webp;;0;0;;2;2;11;;;0;15
+393;Spirulina-Pulver;6;assets/images/ingredients/spirulina-pulver.webp;;0;0;;4;2;12;;;0;
+394;Spitzkohl;1;assets/images/ingredients/spitzkohl.webp;;0;0;;1;2;1;;;0;11
+395;Spitzpaprika gelb;1;assets/images/ingredients/spitzpaprika_gelb.webp;;0;0;;1;2;1;;;0;18
+396;Spitzpaprika grün;1;assets/images/ingredients/spitzpaprika_gruen.webp;;0;0;;1;2;1;;;0;18
+397;Spitzpaprika orange;1;assets/images/ingredients/spitzpaprika_orange.webp;;0;0;;1;2;1;;;0;18
+398;Spitzpaprika rot;1;assets/images/ingredients/spitzpaprika_rot.webp;;0;0;;1;2;1;;;0;18
+399;Stachelbeeren;2;assets/images/ingredients/stachelbeeren.webp;Stachelbeere;0;0;;1;2;1;;;0;6
+400;Stangensellerie;1;assets/images/ingredients/stangensellerie.webp;;0;0;;1;2;1;;;0;18
+401;Steinpilz;1;assets/images/ingredients/steinpilz.webp;Steinpilz;0;0;;1;2;1;;;0;18
+402;Sternanis;6;assets/images/ingredients/sternanis.webp;;0;0;;1;2;9;;;0;22
+403;Süßkartoffeln orange;1;assets/images/ingredients/suesskartoffeln_orange.webp;Süßkartoffel orange;0;0;;1;2;1;;;0;18
+404;Süßkartoffeln violett;1;assets/images/ingredients/suesskartoffeln_violett.webp;Süßkartoffel violett;0;0;;1;2;1;;;0;18
+405;Süßkirschen;2;assets/images/ingredients/suesskirschen.webp;Süßkirsche;0;0;;1;2;1;;;0;6
+406;Szechuanpfeffer;6;assets/images/ingredients/szechuanpfeffer.webp;;0;0;;1;2;9;;;0;22
+407;Tabasco;6;assets/images/ingredients/tabasco.webp;;0;0;;4;1;9;;;0;
+408;Tahini;5;assets/images/ingredients/tahini.webp;;0;0;;3;2;2;;;0;21
+409;Tamari;6;assets/images/ingredients/tamari.webp;;0;0;;3;1;10;;;0;
+410;Teff;3;assets/images/ingredients/teff.webp;;0;0;;1;2;3;;;0;23
+411;Teller-Pfirsich;2;assets/images/ingredients/teller-pfirsich.webp;Teller-Pfirsich;0;0;;1;2;1;;;0;8
+412;Tempeh;4;assets/images/ingredients/tempeh.webp;;0;0;;2;2;11;;;0;3
+413;Teriyaki Sauce;6;assets/images/ingredients/teriyaki_sauce.webp;;0;0;;3;2;10;;;0;
+414;Thymian;6;assets/images/ingredients/thymian.webp;;0;0;;1;2;1;;;0;18
+415;Thymian, getrocknet;6;assets/images/ingredients/thymian__getrocknet.webp;;0;0;;2;1;9;;;0;22
+416;Tomaten;1;assets/images/ingredients/tomaten.webp;Tomate;0;0;;1;2;1;;;0;18
+417;Cherry-Tomaten;1;assets/images/ingredients/cherry-tomaten.webp;Cherry-Tomate;0;0;;1;2;1;;;0;18
+418;Tomaten gelb;1;assets/images/ingredients/tomaten_gelb.webp;Tomate gelb;0;0;;1;2;1;;;0;18
+419;Tomaten Passata;1;assets/images/ingredients/tomaten_passata.webp;;0;0;;2;2;7;;;0;18
+420;Tomaten schwarz;1;assets/images/ingredients/tomaten_schwarz.webp;Tomate schwarz;0;0;;1;2;1;;;0;18
+421;Tomaten, getrocknet;1;assets/images/ingredients/tomaten__getrocknet.webp;Tomate, getrocknet;0;0;;2;2;2;;;0;18
+422;Tomatenmark;1;assets/images/ingredients/tomatenmark.webp;;0;0;;2;1;7;;;0;18
+423;Tomatenstücke;1;assets/images/ingredients/tomatenstuecke.webp;;0;0;;2;2;7;;;0;18
+424;Tonkabohne;6;assets/images/ingredients/tonkabohne.webp;Tonkabohne;0;0;;1;2;9;;;0;22
+425;Topinambur;1;assets/images/ingredients/topinambur.webp;;0;0;;1;2;1;;;0;18
+426;Trauben grün;2;assets/images/ingredients/trauben_gruen.webp;Traube grün;0;0;;1;2;1;;;0;8
+427;Trauben rot;2;assets/images/ingredients/trauben_rot.webp;Traube rot;0;0;;1;2;1;;;0;8
+428;Trüffel;1;assets/images/ingredients/trueffel.webp;;0;0;;1;2;1;;;0;18
+429;Vanille;6;assets/images/ingredients/vanille.webp;;0;0;;2;2;9;;;0;22
+430;Vollkorn-Bandnudeln;3;assets/images/ingredients/vollkorn-bandnudeln.webp;Vollkorn-Bandnudel;0;0;;3;2;4;;;0;23
+431;Vollkorn-Brötchen;3;assets/images/ingredients/vollkorn-broetchen.webp;;0;0;;4;2;3;;;0;23
+432;Vollkorn-Fadennudeln;3;assets/images/ingredients/vollkorn-fadennudeln.webp;Vollkorn-Fadennudel;0;0;;3;2;4;;;0;23
+433;Vollkornflocken;3;assets/images/ingredients/vollkornflocken.webp;Vollkornflocke;0;0;;3;2;3;;;0;25
+434;Vollkorngetreide;3;assets/images/ingredients/vollkorngetreide.webp;;0;0;;1;1;3;;;0;23
+435;Vollkornmehl;3;assets/images/ingredients/vollkornmehl.webp;;0;0;;4;2;12;;;0;23
+436;Vollkornnudeln;3;assets/images/ingredients/vollkornnudeln.webp;Vollkornnudel;0;0;;3;1;4;;;0;23
+437;Vollkorn-Spaghetti;3;assets/images/ingredients/vollkorn-spaghetti.webp;;0;0;;3;2;4;;;0;23
+438;Vollkorn-Wraps;3;assets/images/ingredients/vollkorn-wraps.webp;Vollkorn-Wrap;0;0;;4;2;3;;;0;
+439;Wacholderbeeren;6;assets/images/ingredients/wacholderbeeren.webp;Wacholderbeere;0;0;;1;2;9;;;0;22
+440;Wakame;6;assets/images/ingredients/wakame.webp;;0;0;;2;2;10;;;0;
+441;Walnusskerne;5;assets/images/ingredients/walnusskerne.webp;Walnusskern;0;0;;1;1;2;;;0;21
+442;Wasabi;6;assets/images/ingredients/wasabi.webp;;0;0;;3;2;10;;;0;
+443;Wasser;6;assets/images/ingredients/wasser.webp;;0;0;;1;1;;;;0;
+444;Wassermelone;2;assets/images/ingredients/wassermelone.webp;;0;0;;1;2;1;;;0;8
+445;Weiße Beete;1;assets/images/ingredients/weisse_beete.webp;;0;0;;1;2;1;;;0;18
+446;Weiße Bohnen;4;assets/images/ingredients/weisse_bohnen.webp;Weiße Bohne;0;0;;1;1;6;;;0;1
+447;Weiße Bohnen, gekocht;4;assets/images/ingredients/weisse_bohnen__gekocht.webp;Weiße Bohne, gekocht;0;0;;2;2;7;;;0;2
+448;Weißkohl;1;assets/images/ingredients/weisskohl.webp;Weißkohl;0;0;;1;2;1;;;0;11
+449;Weizen;3;assets/images/ingredients/weizen.webp;;0;0;;1;2;3;;;0;23
+450;Weizenflocken;3;assets/images/ingredients/weizenflocken.webp;Weizenflocke;0;0;;3;2;3;;;0;25
+451;Weizenkeime;3;assets/images/ingredients/weizenkeime.webp;Weizenkeim;0;0;;2;2;3;;;0;
+452;Weizenmehl;3;assets/images/ingredients/weizenmehl.webp;;0;0;;4;2;12;;;0;23
+453;Weizen-Sprossen;3;assets/images/ingredients/weizen-sprossen.webp;Weizen-Sprosse;0;0;;1;2;5;;;0;
+454;Weizen-Vollkorn Farfalle;3;assets/images/ingredients/weizen-vollkorn_farfalle.webp;;0;0;;3;2;4;;;0;23
+455;Weizen-Vollkorn Fusilli;3;assets/images/ingredients/weizen-vollkorn_fusilli.webp;;0;0;;3;2;4;;;0;23
+456;Weizen-Vollkorn Lasagne;3;assets/images/ingredients/weizen-vollkorn_lasagne.webp;;0;0;;3;2;4;;;0;23
+457;Weizen-Vollkorn Linguine;3;assets/images/ingredients/weizen-vollkorn_linguine.webp;;0;0;;3;2;4;;;0;23
+458;Weizen-Vollkorn Penne;3;assets/images/ingredients/weizen-vollkorn_penne.webp;;0;0;;3;2;4;;;0;23
+459;Weizen-Vollkorn Pipette Rigate;3;assets/images/ingredients/weizen-vollkorn_pipette_rigate.webp;;0;0;;3;2;4;;;0;23
+460;Wirsing;1;assets/images/ingredients/wirsing.webp;;0;0;;1;2;1;;;0;11
+461;Zimtstangen;6;assets/images/ingredients/zimtstangen.webp;Zimtstange;0;0;;1;2;9;;;0;22
+462;Zimt, gemahlen;6;assets/images/ingredients/zimt__gemahlen.webp;;0;0;;2;1;9;;;0;22
+463;Zitrone;2;assets/images/ingredients/zitrone.webp;;0;0;;1;2;1;;;0;8
+464;Zitronengras;6;assets/images/ingredients/zitronengras.webp;;0;0;;1;2;1;;;0;18
+465;Zitronenmelisse;6;assets/images/ingredients/zitronenmelisse.webp;;0;0;;1;2;1;;;0;18
+466;Zitronenmelisse, getrocknet;6;assets/images/ingredients/zitronenmelisse__getrocknet.webp;;0;0;;2;2;9;;;0;22
+467;Zucchini gelb;1;assets/images/ingredients/zucchini_gelb.webp;;0;0;;1;2;1;;;0;18
+468;Zucchini grün;1;assets/images/ingredients/zucchini_gruen.webp;;0;0;;1;2;1;;;0;18
+469;Zucchini rund;1;assets/images/ingredients/zucchini_rund.webp;;0;0;;1;2;1;;;0;18
+470;Zucker;6;assets/images/ingredients/zucker.webp;;0;0;;4;2;12;;;0;
+471;Zwetschgen;2;assets/images/ingredients/zwetschgen.webp;Zwetschge;0;0;;1;2;1;;;0;8
+472;Zwiebeln gelb;1;assets/images/ingredients/zwiebeln_gelb.webp;Zwiebel gelb;0;0;;1;2;1;;;0;18
+473;Zwiebeln rot;1;assets/images/ingredients/zwiebeln_rot.webp;Zwiebel rot;0;0;;1;1;1;;;0;18
+474;Zwiebelpulver;6;assets/images/ingredients/zwiebelpulver.webp;;0;0;;2;1;9;;;0;22

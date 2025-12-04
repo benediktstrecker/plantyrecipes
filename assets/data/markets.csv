@@ -1,0 +1,14 @@
+﻿id;name;picture;color;favorite
+1;denns BioMarkt;assets/images/shop/denns.webp;#abc446;1
+2;Rewe;assets/images/shop/rewe.webp;#d31f28;0
+3;Edeka;assets/images/shop/edeka.webp;#022cc7;0
+4;Reformhaus;assets/images/shop/reformhaus.webp;#ffffff;0
+5;dm;assets/images/shop/dm.webp;#ffffff;0
+6;Müller;assets/images/shop/mueller.webp;#ffffff;0
+7;Rossmann;assets/images/shop/rossmann.webp;#c2142d;0
+8;tegut;assets/images/shop/tegut.webp;#741736;0
+9;Netto;assets/images/shop/netto.webp;#ffe500;0
+10;Lidl;assets/images/shop/lidl.webp;#004fac;0
+11;Aldi;assets/images/shop/aldi.webp;#00b8ee;0
+12;Alnatura;assets/images/shop/alnatura.webp;#fffbe6;0
+13;online;assets/images/icons/online-shop.png;#ffffff;0

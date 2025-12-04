@@ -1,3 +1,4 @@
+// lib/screens/Home_Screens/settings.dart
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:planty_flutter_starter/design/layout.dart';
@@ -107,7 +108,7 @@ case 1: return Ingredients();
               GButton(icon: Icons.list_alt, text: 'Rezepte'),
               GButton(icon: Icons.eco, text: 'Zutaten'),
               GButton(icon: Icons.shopping_bag, text: 'Einkauf'),
-              GButton(icon: Icons.incomplete_circle_rounded, text: 'Nährwerte'),
+              GButton(icon: Icons.stacked_bar_chart, text: 'Nährwerte'),
               GButton(icon: Icons.settings, text: 'Einstellungen'),
             ],
           ),

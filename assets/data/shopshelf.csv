@@ -1,0 +1,13 @@
+﻿﻿id;name;color;icon
+1;Obst & Gemüse;;assets/images/icons/obst_gemuese.png
+2;Nüsse & Trockenfrüchte;;assets/images/icons/nuss.png
+3;Getreide & Flocken;;assets/images/icons/flocken.png
+4;Nudeln;;assets/images/icons/penne.png
+5;Saaten & Kerne;;assets/images/icons/saaten.png
+6;Hülsenfrüchte;;assets/images/icons/huelsenfruechte.png
+7;Konserven;;assets/images/icons/konserven.png
+8;Öle & Essig;;assets/images/icons/oel.png
+9;Gewürze;;assets/images/icons/gewuerze.png
+10;Asia;;assets/images/icons/asia.png
+11;Kühlabteilung;;assets/images/icons/kalt.png
+12;Backen;;assets/images/icons/backen.png

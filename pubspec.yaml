@@ -1,6 +1,6 @@
 name: planty_flutter_starter
 description: Ein einfacher Planty Rezept-App Start für Flutter-Anfänger
-version: 1.0.10+19
+version: 1.1.32+2
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -10,25 +10,28 @@ dependencies:
     sdk: flutter
   shared_preferences: ^2.2.3
   google_nav_bar: ^5.0.7
-
   cupertino_icons: ^1.0.2
   flutter_screenutil: ^5.9.3
-
   drift: ^2.28.1
   sqlite3: ^2.9.0
   sqlite3_flutter_libs: ^0.5.39
   path: ^1.9.1
   path_provider: ^2.1.5
-  csv: ^5.0.2   
+  csv: ^5.0.2
   image_picker: ^1.2.0
-  
+  lottie: ^3.1.2
+  url_launcher: ^6.3.0
+  fraction: ^5.0.0
+  font_awesome_flutter: ^10.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   drift_dev: ^2.28.1
   build_runner: ^2.7.0
+  flutter_lints: ^6.0.0
+
+  
 
 flutter:
   uses-material-design: true
@@ -36,4 +39,27 @@ flutter:
   assets:
     - assets/images/
     - assets/images/ingredients/
+    - assets/images/recipes/ 
+    - assets/images/flags/    
+    - assets/images/icons/  
+    - assets/images/shop/ 
+    - assets/images/products/ 
+    - assets/images/products/arche/ 
+    - assets/images/products/byodo/
+    - assets/images/products/davert/ 
+    - assets/images/products/dennree/ 
+    - assets/images/products/koro/ 
+    - assets/images/products/lima/ 
+    - assets/images/products/morgenland/ 
+    - assets/images/products/natural_cool/
+    - assets/images/products/naturata/ 
+    - assets/images/products/peaceful_delicious/
+    - assets/images/products/rapunzel/ 
+    - assets/images/products/reformhaus/
+    - assets/images/products/sonnentor/ 
+    - assets/images/products/soto/
+    - assets/images/products/spielberger/   
+    - assets/images/products/tempehmanufaktur/ 
+    - assets/images/products/yakso/ 
     - assets/data/
+    - assets/leaf_animation.json

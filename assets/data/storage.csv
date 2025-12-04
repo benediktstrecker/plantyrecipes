@@ -1,0 +1,9 @@
+﻿id;name;icon;availability
+1;Kühlschrank, unverschlossen;assets/images/icons/gekuehlt.png;1
+2;Kühlschrank, verschlossen;assets/images/icons/gekuehlt.png;1
+3;Gefrierschrank;assets/images/icons/gefroren.png;1
+4;Keller;assets/images/icons/keller.png;0
+5;Küchenschrank, offen;assets/images/icons/obstschale.png;1
+6;Vorratsbehälter;assets/images/icons/dauer_lagerware.png;1
+7;Gewürzregal;assets/images/icons/gewuerze.png;1
+8;Außen;assets/images/icons/draussen.png;0

@@ -1,4 +1,4 @@
-﻿id;name;nutrients_categorie_id;unit_code;color;picture
+﻿﻿id;name;nutrients_categorie_id;unit_code;color;picture
 1;Energie;1;kcal;;
 2;Fett;2;g;#3498DB;
 3;Eiweiß;2;g;#27AE60;

@@ -1,0 +1,57 @@
+﻿﻿Eingabe;;;;Mischungen - Liste - Kalkulation
+;;;;
+main_ingredient_name;amount;unit_code;part_ingredient_name;main_ingredient_id
+Curry;8;EL;Kurkuma, gemahlen;77
+Curry;8;EL;Koriandersamen;77
+Curry;5;EL;Pfeffer;77
+Curry;0,5;TL;Cayennepfeffer;77
+Curry;1;EL;Nelken;77
+Curry;2;EL;Kreuzkümmel;77
+Curry;2;EL;Kardamon;77
+Curry;1;EL;Muskatnuss;77
+Curry;1;EL;Zimt, gemahlen;77
+Curry;0,5;EL;Ingwer, gemahlen;77
+Baharat;4;TL;Pfeffer;20
+Baharat;4;TL;Paprika edelsüß;20
+Baharat;1;TL;Koriander;20
+Baharat;1;TL;Zimt, gemahlen;20
+Baharat;1;TL;Kümmel;20
+Baharat;1;TL;Nelken;20
+Baharat;1;TL;Muskatnuss;20
+Baharat;1;TL;Ingwer, gemahlen;20
+Baharat;1;TL;Kardamon;20
+Kräuter der Provence;2;TL;Thymian, getrocknet;210
+Kräuter der Provence;2;TL;Oregano, getrocknet;210
+Kräuter der Provence;2;TL;Rosmarin, getrocknet;210
+Kräuter der Provence;1;TL;Bohnenkraut;210
+Kräuter der Provence;0,5;TL;Lavendel;210
+Italienische Kräuter;4;EL;Basilikum, getrocknet;165
+Italienische Kräuter;0,5;EL;Oregano, getrocknet;165
+Italienische Kräuter;0,5;TL;Rosmarin, getrocknet;165
+Italienische Kräuter;1,5;EL;Majoran, getrocknet;165
+Italienische Kräuter;0,5;EL;Salbei, getrocknet;165
+Italienische Kräuter;1;EL;Thymian, getrocknet;165
+Italienische Kräuter;1;EL;Zwiebelpulver;165
+Italienische Kräuter;0,5;EL;Knoblauchpulver;165
+Italienische Kräuter;0,5;TL;Pfefferminze;165
+Harissa;10;TL;Chili;150
+Harissa;3;TL;Paprika geräuchert;150
+Harissa;3;TL;Knoblauchpulver;150
+Harissa;1;TL;Kreuzkümmel, gemahlen;150
+Harissa;1;TL;Koriander, gemahlen;150
+Harissa;1;TL;Kümmel;150
+Harissa;1;TL;Minze;150
+Ras el Hanout;1;TL;Zimt, gemahlen;330
+Ras el Hanout;0,5;TL;Anis;330
+Ras el Hanout;3;TL;Nelken;330
+Ras el Hanout;2;TL;Kurkuma, gemahlen;330
+Ras el Hanout;3;EL;Kreuzkümmel, gemahlen;330
+Ras el Hanout;4;TL;Pfeffer;330
+Ras el Hanout;2;EL;Koriander, gemahlen;330
+Ras el Hanout;2;TL;Muskatnuss;330
+Ras el Hanout;2;TL;Ingwer, gemahlen;330
+Ras el Hanout;1;TL;Piment;330
+Ras el Hanout;2;g;Safran;330
+Ras el Hanout;1;TL;Kardamon;330
+Ras el Hanout;2;Scht.;Chilischoten;330
+Ras el Hanout;1;TL;Galgant;330

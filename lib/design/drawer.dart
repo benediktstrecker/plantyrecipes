@@ -1,3 +1,4 @@
+// lib/design/drawer.dart
 import 'package:flutter/material.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/mobile_view.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/ingredients.dart';
@@ -8,14 +9,26 @@ import 'package:planty_flutter_starter/screens/Home_Screens/settings.dart';
 // DB-/Admin-Screens
 import 'package:planty_flutter_starter/screens/data_manager/month_manager_screen.dart';
 import 'package:planty_flutter_starter/screens/data_manager/unit_manager_screen.dart';
+import 'package:planty_flutter_starter/screens/data_manager/countries_manager_screen.dart';
 import 'package:planty_flutter_starter/screens/data_manager/nutrient_categorie_manager_screen.dart';
 import 'package:planty_flutter_starter/screens/data_manager/nutrient_manager_screen.dart';
-import 'package:planty_flutter_starter/screens/data_manager/ingredient_category_manager_screen.dart'; // <- NEU
-import 'package:planty_flutter_starter/screens/data_manager/ingredient_property_manager_screen.dart'; // <- NEU
+import 'package:planty_flutter_starter/screens/data_manager/ingredient_category_manager_screen.dart';
 import 'package:planty_flutter_starter/screens/data_manager/seasonality_manager_screen.dart';
+import 'package:planty_flutter_starter/screens/data_manager/recipe_category_manager_screen.dart'; 
+import 'package:planty_flutter_starter/screens/data_manager/tag_categorie_manager_screen.dart';
+import 'package:planty_flutter_starter/screens/data_manager/tag_manager_screen.dart';
+import 'package:planty_flutter_starter/screens/data_manager/trafficlight_manager_screen.dart'; 
+import 'package:planty_flutter_starter/screens/data_manager/shopshelf_manager_screen.dart'; 
+import 'package:planty_flutter_starter/screens/data_manager/storage_category_manager_screen.dart';
+import 'package:planty_flutter_starter/screens/data_manager/markets_manager_screen.dart';
+import 'package:planty_flutter_starter/screens/data_manager/producers_manager_screen.dart';
+
+
+
+
 
 class AppDrawer extends StatelessWidget {
-  final int currentIndex; // 0..4 um den aktiven Tab zu markieren
+  final int currentIndex;
   const AppDrawer({super.key, this.currentIndex = 0});
 
   void _go(BuildContext context, Widget page) {
@@ -103,7 +116,6 @@ class AppDrawer extends StatelessWidget {
                   ),
                 ),
                 child: ExpansionTile(
-                  initiallyExpanded: false,
                   title: const Text(
                     'Datenbank',
                     style: TextStyle(
@@ -117,6 +129,26 @@ class AppDrawer extends StatelessWidget {
                   childrenPadding:
                       const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                   children: [
+                    _DbTile(
+                      icon: Icons.restaurant_menu, // ✅ NEU
+                      label: 'Rezept-Kategorien verwalten', // ✅ NEU
+                      onTap: () {
+                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (_, __, ___) =>
+                                const RecipeCategoryManagerScreen(),
+                            transitionDuration:
+                                const Duration(milliseconds: 220),
+                            reverseTransitionDuration:
+                                const Duration(milliseconds: 220),
+                            transitionsBuilder: (_, a, __, child) =>
+                                FadeTransition(opacity: a, child: child),
+                          ),
+                        );
+                      },
+                    ),
                     _DbTile(
                       icon: Icons.category_outlined,
                       label: 'Zutaten-Kategorien verwalten',
@@ -137,26 +169,7 @@ class AppDrawer extends StatelessWidget {
                         );
                       },
                     ),
-                    _DbTile(
-                      icon: Icons.tune, // <- NEU
-                      label: 'Zutaten-Eigenschaften verwalten', // <- NEU
-                      onTap: () {
-                        Navigator.pop(context);
-                        Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                            pageBuilder: (_, __, ___) =>
-                                const IngredientPropertyManagerScreen(),
-                            transitionDuration:
-                                const Duration(milliseconds: 220),
-                            reverseTransitionDuration:
-                                const Duration(milliseconds: 220),
-                            transitionsBuilder: (_, a, __, child) =>
-                                FadeTransition(opacity: a, child: child),
-                          ),
-                        );
-                      },
-                    ),
+                  
                     _DbTile(
                       icon: Icons.calendar_month,
                       label: 'Monate verwalten',
@@ -178,15 +191,15 @@ class AppDrawer extends StatelessWidget {
                       },
                     ),
                     _DbTile(
-                      icon: Icons.severe_cold, // oder Icons.grass / Icons.park
-                      label: 'Saisonalität verwalten', // <- NEU (Seasonality)
+                      icon: Icons.severe_cold,
+                      label: 'Saisonalität verwalten',
                       onTap: () {
                         Navigator.pop(context);
                         Navigator.push(
                           context,
                           PageRouteBuilder(
                             pageBuilder: (_, __, ___) =>
-                                SeasonalityManagerScreen(),
+                                const SeasonalityManagerScreen(),
                             transitionDuration:
                                 const Duration(milliseconds: 220),
                             reverseTransitionDuration:
@@ -217,6 +230,24 @@ class AppDrawer extends StatelessWidget {
                         );
                       },
                     ),
+                    _DbTile(
+  icon: Icons.flag_rounded,
+  label: 'Länder verwalten',
+  onTap: () {
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const CountriesManagerScreen(),
+        transitionDuration: const Duration(milliseconds: 220),
+        reverseTransitionDuration: const Duration(milliseconds: 220),
+        transitionsBuilder: (_, a, __, child) =>
+            FadeTransition(opacity: a, child: child),
+      ),
+    );
+  },
+),
+
                     _DbTile(
                       icon: Icons.category,
                       label: 'Nährstoff-Kategorien',
@@ -257,6 +288,126 @@ class AppDrawer extends StatelessWidget {
                         );
                       },
                     ),
+                    _DbTile(
+  icon: Icons.style, // ✅ Tag-Kategorien
+  label: 'Tag-Kategorien verwalten',
+  onTap: () {
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const TagCategorieManagerScreen(),
+        transitionDuration: const Duration(milliseconds: 220),
+        reverseTransitionDuration: const Duration(milliseconds: 220),
+        transitionsBuilder: (_, a, __, child) =>
+            FadeTransition(opacity: a, child: child),
+      ),
+    );
+  },
+),
+_DbTile(
+  icon: Icons.edit_attributes, // ✅ Tags
+  label: 'Tags verwalten',
+  onTap: () {
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const TagManagerScreen(),
+        transitionDuration: const Duration(milliseconds: 220),
+        reverseTransitionDuration: const Duration(milliseconds: 220),
+        transitionsBuilder: (_, a, __, child) =>
+            FadeTransition(opacity: a, child: child),
+      ),
+    );
+  },
+),
+_DbTile(
+  icon: Icons.traffic_outlined, // ✅ Trafficlight
+  label: 'Trafficlight verwalten',
+  onTap: () {
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const TrafficlightManagerScreen(),
+        transitionDuration: const Duration(milliseconds: 220),
+        reverseTransitionDuration: const Duration(milliseconds: 220),
+        transitionsBuilder: (_, a, __, child) =>
+            FadeTransition(opacity: a, child: child),
+      ),
+    );
+  },
+),
+_DbTile(
+  icon: Icons.shelves, // ✅ Shopshelf
+  label: 'Shopshelf verwalten',
+  onTap: () {
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const ShopshelfManagerScreen(),
+        transitionDuration: const Duration(milliseconds: 220),
+        reverseTransitionDuration: const Duration(milliseconds: 220),
+        transitionsBuilder: (_, a, __, child) =>
+            FadeTransition(opacity: a, child: child),
+      ),
+    );
+  },
+),
+_DbTile(
+  icon: Icons.inventory_2_outlined, // ✅ Storage Categories
+  label: 'Storage Categories verwalten',
+  onTap: () {
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const StorageCategoryManagerScreen(),
+        transitionDuration: const Duration(milliseconds: 220),
+        reverseTransitionDuration: const Duration(milliseconds: 220),
+        transitionsBuilder: (_, a, __, child) =>
+            FadeTransition(opacity: a, child: child),
+      ),
+    );
+  },
+),
+_DbTile(
+  icon: Icons.storefront_outlined, // ✅ Markets
+  label: 'Markets verwalten',
+  onTap: () {
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const MarketsManagerScreen(),
+        transitionDuration: const Duration(milliseconds: 220),
+        reverseTransitionDuration: const Duration(milliseconds: 220),
+        transitionsBuilder: (_, a, __, child) =>
+            FadeTransition(opacity: a, child: child),
+      ),
+    );
+  },
+),
+_DbTile(
+  icon: Icons.factory_outlined, // ✅ Producers
+  label: 'Producers verwalten',
+  onTap: () {
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const ProducersManagerScreen(),
+        transitionDuration: const Duration(milliseconds: 220),
+        reverseTransitionDuration: const Duration(milliseconds: 220),
+        transitionsBuilder: (_, a, __, child) =>
+            FadeTransition(opacity: a, child: child),
+      ),
+    );
+  },
+),
+
                   ],
                 ),
               ),

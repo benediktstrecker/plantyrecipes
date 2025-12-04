@@ -1,3 +1,4 @@
+// lib/screens/data_manager/unit_manager_screen.dart
 import 'package:flutter/material.dart';
 import 'package:drift/drift.dart' as d;
 
@@ -16,10 +17,10 @@ class UnitManagerScreen extends StatefulWidget {
 class _UnitManagerScreenState extends State<UnitManagerScreen> {
   final TextEditingController _codeCtrl = TextEditingController();
   final TextEditingController _labelCtrl = TextEditingController();
-  final TextEditingController _dimensionCtrl = TextEditingController();
+  final TextEditingController _pluralCtrl = TextEditingController();
+  final TextEditingController _categorieCtrl = TextEditingController();
   final TextEditingController _baseFactorCtrl = TextEditingController();
 
-  // Suche
   final TextEditingController _searchCtrl = TextEditingController();
   final FocusNode _searchFocus = FocusNode();
   String _query = '';
@@ -61,7 +62,8 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
     _closeSearch();
     _codeCtrl.clear();
     _labelCtrl.clear();
-    _dimensionCtrl.clear();
+    _pluralCtrl.clear();
+    _categorieCtrl.clear();
     _baseFactorCtrl.text = '1.0';
 
     final ok = await showDialog<bool>(
@@ -70,7 +72,8 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
         title: 'Neue Einheit anlegen',
         codeController: _codeCtrl,
         labelController: _labelCtrl,
-        dimensionController: _dimensionCtrl,
+        pluralController: _pluralCtrl,
+        categorieController: _categorieCtrl,
         baseFactorController: _baseFactorCtrl,
         confirmLabel: 'Anlegen',
       ),
@@ -79,10 +82,11 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
 
     final code = _codeCtrl.text.trim();
     final label = _labelCtrl.text.trim();
-    final dimension = _dimensionCtrl.text.trim();
+    final plural = _pluralCtrl.text.trim();
+    final categorie = _categorieCtrl.text.trim();
     final factor = double.tryParse(_baseFactorCtrl.text.trim());
 
-    if (code.isEmpty || label.isEmpty || dimension.isEmpty || factor == null) {
+    if (code.isEmpty || label.isEmpty || categorie.isEmpty || factor == null) {
       _snack('Bitte alle Felder korrekt ausfüllen.');
       return;
     }
@@ -92,7 +96,8 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
             UnitsCompanion(
               code: d.Value(code),
               label: d.Value(label),
-              dimension: d.Value(dimension),
+              plural: d.Value(plural.isEmpty ? null : plural),
+              categorie: d.Value(categorie),
               baseFactor: d.Value(factor),
             ),
           );
@@ -106,7 +111,8 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
     _closeSearch();
     _codeCtrl.text = u.code;
     _labelCtrl.text = u.label;
-    _dimensionCtrl.text = u.dimension;
+    _pluralCtrl.text = u.plural ?? '';
+    _categorieCtrl.text = u.categorie;
     _baseFactorCtrl.text = u.baseFactor.toString();
 
     final ok = await showDialog<bool>(
@@ -115,7 +121,8 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
         title: 'Einheit bearbeiten (ID ${u.id})',
         codeController: _codeCtrl,
         labelController: _labelCtrl,
-        dimensionController: _dimensionCtrl,
+        pluralController: _pluralCtrl,
+        categorieController: _categorieCtrl,
         baseFactorController: _baseFactorCtrl,
         confirmLabel: 'Speichern',
       ),
@@ -124,10 +131,11 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
 
     final code = _codeCtrl.text.trim();
     final label = _labelCtrl.text.trim();
-    final dimension = _dimensionCtrl.text.trim();
+    final plural = _pluralCtrl.text.trim();
+    final categorie = _categorieCtrl.text.trim();
     final factor = double.tryParse(_baseFactorCtrl.text.trim());
 
-    if (code.isEmpty || label.isEmpty || dimension.isEmpty || factor == null) {
+    if (code.isEmpty || label.isEmpty || categorie.isEmpty || factor == null) {
       _snack('Bitte alle Felder korrekt ausfüllen.');
       return;
     }
@@ -137,7 +145,8 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
         UnitsCompanion(
           code: d.Value(code),
           label: d.Value(label),
-          dimension: d.Value(dimension),
+          plural: d.Value(plural.isEmpty ? null : plural),
+          categorie: d.Value(categorie),
           baseFactor: d.Value(factor),
         ),
       );
@@ -190,22 +199,21 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
     return input.where((u) {
       return u.label.toLowerCase().contains(q) ||
           u.code.toLowerCase().contains(q) ||
-          u.dimension.toLowerCase().contains(q);
+          (u.plural ?? '').toLowerCase().contains(q) ||
+          u.categorie.toLowerCase().contains(q);
     }).toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    final bottomInset = MediaQuery.of(context).viewInsets.bottom; // Tastaturhöhe
+    final bottomInset = MediaQuery.of(context).viewInsets.bottom;
     final keyboardOpen = bottomInset > 0.0;
 
-    // nur die Suchleiste als Overlay berücksichtigen
     const double searchRowHeight = 60;
     final double overlayBottom = keyboardOpen ? bottomInset : 0;
 
     return Scaffold(
       backgroundColor: Colors.black,
-      // wir managen die Insets selbst via Stack/Positioned
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text('Einheiten verwalten', style: TextStyle(color: Colors.white)),
@@ -217,7 +225,8 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
               padding: EdgeInsets.only(right: 12),
               child: Center(
                 child: SizedBox(
-                  width: 18, height: 18,
+                  width: 18,
+                  height: 18,
                   child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
                 ),
               ),
@@ -230,65 +239,8 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
             ),
         ],
       ),
-
-      // *** FIX: NavigationBar sitzt jetzt am echten unteren Rand, nicht mehr im Overlay ***
-      bottomNavigationBar: keyboardOpen
-          ? null
-          : NavigationBarTheme(
-              data: NavigationBarThemeData(
-                backgroundColor: Colors.black,
-                indicatorColor: Colors.green.shade700.withOpacity(0.25),
-                iconTheme: MaterialStateProperty.resolveWith<IconThemeData>((states) {
-                  if (states.contains(MaterialState.selected)) {
-                    return IconThemeData(color: Colors.green.shade700);
-                  }
-                  return const IconThemeData(color: Colors.white70);
-                }),
-                labelTextStyle: MaterialStateProperty.all(
-                  const TextStyle(color: Colors.white70),
-                ),
-              ),
-              child: NavigationBar(
-                labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-                selectedIndex: 2, // Units
-                destinations: [
-                  NavigationDestination(
-                    icon: Icon(Icons.eco_outlined),
-                    selectedIcon: Icon(Icons.eco),
-                    label: 'Season',
-                  ),
-                  NavigationDestination(
-                    icon: Icon(Icons.local_fire_department_outlined),
-                    selectedIcon: Icon(Icons.local_fire_department),
-                    label: 'Nutr',
-                  ),
-                  NavigationDestination(
-                    icon: Icon(Icons.straighten_outlined),
-                    selectedIcon: Icon(Icons.straighten),
-                    label: 'Units',
-                  ),
-                  NavigationDestination(
-                    icon: Icon(Icons.calendar_month_outlined),
-                    selectedIcon: Icon(Icons.calendar_month),
-                    label: 'Months',
-                  ),
-                  NavigationDestination(
-                    icon: Icon(Icons.category_outlined),
-                    selectedIcon: Icon(Icons.category),
-                    label: 'Cat',
-                  ),
-                  NavigationDestination(
-                    icon: Icon(Icons.tune_outlined),
-                    selectedIcon: Icon(Icons.tune),
-                    label: 'Props',
-                  ),
-                ],
-              ),
-            ),
-
       body: Stack(
         children: [
-          // --- Inhalt ---
           NotificationListener<ScrollNotification>(
             onNotification: (n) {
               if (n is UserScrollNotification) _closeSearch();
@@ -347,13 +299,12 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
                 }
 
                 return ListView.separated(
-                  // nur Platz für die Suchleiste lassen
                   padding: const EdgeInsets.fromLTRB(8, 8, 8, searchRowHeight + 8),
-                  separatorBuilder: (_, __) => const Divider(color: Colors.white12, height: 1),
+                  separatorBuilder: (_, __) =>
+                      const Divider(color: Colors.white12, height: 1),
                   itemCount: units.length,
                   itemBuilder: (_, i) {
                     final u = units[i];
-
                     return Dismissible(
                       key: ValueKey('unit-${u.id}'),
                       direction: DismissDirection.horizontal,
@@ -366,24 +317,33 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
                             context: context,
                             builder: (_) => AlertDialog(
                               backgroundColor: Colors.black,
-                              title: const Text('Löschen bestätigen', style: TextStyle(color: Colors.white)),
-                              content: Text('Einheit #${u.id} – "${u.label}" wirklich löschen?',
-                                  style: const TextStyle(color: Colors.white70)),
+                              title: const Text('Löschen bestätigen',
+                                  style: TextStyle(color: Colors.white)),
+                              content: Text(
+                                  'Einheit #${u.id} – "${u.label}" wirklich löschen?',
+                                  style:
+                                      const TextStyle(color: Colors.white70)),
                               actions: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(context, false),
-                                  child: const Text('Abbrechen', style: TextStyle(color: Colors.white70)),
+                                  child: const Text('Abbrechen',
+                                      style:
+                                          TextStyle(color: Colors.white70)),
                                 ),
                                 FilledButton(
-                                  style: FilledButton.styleFrom(backgroundColor: Colors.red),
+                                  style: FilledButton.styleFrom(
+                                      backgroundColor: Colors.red),
                                   onPressed: () => Navigator.pop(context, true),
-                                  child: const Text('Löschen', style: TextStyle(color: Colors.white)),
+                                  child: const Text('Löschen',
+                                      style: TextStyle(color: Colors.white)),
                                 ),
                               ],
                             ),
                           );
                           if (ok == true) {
-                            await (appDb.delete(appDb.units)..where((t) => t.id.equals(u.id))).go();
+                            await (appDb.delete(appDb.units)
+                                  ..where((t) => t.id.equals(u.id)))
+                                .go();
                             _snack('Einheit "${u.label}" gelöscht.');
                           }
                           return ok == true;
@@ -401,21 +361,28 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
                       ),
                       child: ListTile(
                         dense: true,
-                        visualDensity: const VisualDensity(vertical: -2, horizontal: -2),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                        visualDensity:
+                            const VisualDensity(vertical: -2, horizontal: -2),
+                        contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 6),
                         tileColor: Colors.black,
                         leading: SizedBox(
                           width: 44,
                           child: Text(
                             '${u.id}',
                             textAlign: TextAlign.center,
-                            style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w600),
+                            style: const TextStyle(
+                                color: Colors.white70,
+                                fontWeight: FontWeight.w600),
                           ),
                         ),
                         title: Text(
                           u.label,
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500),
                         ),
                       ),
                     );
@@ -425,7 +392,6 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
             ),
           ),
 
-          // --- Overlay unten: nur die Suchleiste ---
           Positioned(
             left: 0,
             right: 0,
@@ -458,7 +424,7 @@ class _UnitManagerScreenState extends State<UnitManagerScreen> {
   }
 }
 
-// --- Wiederverwendbare Suchzeile (TextField + Plus) ---
+// --- Suchzeile (TextField + Plus-Button) ---
 class _SearchRow extends StatelessWidget {
   final TextEditingController controller;
   final FocusNode focusNode;
@@ -485,16 +451,14 @@ class _SearchRow extends StatelessWidget {
                 focusNode: focusNode,
                 style: const TextStyle(color: Colors.white),
                 textInputAction: TextInputAction.search,
-                onTap: () => FocusScope.of(context).requestFocus(focusNode),
-                onTapOutside: (_) => focusNode.unfocus(),
-                onSubmitted: (_) => focusNode.unfocus(),
                 decoration: InputDecoration(
                   prefixIcon: const Icon(Icons.search, color: Colors.white70),
                   hintText: 'Suchen …',
                   hintStyle: const TextStyle(color: Colors.white54),
                   filled: true,
                   fillColor: const Color(0xFF111111),
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(color: Colors.white12),
@@ -526,11 +490,13 @@ class _SearchRow extends StatelessWidget {
   }
 }
 
+// --- Dialog zum Bearbeiten/Hinzufügen ---
 class _UnitEditDialog extends StatelessWidget {
   final String title;
   final TextEditingController codeController;
   final TextEditingController labelController;
-  final TextEditingController dimensionController;
+  final TextEditingController pluralController;
+  final TextEditingController categorieController;
   final TextEditingController baseFactorController;
   final String confirmLabel;
 
@@ -538,7 +504,8 @@ class _UnitEditDialog extends StatelessWidget {
     required this.title,
     required this.codeController,
     required this.labelController,
-    required this.dimensionController,
+    required this.pluralController,
+    required this.categorieController,
     required this.baseFactorController,
     required this.confirmLabel,
   });
@@ -556,19 +523,25 @@ class _UnitEditDialog extends StatelessWidget {
             const SizedBox(height: 12),
             _buildField('Label', 'z. B. Gramm', labelController),
             const SizedBox(height: 12),
-            _buildField('Dimension', 'mass | volume | count', dimensionController),
+            _buildField('Plural', 'z. B. Gramm', pluralController),
             const SizedBox(height: 12),
-            _buildField('Faktor', 'z. B. 1.0', baseFactorController, keyboardType: TextInputType.number),
+            _buildField('Kategorie', 'z. B. Masse | Anzahl | Energie',
+                categorieController),
+            const SizedBox(height: 12),
+            _buildField('Faktor', 'z. B. 1.0', baseFactorController,
+                keyboardType: TextInputType.number),
           ],
         ),
       ),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context, false),
-          child: const Text('Abbrechen', style: TextStyle(color: Colors.white70)),
+          child:
+              const Text('Abbrechen', style: TextStyle(color: Colors.white70)),
         ),
         FilledButton(
-          style: FilledButton.styleFrom(backgroundColor: Colors.green, foregroundColor: Colors.white),
+          style: FilledButton.styleFrom(
+              backgroundColor: Colors.green, foregroundColor: Colors.white),
           onPressed: () => Navigator.pop(context, true),
           child: Text(confirmLabel),
         ),
@@ -576,12 +549,8 @@ class _UnitEditDialog extends StatelessWidget {
     );
   }
 
-  Widget _buildField(
-    String label,
-    String hint,
-    TextEditingController controller, {
-    TextInputType keyboardType = TextInputType.text,
-  }) {
+  Widget _buildField(String label, String hint, TextEditingController controller,
+      {TextInputType keyboardType = TextInputType.text}) {
     return TextField(
       controller: controller,
       style: const TextStyle(color: Colors.white),
@@ -591,8 +560,10 @@ class _UnitEditDialog extends StatelessWidget {
         hintText: hint,
         labelStyle: const TextStyle(color: Colors.white70),
         hintStyle: const TextStyle(color: Colors.white54),
-        enabledBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.white24)),
-        focusedBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+        enabledBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white24)),
+        focusedBorder:
+            const OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
       ),
     );
   }

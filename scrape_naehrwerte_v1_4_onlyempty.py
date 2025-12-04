@@ -4,6 +4,9 @@
 scrape_naehrwerte_v1_4_onlyempty.py
 - basiert auf v1_4 (nur leere Zellen überschreiben)
 - Farbliche Markierung der neu befüllten Zellen bleibt erhalten
+
+Aufrufbeispiel:
+  py scrape_naehrwerte_v1_4_onlyempty.py --input "C:\plantyrecipes\scrape_rest.xlsx" --sheet Tabelle1 --ing-col-index 0 --link-col-index 1
 """
 
 import re

@@ -1,4 +1,4 @@
-// lib/screens/ingredient_category_manager_screen.dart
+// lib/screens/data_manager/ingredient_category_manager_screen.dart
 import 'package:flutter/material.dart';
 import 'package:drift/drift.dart' as d;
 
