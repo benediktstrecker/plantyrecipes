@@ -668,9 +668,7 @@ class ShoppingListIngredient extends Table {
 
   RealColumn get ingredientMarketAmountActual => real().nullable()();
 
-  // -------------------------------------------------------------
   // NEU: price_actual
-  // -------------------------------------------------------------
   RealColumn get priceActual => real().nullable()();
 }
 
@@ -719,7 +717,7 @@ class IngredientStorage extends Table {
 
 // -------------------------------
 // Tabelle: Stock (aus stock.csv)
-// CSV: id;ingredient_id;storage_id;shopping_list_id;date_entry;amount;unit_code
+// CSV: id;ingredient_id;storage_id;shopping_list_id;self-production;meal_id;date_entry;amount;unit_code;sign
 // -------------------------------
 class Stock extends Table {
   IntColumn get id => integer().autoIncrement()();
@@ -736,6 +734,12 @@ class Stock extends Table {
   IntColumn get shoppingListId =>
       integer().nullable().references(ShoppingList, #id)();
 
+  // NEW: Self-Production (true/false)
+  BoolColumn get selfProduction => boolean().nullable()();
+
+  // NEW: Meal ID (vorerst Text)
+  TextColumn get mealId => text().nullable()();
+
   // Datum des Einlagerns
   DateTimeColumn get dateEntry => dateTime().nullable()();
 
@@ -746,8 +750,291 @@ class Stock extends Table {
   TextColumn get unitCode =>
       text().nullable().customConstraint('NULL REFERENCES units(code)')();
 
+  // NEW: Sign → "+" oder "-"
+  TextColumn get sign => text().nullable().check(
+        sign.isIn(["+", "-"]),
+      )();
+
   @override
   Set<Column> get primaryKey => {id};
 }
 
+
+// -------------------------------
+// Tabelle: MealCategory (aus meal_category.csv)
+// CSV: id;name;color;image;favorite
+// -------------------------------
+class MealCategory extends Table {
+  IntColumn get id => integer()(); // feste ID aus CSV
+
+  TextColumn get name => text()(); // Frühstück, Mittagessen …
+
+  /// Hex-Farbe z.B. "#bf360c"
+  TextColumn get color => text()();
+
+  TextColumn get image => text().nullable()(); // optional
+
+  BoolColumn get favorite =>
+      boolean().withDefault(const Constant(false))();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+// -------------------------------
+// Tabelle: PreparationList (aus preparation_list.csv)
+// CSV: id;recipe_id;recipe_portion_number_base;time_prepared;recipe_portion_number_left
+// -------------------------------
+class PreparationList extends Table {
+  IntColumn get id => integer().autoIncrement()();
+
+  IntColumn get recipeId =>
+      integer().references(Recipes, #id)();  // FK → Recipes
+
+  IntColumn get recipePortionNumberBase => integer().nullable()();
+
+  DateTimeColumn get timePrepared => dateTime().nullable()();
+
+  IntColumn get recipePortionNumberLeft => integer().nullable()();
+}
+
+// -------------------------------
+// Tabelle: Meal (aus meal.csv)
+// CSV:
+// id;date;meal_category_id;recipe_id;recipe_portion_number; recipe_portion_unit;
+// preparation_list_id;prepared;ingredient_id;ingredient_unit_code;
+// ingredient_amount;time_consumed
+// -------------------------------
+class Meal extends Table {
+  IntColumn get id => integer().autoIncrement()();
+
+  DateTimeColumn get date => dateTime().nullable()();
+
+  IntColumn get mealCategoryId =>
+      integer().nullable().references(MealCategory, #id)();
+
+  IntColumn get recipeId =>
+      integer().nullable().references(Recipes, #id)();
+
+  IntColumn get recipePortionNumber => integer().nullable()();
+
+  TextColumn get recipePortionUnit =>
+      text().nullable().customConstraint('NULL REFERENCES units(code)')();
+
+  IntColumn get preparationListId =>
+      integer().nullable().references(PreparationList, #id)();
+
+  BoolColumn get prepared =>
+      boolean().withDefault(const Constant(false))();
+
+  IntColumn get ingredientId =>
+      integer().nullable().references(Ingredients, #id)();
+
+  TextColumn get ingredientUnitCode =>
+      text().nullable().customConstraint('NULL REFERENCES units(code)')();
+
+  RealColumn get ingredientAmount => real().nullable()();
+
+  DateTimeColumn get timeConsumed => dateTime().nullable()();
+}
+
+// -------------------------------
+// Tabelle: Gender (aus gender.csv)
+// CSV: id;name;color;image;
+// base_energy_weight_factor;
+// base_energy_plus_add;
+// base_energy_age_factor;
+// base_energy_plus_add;
+// base_energy_multiplikator
+// -------------------------------
+class Gender extends Table {
+  IntColumn get id => integer()(); // feste ID aus CSV
+
+  TextColumn get name => text()(); // weiblich, männlich
+
+  TextColumn get color => text().nullable()();
+
+  TextColumn get image => text().nullable()();
+
+  // Faktoren für Grundumsatz
+  RealColumn get baseEnergyWeightFactor => real()();
+
+  RealColumn get baseEnergyAgePlus => real()();
+
+  RealColumn get baseEnergyAgeFactor => real()();
+
+  RealColumn get baseEnergyPlusAdd => real()();
+
+  RealColumn get baseEnergyMultiplikator => real()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+// -------------------------------
+// Tabelle: AgeGroups (aus age_group.csv)
+// CSV: id;lower_limit;upper_limit
+// -------------------------------
+class AgeGroup extends Table {
+  IntColumn get id => integer()(); // feste ID
+
+  IntColumn get lowerLimit => integer()(); // inkl.
+
+  IntColumn get upperLimit => integer()(); // exkl./inkl. nach Logik
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+// -------------------------------
+// Tabelle: ActivityLevel (aus activity_level.csv)
+// CSV: id;name;PAL_value;color
+// -------------------------------
+class ActivityLevel extends Table {
+  IntColumn get id => integer()(); // feste ID
+
+  TextColumn get name => text()(); // Schlafen, Sitzen …
+
+  RealColumn get palValue => real()(); // PAL
+
+  TextColumn get color => text().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+// ----------------------------------------------------
+// Tabelle: NutritionReferences (aus nutrition_reference.csv)
+// CSV:
+// id;age_group_id;is_pregnant;is_breastfeeding;
+// gender_id;nutrient_id;activity_level_id;unit_id;
+// lower_limit;target;upper_limit;
+// description;foot_note
+// ----------------------------------------------------
+class NutritionReference extends Table {
+  IntColumn get id => integer()(); // feste ID
+
+  // Altersgruppe
+  IntColumn get ageGroupId =>
+      integer().references(AgeGroup, #id)();
+
+  // Schwangerschaft / Stillzeit
+  BoolColumn get isPregnant =>
+      boolean().withDefault(const Constant(false))();
+
+  BoolColumn get isBreastfeeding =>
+      boolean().withDefault(const Constant(false))();
+
+  // Geschlecht
+  IntColumn get genderId =>
+      integer().references(Gender, #id)();
+
+  // Nährstoff
+  IntColumn get nutrientId =>
+      integer().nullable().references(Nutrient, #id)();
+
+  // Aktivitätslevel (optional)
+  IntColumn get activityLevelId =>
+      integer().nullable().references(ActivityLevel, #id)();
+
+  // Einheit (FK auf units.code)
+  TextColumn get unitCode =>
+      text().nullable().references(Units, #code)();
+
+  // Grenzwerte
+  RealColumn get lowerLimit => real().nullable()();
+
+  RealColumn get target => real().nullable()();
+
+  RealColumn get upperLimit => real().nullable()();
+
+  // Texte
+  TextColumn get description => text().nullable()();
+
+  TextColumn get footNote => text().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+// -------------------------------
+// Tabelle: User (aus user.csv)
+// -------------------------------
+class User extends Table {
+  IntColumn get id => integer()(); // feste ID aus CSV
+
+  TextColumn get name => text()();
+
+  // Geschlecht
+  IntColumn get genderId =>
+      integer().references(Gender, #id)();
+
+  // Körperdaten
+  RealColumn get weight => real().nullable()(); // kg
+  RealColumn get height => real().nullable()(); // cm
+
+  // Geburt 
+  DateTimeColumn get dateOfBirth => dateTime().nullable()();
+
+  // Aktivität
+  RealColumn get palValue => real().nullable()();
+
+  // Schwangerschaft / Stillzeit
+  BoolColumn get isPregnant =>
+      boolean().withDefault(const Constant(false))();
+
+  DateTimeColumn get dateChildBirth => dateTime().nullable()();    
+
+  BoolColumn get isBreastfeeding =>
+      boolean().withDefault(const Constant(false))();
+
+  // Portionsgröße (z. B. 1.0 = normal)
+  RealColumn get portionSize => real().nullable()();
+
+  // UI
+  TextColumn get color => text().nullable()();
+  TextColumn get picture => text().nullable()();
+
+  // Land
+  IntColumn get countryId =>
+      integer().nullable().references(Countries, #id)();
+
+  // Profil angelegt
+  DateTimeColumn get profileCreated => dateTime().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+
+// ----------------------------------------------------
+// Tabelle: UserCustomNutrition (aus user_custom_nutrition.csv)
+// ----------------------------------------------------
+class UserCustomNutrition extends Table {
+  IntColumn get id => integer()(); // feste ID
+
+  // Bezug auf User
+  IntColumn get userId =>
+      integer().references(User, #id)();
+
+  // Gültigkeitszeitraum
+  DateTimeColumn get dateStart => dateTime().nullable()();
+  DateTimeColumn get dateEnd => dateTime().nullable()();
+
+  // Nährstoff
+  IntColumn get nutrientId =>
+      integer().references(Nutrient, #id)();
+
+  // Einheit (FK auf units.code)
+  TextColumn get unitCode =>
+      text().customConstraint('NOT NULL REFERENCES units(code)')();
+
+  // Grenzwerte
+  RealColumn get lowerLimit => real().nullable()();
+  RealColumn get target => real().nullable()();
+  RealColumn get upperLimit => real().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
 

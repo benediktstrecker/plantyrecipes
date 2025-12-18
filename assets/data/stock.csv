@@ -1,1 +1,1 @@
-﻿id;ingredient_id;storage_id;shopping_list_id;date_entry;amount;unit_code
+﻿﻿id;ingredient_id;storage_id;shopping_list_id;self-production;meal_id;date_entry;amount;unit_code;sign

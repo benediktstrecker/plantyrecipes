@@ -54,6 +54,15 @@ LazyDatabase _openConnection() {
     Storage,
     IngredientStorage,
     Stock,
+    MealCategory,
+    PreparationList,
+    Meal,
+    Gender,
+    AgeGroup,
+    ActivityLevel,
+    NutritionReference,
+    User,
+    UserCustomNutrition,
   ],
 )
 class AppDb extends _$AppDb {

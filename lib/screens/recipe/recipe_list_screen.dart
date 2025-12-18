@@ -7,10 +7,22 @@ import 'package:planty_flutter_starter/db/app_db.dart';
 import 'package:drift/drift.dart' as d;
 import 'package:planty_flutter_starter/screens/recipe/recipe_detail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:planty_flutter_starter/services/meal_item_picker.dart';
+
 
 class RecipeListScreen extends StatefulWidget {
   final String? category;
-  const RecipeListScreen({super.key, this.category});
+  final ListPickMode pickMode;
+  final DateTime? mealDay;
+  final int? mealCategoryId;
+
+  const RecipeListScreen({
+    super.key,
+    this.category,
+    this.pickMode = ListPickMode.none,
+    this.mealDay,
+    this.mealCategoryId,
+  });
 
   @override
   State<RecipeListScreen> createState() => _RecipeListScreenState();
@@ -393,8 +405,11 @@ items = List.of(items);
                                         'CSV importieren: assets/data/recipes.csv',
                                   )
                                 : _SmoothContent(
-                                    items: items,
-                                    viewMode: _viewMode)),
+                                items: items,
+                                viewMode: _viewMode,
+                                pickMode: widget.pickMode,
+                              )
+                            ),
                       ),
                     ),
                   ],
@@ -415,7 +430,14 @@ items = List.of(items);
 class _SmoothContent extends StatelessWidget {
   final List<Recipe> items;
   final int viewMode;
-  const _SmoothContent({required this.items, required this.viewMode});
+  final ListPickMode pickMode;
+
+  const _SmoothContent({
+    required this.items,
+    required this.viewMode,
+    required this.pickMode,
+  });
+
 
   @override
   Widget build(BuildContext context) {
@@ -450,12 +472,34 @@ class _SmoothContent extends StatelessWidget {
         child: KeyedSubtree(
           key: ValueKey<int>(viewMode),
           child: switch (viewMode) {
-            1 => _TextListView(items: items),
-            2 => _ImageListView(items: items),
-            3 => _GridViewRecipes(items: items, columns: 2),
-            4 => _GridViewRecipes(items: items, columns: 3),
-            5 => _GridViewRecipes(items: items, columns: 5),
-            _ => _GridViewRecipes(items: items, columns: 2),
+            1 => _TextListView(
+                  items: items,
+                  pickMode: pickMode,
+                ),
+            2 => _ImageListView(
+                  items: items,
+                  pickMode: pickMode,
+                ),
+            3 => _GridViewRecipes(
+                  items: items,
+                  columns: 2,
+                  pickMode: pickMode,
+                ),
+            4 => _GridViewRecipes(
+                  items: items,
+                  columns: 3,
+                  pickMode: pickMode,
+                ),
+            5 => _GridViewRecipes(
+                  items: items,
+                  columns: 5,
+                  pickMode: pickMode,
+                ),
+            _ => _GridViewRecipes( // ✅ Pflicht für int
+                  items: items,
+                  columns: 2,
+                  pickMode: pickMode,
+                ),
           },
         ),
       ),
@@ -468,7 +512,13 @@ class _SmoothContent extends StatelessWidget {
 
 class _TextListView extends StatelessWidget {
   final List<Recipe> items;
-  const _TextListView({required this.items});
+  final ListPickMode pickMode;
+
+  const _TextListView({
+    required this.items,
+    required this.pickMode,
+  });
+
 
   @override
   Widget build(BuildContext context) {
@@ -499,19 +549,30 @@ class _TextListView extends StatelessWidget {
             ? const Icon(Icons.bookmark, color: Colors.white)
             : const SizedBox.shrink(),
           onTap: () {
-            Navigator.of(context).push(PageRouteBuilder(
-              transitionDuration: const Duration(milliseconds: 280),
-              reverseTransitionDuration:
-                  const Duration(milliseconds: 280),
-              pageBuilder: (_, __, ___) => RecipeDetailScreen(
-                recipeId: r.id,
-                title: r.name,
-                imagePath: r.picture ?? 'assets/images/placeholder.jpg',
+            if (pickMode == ListPickMode.mealSelect) {
+              Navigator.of(context).pop(
+                SelectedMealItem.recipe(r.id),
+              );
+              return;
+            }
+
+            Navigator.of(context).push(
+              PageRouteBuilder(
+                transitionDuration: const Duration(milliseconds: 280),
+                reverseTransitionDuration: const Duration(milliseconds: 280),
+                pageBuilder: (_, __, ___) => RecipeDetailScreen(
+                  recipeId: r.id,
+                  title: r.name,
+                  imagePath: r.picture ?? 'assets/images/placeholder.jpg',
+                ),
+                transitionsBuilder: (_, animation, __, child) {
+                  return FadeTransition(
+                    opacity: animation,
+                    child: child,
+                  );
+                },
               ),
-              transitionsBuilder: (_, animation, __, child) {
-                return FadeTransition(opacity: animation, child: child);
-              },
-            ));
+            );
           },
         );
       },
@@ -521,7 +582,13 @@ class _TextListView extends StatelessWidget {
 
 class _ImageListView extends StatelessWidget {
   final List<Recipe> items;
-  const _ImageListView({required this.items});
+  final ListPickMode pickMode;
+
+  const _ImageListView({
+    required this.items,
+    required this.pickMode,
+  });
+
 
   @override
   Widget build(BuildContext context) {
@@ -538,28 +605,32 @@ class _ImageListView extends StatelessWidget {
             : r.picture!;
         return InkWell(
           onTap: () {
-            Navigator.of(context).push(PageRouteBuilder(
-              transitionDuration: const Duration(milliseconds: 280),
-              reverseTransitionDuration:
-                  const Duration(milliseconds: 280),
-              pageBuilder: (_, __, ___) => RecipeDetailScreen(
-                recipeId: r.id,
-                title: r.name,
-                imagePath: r.picture ?? 'assets/images/placeholder.jpg',
+            if (pickMode == ListPickMode.mealSelect) {
+              Navigator.of(context).pop(
+                SelectedMealItem.recipe(r.id),
+              );
+              return;
+            }
+
+            Navigator.of(context).push(
+              PageRouteBuilder(
+                transitionDuration: const Duration(milliseconds: 280),
+                reverseTransitionDuration: const Duration(milliseconds: 280),
+                pageBuilder: (_, __, ___) => RecipeDetailScreen(
+                  recipeId: r.id,
+                  title: r.name,
+                  imagePath: r.picture ?? 'assets/images/placeholder.jpg',
+                ),
+                transitionsBuilder: (_, animation, __, child) {
+                  return FadeTransition(
+                    opacity: animation,
+                    child: child,
+                  );
+                },
               ),
-              transitionsBuilder: (_, animation, __, child) {
-                final offsetAnimation = Tween<Offset>(
-                        begin: const Offset(0, 0.05), end: Offset.zero)
-                    .animate(CurvedAnimation(
-                        parent: animation, curve: Curves.easeOutCubic));
-                return FadeTransition(
-                  opacity: animation,
-                  child:
-                      SlideTransition(position: offsetAnimation, child: child),
-                );
-              },
-            ));
+            );
           },
+
           splashColor: Colors.white10,
           highlightColor: Colors.white10,
           child: Container(
@@ -609,7 +680,8 @@ class _ImageListView extends StatelessWidget {
 class _GridViewRecipes extends StatelessWidget {
   final List<Recipe> items;
   final int columns;
-  const _GridViewRecipes({required this.items, required this.columns});
+  final ListPickMode pickMode;
+  const _GridViewRecipes({required this.items, required this.columns, required this.pickMode});
 
   @override
   Widget build(BuildContext context) {
@@ -633,29 +705,32 @@ class _GridViewRecipes extends StatelessWidget {
         if (columns >= 5) {
           return InkWell(
             onTap: () {
-              Navigator.of(context).push(PageRouteBuilder(
-                transitionDuration: const Duration(milliseconds: 280),
-                reverseTransitionDuration:
-                    const Duration(milliseconds: 280),
-                pageBuilder: (_, __, ___) => RecipeDetailScreen(
-                  recipeId: r.id,
-                  title: r.name,
-                  imagePath:
-                      r.picture ?? 'assets/images/placeholder.jpg',
+              if (pickMode == ListPickMode.mealSelect) {
+                Navigator.of(context).pop(
+                  SelectedMealItem.recipe(r.id),
+                );
+                return;
+              }
+
+              Navigator.of(context).push(
+                PageRouteBuilder(
+                  transitionDuration: const Duration(milliseconds: 280),
+                  reverseTransitionDuration: const Duration(milliseconds: 280),
+                  pageBuilder: (_, __, ___) => RecipeDetailScreen(
+                    recipeId: r.id,
+                    title: r.name,
+                    imagePath: r.picture ?? 'assets/images/placeholder.jpg',
+                  ),
+                  transitionsBuilder: (_, animation, __, child) {
+                    return FadeTransition(
+                      opacity: animation,
+                      child: child,
+                    );
+                  },
                 ),
-                transitionsBuilder: (_, animation, __, child) {
-                  final offsetAnimation = Tween<Offset>(
-                          begin: const Offset(0, 0.05), end: Offset.zero)
-                      .animate(CurvedAnimation(
-                          parent: animation, curve: Curves.easeOutCubic));
-                  return FadeTransition(
-                    opacity: animation,
-                    child: SlideTransition(
-                        position: offsetAnimation, child: child),
-                  );
-                },
-              ));
+              );
             },
+
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(img, fit: BoxFit.cover),
@@ -665,29 +740,32 @@ class _GridViewRecipes extends StatelessWidget {
 
         return InkWell(
           onTap: () {
-            Navigator.of(context).push(PageRouteBuilder(
-              transitionDuration: const Duration(milliseconds: 280),
-              reverseTransitionDuration:
-                  const Duration(milliseconds: 280),
-              pageBuilder: (_, __, ___) => RecipeDetailScreen(
-                recipeId: r.id,
-                title: r.name,
-                imagePath:
-                    r.picture ?? 'assets/images/placeholder.jpg',
+            if (pickMode == ListPickMode.mealSelect) {
+              Navigator.of(context).pop(
+                SelectedMealItem.recipe(r.id),
+              );
+              return;
+            }
+
+            Navigator.of(context).push(
+              PageRouteBuilder(
+                transitionDuration: const Duration(milliseconds: 280),
+                reverseTransitionDuration: const Duration(milliseconds: 280),
+                pageBuilder: (_, __, ___) => RecipeDetailScreen(
+                  recipeId: r.id,
+                  title: r.name,
+                  imagePath: r.picture ?? 'assets/images/placeholder.jpg',
+                ),
+                transitionsBuilder: (_, animation, __, child) {
+                  return FadeTransition(
+                    opacity: animation,
+                    child: child,
+                  );
+                },
               ),
-              transitionsBuilder: (_, animation, __, child) {
-                final offsetAnimation = Tween<Offset>(
-                        begin: const Offset(0, 0.05), end: Offset.zero)
-                    .animate(CurvedAnimation(
-                        parent: animation, curve: Curves.easeOutCubic));
-                return FadeTransition(
-                  opacity: animation,
-                  child:
-                      SlideTransition(position: offsetAnimation, child: child),
-                );
-              },
-            ));
+            );
           },
+
           splashColor: Colors.white10,
           highlightColor: Colors.white10,
           child: Container(

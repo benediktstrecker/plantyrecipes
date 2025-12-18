@@ -23,6 +23,18 @@ import 'package:planty_flutter_starter/screens/ingredient/ingredient_nutrient.da
 import 'package:planty_flutter_starter/screens/ingredient/ingredient_recipe.dart'
     as rec;
 
+import 'package:planty_flutter_starter/widgets/multi_day_picker.dart';
+import 'package:planty_flutter_starter/widgets/ingredient_plan_assign_dialog.dart';
+
+
+Color _parseHexColor(String? hex) {
+  if (hex == null) return Colors.grey;
+  String c = hex.replaceAll('#', '');
+  if (c.length == 6) c = 'FF$c';
+  return Color(int.parse(c, radix: 16));
+}
+
+
 // ------------------------------------------------------------
 // INGREDIENT DETAIL SCREEN
 // ------------------------------------------------------------
@@ -420,10 +432,210 @@ class _OverviewTab extends StatelessWidget {
                             Expanded(
                               child: _ActionButton(
                                 icon: Icons.event,
-                                label: "Plan",
-                                onTap: () {},
+                                label: "Planen",
+                                onTap: () async {
+                                  // ---------------------------------------------
+                                  // 1) Multi-Day-Picker
+                                  // ---------------------------------------------
+                                  final pickedDays = await MultiDayPicker.showMealPlan(
+                                    context,
+                                    portionLimit: 9999, // später dynamisch
+                                  );
+
+                                  if (pickedDays == null || pickedDays.isEmpty) return;
+
+                                  // ---------------------------------------------
+                                  // 2) Ingredient laden
+                                  // ---------------------------------------------
+                                  final ing = await (appDb.select(appDb.ingredients)
+                                        ..where((i) => i.id.equals(ingredientId)))
+                                      .getSingle();
+
+                                  // ---------------------------------------------
+                                  // 3) IngredientUnits → unitCodes
+                                  // ---------------------------------------------
+                                  final iuRows = await (appDb.select(appDb.ingredientUnits)
+                                        ..where((u) => u.ingredientId.equals(ingredientId)))
+                                      .get();
+
+                                  final iuCodes = iuRows.map((e) => e.unitCode).toSet();
+
+                                  // Alle Units laden
+                                  final allUnits = await appDb.select(appDb.units).get();
+
+                                  // Filter: nur Units, die zum Ingredient gehören
+                                  final units = [
+                                    for (final u in allUnits)
+                                      if (iuCodes.contains(u.code)) u,
+                                  ];
+
+                                  // ---------------------------------------------
+                                  // 4) Default-MealCategory bestimmen
+                                  // ---------------------------------------------
+                                  final catRows = await appDb.select(appDb.mealCategory).get();
+
+                                  if (catRows.isEmpty) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                        content: Text("Keine Mahlzeiten-Kategorien vorhanden."),
+                                      ),
+                                    );
+                                    return;
+                                  }
+
+                                  final defaultCategoryId = catRows.first.id;
+
+                                  // ---------------------------------------------
+                                  // 5) Ingredient-Assign-Dialog öffnen
+                                  // ---------------------------------------------
+                                  final entries = await showDialog<List<IngredientDayEntry>>(
+                                    context: context,
+                                    builder: (_) => IngredientPlanAssignDialog(
+                                      ingredient: ing,
+                                      units: units,
+                                      pickedDays: pickedDays,
+                                      defaultMealCategoryId: defaultCategoryId,
+                                    ),
+                                  );
+
+                                  if (entries == null || entries.isEmpty) return;
+
+                                  // ---------------------------------------------
+                                  // 6) Einträge in meal-Tabelle speichern
+                                  // ---------------------------------------------
+                                  for (final e in entries) {
+                                    await appDb.into(appDb.meal).insert(
+                                      MealCompanion.insert(
+                                        date: d.Value(e.date),
+                                        mealCategoryId: d.Value(e.categoryId),
+
+                                        recipeId: const d.Value(null),
+                                        preparationListId: const d.Value(null),
+                                        recipePortionNumber: const d.Value(null),
+                                        recipePortionUnit: const d.Value(null),
+
+                                        ingredientId: d.Value(ingredientId),
+                                        ingredientUnitCode: d.Value(e.unitCode),
+                                        ingredientAmount: d.Value(e.amount),
+
+                                        prepared: const d.Value(false),
+                                        timeConsumed: const d.Value(null),
+                                      ),
+                                    );
+                                  }
+
+                                  // ---------------------------------------------
+                                  // 7) Optional: Zutat zur Einkaufsliste hinzufügen
+                                  // ---------------------------------------------
+                                  if (!context.mounted) return;
+
+                                  final addToShopping = await showDialog<bool>(
+                                    context: context,
+                                    barrierDismissible: false,
+                                    builder: (ctx) => AlertDialog(
+                                      backgroundColor: Colors.black87,
+                                      title: const Text(
+                                        "Zur Einkaufsliste hinzufügen?",
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      content: const Text(
+                                        "Soll diese geplante Zutat zur Einkaufsliste hinzugefügt werden?",
+                                        style: TextStyle(color: Colors.white70),
+                                      ),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(ctx, false),
+                                          child: const Text(
+                                            "Nein",
+                                            style: TextStyle(color: Colors.white),
+                                          ),
+                                        ),
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(ctx, true),
+                                          child: const Text(
+                                            "Ja",
+                                            style: TextStyle(color: Colors.greenAccent),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+
+                                  if (addToShopping == true) {
+                                    // ---------------------------------------------
+                                    // 8) Einkaufs­liste auswählen
+                                    //    (Dialog-Klasse wie bei Rezepten wiederverwenden)
+                                    // ---------------------------------------------
+                                    final targetShoppingListId = await showDialog<int>(
+                                      context: context,
+                                      builder: (_) => _SelectTargetShoppingListDialog(),
+                                    );
+
+                                    if (targetShoppingListId != null) {
+                                      // Gesamtmenge über alle Tage
+                                      final totalAmount = entries.fold<double>(
+                                        0,
+                                        (sum, e) => sum + e.amount,
+                                      );
+
+                                      // Einheit: wir gehen davon aus, dass überall dieselbe gewählt wurde
+                                      final unitCodes = entries.map((e) => e.unitCode).toSet();
+                                      final unitCode = unitCodes.length == 1
+                                          ? unitCodes.first
+                                          : entries.first.unitCode;
+
+                                      await appDb
+                                          .into(appDb.shoppingListIngredient)
+                                          .insert(
+                                        ShoppingListIngredientCompanion.insert(
+                                          shoppingListId: targetShoppingListId,
+                                          ingredientIdNominal: d.Value(ingredientId),
+                                          ingredientAmountNominal: d.Value(totalAmount),
+                                          ingredientUnitCodeNominal: d.Value(unitCode),
+                                        ),
+                                      );
+
+                                      // Abschlussdialog für Einkaufsliste
+                                      if (context.mounted) {
+                                        await showDialog(
+                                          context: context,
+                                          builder: (_) => AlertDialog(
+                                            backgroundColor: Colors.black,
+                                            title: const Text(
+                                              "Hinzugefügt",
+                                              style: TextStyle(color: Colors.white),
+                                            ),
+                                            content: const Text(
+                                              "Die geplante Zutat wurde zur Einkaufsliste hinzugefügt.",
+                                              style: TextStyle(color: Colors.white70),
+                                            ),
+                                            actions: [
+                                              TextButton(
+                                                onPressed: () => Navigator.pop(context),
+                                                child: const Text(
+                                                  "OK",
+                                                  style: TextStyle(color: Colors.greenAccent),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        );
+                                      }
+                                    }
+                                  }
+
+                                  // ---------------------------------------------
+                                  // 9) Abschluss-Info "Geplant."
+                                  // ---------------------------------------------
+                                  if (context.mounted) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(content: Text("Geplant.")),
+                                    );
+                                  }
+                                },
                               ),
                             ),
+
 
                             // 4) Lagerung (Bild + Zyklus)
                             Expanded(
@@ -971,4 +1183,96 @@ class _SeasonBarSkeleton12 extends StatelessWidget {
       ),
     );
   }
+}
+
+
+class _IngredientPlanResult {
+  final int mealCategoryId;
+  final String unitCode;
+  final double amount;
+
+  _IngredientPlanResult({
+    required this.mealCategoryId,
+    required this.unitCode,
+    required this.amount,
+  });
+}
+
+class _SelectTargetShoppingListDialog extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<ShoppingListData>>(
+      future: (appDb.select(appDb.shoppingList)
+            ..where((t) => t.done.equals(false)))
+          .get(),
+      builder: (ctx, snap) {
+        final lists = snap.data ?? [];
+
+        return AlertDialog(
+          backgroundColor: Colors.black87,
+          title: const Text("Einkaufsliste wählen",
+              style: TextStyle(color: Colors.white)),
+          content: SizedBox(
+            width: double.maxFinite,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (final sl in lists)
+                  GestureDetector(
+                    onTap: () => Navigator.pop(context, sl.id),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 12),
+                      margin: const EdgeInsets.symmetric(vertical: 6),
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              sl.name,
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 16),
+                            ),
+                          ),
+                          if (sl.marketId != null) _buildMarketIconSmall(sl.marketId!)
+                        ],
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+// Kleine Hilfsfunktion aus deinem Shopping-Code
+Widget _buildMarketIconSmall(int marketId) {
+  return FutureBuilder<Market?>(
+    future: (appDb.select(appDb.markets)
+          ..where((m) => m.id.equals(marketId)))
+        .getSingleOrNull(),
+    builder: (ctx, snap) {
+      final m = snap.data;
+      if (m == null) return const SizedBox(width: 32);
+      return Container(
+        width: 32,
+        height: 32,
+        decoration: BoxDecoration(
+          color: _parseHexColor(m.color),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Image.asset(m.picture ?? "assets/images/shop/placeholder.png",
+              fit: BoxFit.cover),
+        ),
+      );
+    },
+  );
 }

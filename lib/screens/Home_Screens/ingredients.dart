@@ -6,11 +6,12 @@ import 'package:planty_flutter_starter/utils/easy_swipe_nav.dart';
 import 'package:planty_flutter_starter/design/drawer.dart';
 
 // Zielseiten importieren
-import 'package:planty_flutter_starter/screens/Home_Screens/mobile_view.dart';
+import 'package:planty_flutter_starter/screens/Home_Screens/recipes.dart'
+    as screen_rec;
 import 'package:planty_flutter_starter/screens/ingredient/ingredients_list_screen.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/shopping.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/nutrition.dart';
-import 'package:planty_flutter_starter/screens/Home_Screens/settings.dart';
+import 'package:planty_flutter_starter/screens/Home_Screens/meals.dart';
 
 // DB
 import 'package:planty_flutter_starter/db/db_singleton.dart';
@@ -29,8 +30,15 @@ class Ingredients extends StatefulWidget {
 }
 
 class _IngredientsState extends State<Ingredients> with EasySwipeNav {
-  int _selectedIndex = 1; // 1 = Zutaten
+  int _selectedIndex = 0; // 0 = Zutaten
   static const Duration _slideDuration = Duration(milliseconds: 280);
+
+
+  // Drawer-Steuerung
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  double _dragStartX = 0;
+  double _dragStartY = 0;
+  bool _drawerGesture = false;
 
   bool _seeding = false;
 
@@ -71,18 +79,19 @@ class _IngredientsState extends State<Ingredients> with EasySwipeNav {
   Widget _widgetForIndex(int index) {
     switch (index) {
       case 0:
-        return const MobileView(); // Rezepte
+        return const Ingredients();          // Zutaten (links)
       case 1:
-        return const Ingredients(); // Zutaten
+        return const Shopping();             // Einkauf
       case 2:
-        return const Shopping(); // Einkauf
+        return const screen_rec.Recipes();   // Rezepte (mittig)
       case 3:
-        return const Nutrition(); // Nährwerte
+        return const Meals();             // Mahlzeiten
       case 4:
       default:
-        return const Settings(); // Einstellungen
+        return const Nutrition();            // Nährwerte (rechts)
     }
   }
+
 
   void _slideToIndex(int index, {required bool fromRight}) {
     if (!mounted || index < 0 || index > 4) return;
@@ -118,39 +127,74 @@ class _IngredientsState extends State<Ingredients> with EasySwipeNav {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-  // EasySwipeNav (rechts→links etc.)
-  onHorizontalDragStart: onSwipeStart,
-  onHorizontalDragUpdate: onSwipeUpdate,
-  onHorizontalDragEnd: onSwipeEnd,
+      onHorizontalDragStart: (details) {
+  _dragStartX = details.globalPosition.dx;
+  _dragStartY = details.globalPosition.dy;
+  _drawerGesture = false;
+  onSwipeStart(details); // EasySwipeNav
+},
 
-  // 👇 NEU: Vertikaler Swipe (nach oben = alle Zutaten)
-  onVerticalDragEnd: (details) {
-    final velocity = details.velocity.pixelsPerSecond.dy;
-    if (velocity < -300) {
-      Navigator.of(context).push(
-        PageRouteBuilder(
-          pageBuilder: (_, __, ___) =>
-              const IngredientsListScreen(category: 'Alle Zutaten'),
-          transitionDuration: _slideDuration,
-          reverseTransitionDuration: _slideDuration,
-          transitionsBuilder: (_, animation, __, child) {
-            final offsetAnimation = Tween<Offset>(
-              begin: const Offset(0, 0.1),
-              end: Offset.zero,
-            ).animate(CurvedAnimation(
-              parent: animation,
-              curve: Curves.easeOutCubic,
-            ));
-            return FadeTransition(
-              opacity: animation,
-              child: SlideTransition(position: offsetAnimation, child: child),
-            );
-          },
-        ),
-      );
+onHorizontalDragUpdate: (details) {
+  final dx = details.globalPosition.dx - _dragStartX;
+  final dy = (details.globalPosition.dy - _dragStartY).abs();
+
+  // exakt wie recipes.dart
+  const double _horizontalOpenThreshold = 30;
+  const double _verticalTolerance = 24;
+
+  if (!_drawerGesture &&
+      dy < _verticalTolerance &&
+      dx > _horizontalOpenThreshold) {
+
+    _drawerGesture = true;
+    final state = _scaffoldKey.currentState;
+    if (state != null && !state.isDrawerOpen) {
+      state.openDrawer();
     }
-  },
-  child: Scaffold(
+    return; // verhindert EasySwipeNav
+  }
+
+  if (!_drawerGesture) {
+    onSwipeUpdate(details); // Navigation
+  }
+},
+
+onHorizontalDragEnd: (details) {
+  if (!_drawerGesture) {
+    onSwipeEnd(details); // Navigation
+  }
+},
+
+
+    // 👇 NEU: Vertikaler Swipe (nach oben = alle Zutaten)
+    onVerticalDragEnd: (details) {
+      final velocity = details.velocity.pixelsPerSecond.dy;
+      if (velocity < -300) {
+        Navigator.of(context).push(
+          PageRouteBuilder(
+            pageBuilder: (_, __, ___) =>
+                const IngredientsListScreen(category: 'Alle Zutaten'),
+            transitionDuration: _slideDuration,
+            reverseTransitionDuration: _slideDuration,
+            transitionsBuilder: (_, animation, __, child) {
+              final offsetAnimation = Tween<Offset>(
+                begin: const Offset(0, 0.1),
+                end: Offset.zero,
+              ).animate(CurvedAnimation(
+                parent: animation,
+                curve: Curves.easeOutCubic,
+              ));
+              return FadeTransition(
+                opacity: animation,
+                child: SlideTransition(position: offsetAnimation, child: child),
+              );
+            },
+          ),
+        );
+      }
+    },
+    child: Scaffold(
+        key: _scaffoldKey,
         backgroundColor: darkgreen,
         appBar: AppBar(
           title: const Text(
@@ -178,7 +222,7 @@ class _IngredientsState extends State<Ingredients> with EasySwipeNav {
               ),
           ],
         ),
-        drawer: const AppDrawer(currentIndex: 1),
+        drawer: const AppDrawer(currentIndex: 0),
         bottomNavigationBar: Container(
           padding: const EdgeInsets.fromLTRB(15, 0, 15, 20),
           child: GNav(
@@ -189,12 +233,13 @@ class _IngredientsState extends State<Ingredients> with EasySwipeNav {
             selectedIndex: _selectedIndex.clamp(0, 4),
             onTabChange: _navigateToPage,
             tabs: const [
-              GButton(icon: Icons.list_alt, text: 'Rezepte'),
-              GButton(icon: Icons.eco, text: 'Zutaten'),
-              GButton(icon: Icons.shopping_bag, text: 'Einkauf'),
-              GButton(icon: Icons.stacked_bar_chart, text: 'Nährwerte'),
-              GButton(icon: Icons.settings, text: 'Einstellungen'),
+              GButton(icon: Icons.eco, text: 'Zutaten'),             // 0
+              GButton(icon: Icons.storefront, text: 'Einkauf'),    // 1
+              GButton(icon: Icons.list_alt, text: 'Rezepte'),        // 2
+              GButton(icon: Icons.calendar_month, text: 'Mahlzeiten'),  // 3
+              GButton(icon: Icons.stacked_bar_chart, text: 'Nährwerte'), // 4
             ],
+
           ),
         ),
         body: Padding(

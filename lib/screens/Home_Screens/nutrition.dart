@@ -6,10 +6,10 @@ import 'package:planty_flutter_starter/utils/easy_swipe_nav.dart';
 import 'package:planty_flutter_starter/design/drawer.dart';
 
 // Zielseiten importieren
-import 'package:planty_flutter_starter/screens/Home_Screens/mobile_view.dart';
+import 'package:planty_flutter_starter/screens/Home_Screens/recipes.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/ingredients.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/shopping.dart';
-import 'package:planty_flutter_starter/screens/Home_Screens/settings.dart';
+import 'package:planty_flutter_starter/screens/Home_Screens/meals.dart';
 
 class Nutrition extends StatefulWidget {
   const Nutrition({super.key});
@@ -19,26 +19,28 @@ class Nutrition extends StatefulWidget {
 }
 
 class _NutritionState extends State<Nutrition> with EasySwipeNav {
-  int _selectedIndex = 3; // 3 = Nährwerte
+  int _selectedIndex = 4; // 4 = Nährwerte
   static const Duration _slideDuration = Duration(milliseconds: 280);
 
   @override
   int get currentIndex => _selectedIndex;
 
   Widget _widgetForIndex(int index) {
-    switch (index) {
-      case 0: return MobileView();
-case 1: return Ingredients();
-
-      case 2:
-        return Shopping(); // Einkauf
-      case 3:
-        return Nutrition(); // Nährwerte
-      case 4:
-      default:
-        return Settings(); // Einstellungen
-    }
+  switch (index) {
+    case 0:
+      return const Ingredients();       // Zutaten
+    case 1:
+      return const Shopping();          // Einkauf
+    case 2:
+      return const Recipes();           // Rezepte (Startseite)
+    case 3:
+      return const Meals();          // Mahlzeiten
+    case 4:
+    default:
+      return const Nutrition();         // Nährwerte
   }
+}
+
 
   void _slideToIndex(int index, {required bool fromRight}) {
     if (!mounted || index < 0 || index > 4) return;
@@ -82,7 +84,7 @@ case 1: return Ingredients();
         backgroundColor: darkgreen,
         appBar: AppBar(
           title: const Text(
-            "Planty Recipes",
+            "Planty Nutrition",
             style: TextStyle(
               color: Colors.white,
               fontSize: 30,
@@ -93,7 +95,7 @@ case 1: return Ingredients();
         ),
 
         // Einfacher Drawer (ohne DB)
-        drawer: const AppDrawer(currentIndex: 0),
+        drawer: const AppDrawer(currentIndex: 4),
         bottomNavigationBar: Container(
           padding: const EdgeInsets.fromLTRB(15, 0, 15, 20),
           child: GNav(
@@ -104,11 +106,11 @@ case 1: return Ingredients();
             selectedIndex: _selectedIndex.clamp(0, 4),
             onTabChange: _navigateToPage,
             tabs: const [
-              GButton(icon: Icons.list_alt, text: 'Rezepte'),
-              GButton(icon: Icons.eco, text: 'Zutaten'),
-              GButton(icon: Icons.shopping_bag, text: 'Einkauf'),
-              GButton(icon: Icons.stacked_bar_chart, text: 'Nährwerte'),
-              GButton(icon: Icons.settings, text: 'Einstellungen'),
+              GButton(icon: Icons.eco, text: 'Zutaten'),            // index 0
+              GButton(icon: Icons.storefront, text: 'Einkauf'),   // index 1
+              GButton(icon: Icons.list_alt, text: 'Rezepte'),       // index 2
+              GButton(icon: Icons.calendar_month, text: 'Mahlzeiten'), // index 3
+              GButton(icon: Icons.stacked_bar_chart, text: 'Nährwerte'), // index 4
             ],
           ),
         ),

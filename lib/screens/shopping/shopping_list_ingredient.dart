@@ -971,20 +971,46 @@ class _ShoppingListIngredientScreenState
   Future<void> _openProductSelection() async {
     if (ingredient == null || activeSli == null) return;
 
-    final result = await Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => ShoppingListProductScreen(
-          ingredient: ingredient!,
-          currentProductId: activeSli!.productIdNominal,
-          shoppingListIngredientId: activeSli!.id,
-          ingredientAmountNominal:
-              activeSli!.ingredientAmountNominal ?? 0,
-          ingredientUnitCodeNominal:
-              activeSli!.ingredientUnitCodeNominal ?? "",
+    final result = await Navigator.of(context).push(
+  PageRouteBuilder(
+    transitionDuration: const Duration(milliseconds: 260),
+    reverseTransitionDuration: const Duration(milliseconds: 220),
+    opaque: false,
+    barrierColor: Colors.transparent,
+    pageBuilder: (_, __, ___) => ShoppingListProductScreen(
+      ingredient: ingredient!,
+      currentProductId: activeSli!.productIdNominal,
+      shoppingListIngredientId: activeSli!.id,
+      ingredientAmountNominal: activeSli!.ingredientAmountNominal ?? 0,
+      ingredientUnitCodeNominal: activeSli!.ingredientUnitCodeNominal ?? "",
+    ),
+    transitionsBuilder: (_, animation, __, child) {
+      final slide = Tween<Offset>(
+        begin: const Offset(0, 0.04),
+        end: Offset.zero,
+      ).animate(
+        CurvedAnimation(
+          parent: animation,
+          curve: Curves.easeOutCubic,
         ),
-      ),
-    );
+      );
+
+      final fade = Tween<double>(
+        begin: 0.8,   // verhindert weißes Einblitzen
+        end: 1.0,
+      ).animate(animation);
+
+      return FadeTransition(
+        opacity: fade,
+        child: SlideTransition(
+          position: slide,
+          child: child,
+        ),
+      );
+    },
+  ),
+);
+
 
     if (result == null) return;
 
@@ -1065,14 +1091,42 @@ class _ShoppingListIngredientScreenState
   Future<void> _openAlternativeSelection() async {
     if (ingredient == null || activeSli == null) return;
 
-    final selected = await Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => ShoppingListAlternativeScreen(
-          ingredient: ingredient!,
+    final selected = await Navigator.of(context).push(
+  PageRouteBuilder(
+    transitionDuration: const Duration(milliseconds: 260),
+    reverseTransitionDuration: const Duration(milliseconds: 220),
+    opaque: false,
+    barrierColor: Colors.transparent,
+    pageBuilder: (_, __, ___) => ShoppingListAlternativeScreen(
+      ingredient: ingredient!,
+    ),
+    transitionsBuilder: (_, animation, __, child) {
+      final slide = Tween<Offset>(
+        begin: const Offset(0, 0.04),   // smoother Einstieg
+        end: Offset.zero,
+      ).animate(
+        CurvedAnimation(
+          parent: animation,
+          curve: Curves.easeOutCubic,
         ),
-      ),
-    );
+      );
+
+      final fade = Tween<double>(
+        begin: 0.8,   // verhindert weißes Einblitzen
+        end: 1.0,
+      ).animate(animation);
+
+      return FadeTransition(
+        opacity: fade,
+        child: SlideTransition(
+          position: slide,
+          child: child,
+        ),
+      );
+    },
+  ),
+);
+
 
     if (selected == null || selected is! Ingredient) return;
 

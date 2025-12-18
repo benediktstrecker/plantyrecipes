@@ -27,6 +27,9 @@ import 'package:planty_flutter_starter/screens/shopping/shopping_list_overview.d
 
 import 'package:planty_flutter_starter/services/ingredient_nominal_selection.dart';
 
+import 'package:planty_flutter_starter/widgets/create_shopping_list_flow.dart';
+
+
 class RecipeIngredientScreen extends StatefulWidget {
   final int recipeId;
   final String title;
@@ -55,7 +58,7 @@ class _RecipeIngredientScreenState extends State<RecipeIngredientScreen>
   int get currentIndex => _selectedIndex;
 
   int _selectedIndex = 1;
-  int _viewMode = 3;
+  int _viewMode = 4;
   int _sortMode = 1;
 
   int? _portionNumber;
@@ -335,23 +338,6 @@ Future<int?> _loadDefaultMarketId() async {
   final fav = await query.getSingleOrNull();
   return fav?.id;
 }
-
-
-Future<void> _createShoppingList(String name, int? marketId) async {
-  final sl = appDb.shoppingList;
-  final now = DateTime.now().toIso8601String();
-
-  await appDb.into(sl).insert(
-        ShoppingListCompanion.insert(
-  name: name,
-  dateCreated: d.Value(DateTime.now()),
-  lastEdited: d.Value(DateTime.now()),
-)
-
-      );
-  setState(() {});
-}
-
 
 
 Future<void> _addSelectedIngredientsToList(int shoppingListId) async {
@@ -899,177 +885,23 @@ await recalculateNominalsForSLI(sliId);
                                   Divider(color: Colors.white24),
                                   const SizedBox(height: 18),
                                   InkWell(
-  onTap: () async {
-  DateTime selectedDate = DateTime.now();
+ onTap: () async {
+  final newListId = await CreateShoppingListFlow.start(context);
 
-  // ------------------------------------------------------------
-  // 1) Datum wählen
-  // ------------------------------------------------------------
-  final pickedDate = await showDialog<DateTime>(
-    context: context,
-    builder: (ctx) {
-      return StatefulBuilder(builder: (ctx, setStateDialog) {
-        return AlertDialog(
-          backgroundColor: Colors.black87,
-          title: const Text(
-            "Datum wählen",
-            style: TextStyle(color: Colors.white),
-          ),
-          content: SizedBox(
-            width: double.maxFinite,
-            child: Theme(
-              data: Theme.of(context).copyWith(
-                colorScheme: const ColorScheme.dark(
-                  primary: Colors.green,
-                  onPrimary: Colors.white,
-                  onSurface: Colors.white,
-                  surface: Colors.black,
-                ),
-              ),
-              child: CalendarDatePicker(
-                initialDate: selectedDate,
-                firstDate: DateTime.now().subtract(const Duration(days: 365)),
-                lastDate: DateTime.now().add(const Duration(days: 365)),
-                onDateChanged: (d) => setStateDialog(() => selectedDate = d),
-              ),
-            ),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(ctx),
-              child: const Text("Abbrechen", style: TextStyle(color: Colors.white)),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(ctx, selectedDate),
-              child: const Text("Weiter", style: TextStyle(color: Colors.white)),
-            ),
-          ],
-        );
-      });
-    },
-  );
+  if (newListId != null) {
+    await _addSelectedIngredientsToList(newListId);
 
-  if (pickedDate == null) return;
-  final DateTime date = pickedDate;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text("Neue Liste erstellt + Zutaten hinzugefügt"),
+        backgroundColor: darkgreen,
+      ),
+    );
 
-  // ------------------------------------------------------------
-  // 2) Märkte laden (vertikal + scrollbar + schmale Balken)
-  // ------------------------------------------------------------
-  final markets = await (appDb.select(appDb.markets)
-        ..orderBy([(m) => d.OrderingTerm(expression: m.id)]))
-      .get();
-
-  final chosenMarket = await showDialog<Market>(
-    context: context,
-    builder: (ctx) {
-      return AlertDialog(
-        backgroundColor: Colors.black87,
-        title: const Text(
-          "Markt wählen",
-          style: TextStyle(color: Colors.white),
-        ),
-        content: SizedBox(
-          width: double.maxFinite,
-          height: 300,
-          child: ListView.builder(
-            itemCount: markets.length,
-            itemBuilder: (context, index) {
-              final m = markets[index];
-
-              // Farbe konvertieren
-              Color? bg;
-              if (m.color != null) {
-                String hex = m.color!.replaceAll('#', '');
-                if (hex.length == 6) hex = 'FF$hex';
-                try {
-                  bg = Color(int.parse(hex, radix: 16));
-                } catch (_) {
-                  bg = Colors.grey[800];
-                }
-              } else {
-                bg = Colors.grey[800];
-              }
-
-              return GestureDetector(
-                onTap: () => Navigator.pop(ctx, m),
-                child: Container(
-                  margin: const EdgeInsets.symmetric(vertical: 6),
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                  color: Colors.black,
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 45,
-                        height: 45,
-                        decoration: BoxDecoration(
-                          color: bg,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            m.picture ?? "assets/images/shop/placeholder.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          m.name,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              );
-            },
-          ),
-        ),
-      );
-    },
-  );
-
-  final Market? market = chosenMarket;
-
-  // ------------------------------------------------------------
-  // 3) Name generieren
-  // ------------------------------------------------------------
-  const weekdayNames = [
-    "",
-    "Montag",
-    "Dienstag",
-    "Mittwoch",
-    "Donnerstag",
-    "Freitag",
-    "Samstag",
-    "Sonntag"
-  ];
-
-  final name =
-      "${weekdayNames[date.weekday]}, ${date.day.toString().padLeft(2, '0')}"
-      ".${date.month.toString().padLeft(2, '0')}.";
-
-  // ------------------------------------------------------------
-  // 4) Speichern
-  // ------------------------------------------------------------
-  final id = await appDb.into(appDb.shoppingList).insert(
-        ShoppingListCompanion.insert(
-          name: name,
-          dateCreated: d.Value(DateTime.now()),
-          lastEdited: d.Value(DateTime.now()),
-          marketId: d.Value(market?.id),
-          dateShopping: d.Value(date),
-        ),
-      );
-
-  setState(() {});
+    setState(() => _showListSelector = false);
+  }
 },
+
   child: const Text(
     "+ Neue Einkaufsliste erstellen",
     style: TextStyle(

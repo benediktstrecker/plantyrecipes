@@ -23,6 +23,21 @@ import 'package:planty_flutter_starter/screens/recipe/recipe_preparation.dart'
 import 'package:planty_flutter_starter/screens/recipe/recipe_nutrient.dart'
     as nutr;
 
+import 'package:planty_flutter_starter/widgets/meal_plan_assign_dialog.dart';
+
+import 'package:planty_flutter_starter/widgets/multi_day_picker.dart';
+
+
+
+
+Color _parseHexColor(String? hex) {
+  if (hex == null) return Colors.grey;
+  String c = hex.replaceAll('#', '');
+  if (c.length == 6) c = 'FF$c';
+  return Color(int.parse(c, radix: 16));
+}
+
+
 class RecipeDetailScreen extends StatefulWidget {
   final int recipeId;
   final String title;
@@ -65,6 +80,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen>
     setState(() => _selectedIndex = index);
   }
 
+
   Widget _widgetForIndex(int index) {
     switch (index) {
       case 0:
@@ -95,6 +111,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen>
     }
   }
 
+  
   @override
   void goToIndex(int index) => _navigateToPage(index);
 
@@ -315,6 +332,8 @@ class _OverviewTabState extends State<_OverviewTab> {
     return v != null ? Color(v) : null;
   }
 
+
+
   @override
   Widget build(BuildContext context) {
     final recipe = widget.recipe;
@@ -327,71 +346,6 @@ class _OverviewTabState extends State<_OverviewTab> {
         Stack(
           children: [
             _ImageBox1x1(imagePath: widget.imagePath),
-            /*Positioned(
-              top: 10,
-              left: 10,
-              child: StreamBuilder<RecipeCategory?>(
-                stream: _watchRecipeCategory(recipeId),
-                builder: (context, catSnap) {
-                  final cat = catSnap.data;
-                  if (cat == null) return const SizedBox.shrink();
-                  return Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2C2C2C),
-                      borderRadius: BorderRadius.circular(999),
-                    ),
-                    child: Text(
-                      cat.title,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 12,
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-            // --- Bookmark oben rechts ---
-Positioned(
-  top: 12,
-  right: 12,
-  child: StreamBuilder<Recipe?>(
-    stream: (appDb.select(appDb.recipes)
-          ..where((r) => r.id.equals(recipeId)))
-        .watchSingleOrNull(),
-    builder: (context, snap) {
-      final recipe = snap.data;
-      final isBookmarked = (recipe?.bookmark ?? 0) == 1;
-
-      return GestureDetector(
-        onTap: () async {
-          final newVal = isBookmarked ? 0 : 1;
-          await (appDb.update(appDb.recipes)
-                ..where((r) => r.id.equals(recipeId)))
-              .write(RecipesCompanion(bookmark: d.Value(newVal)));
-        },
-        child: Container(
-          width: 36,
-          height: 36,
-          decoration: BoxDecoration(
-            color: isBookmarked
-                ? const Color(0xFF2C2C2C)
-                : Colors.transparent,
-            shape: BoxShape.circle,
-            border: Border.all(color: Colors.white24, width: 1),
-          ),
-          child: Icon(
-            isBookmarked ? Icons.bookmark : Icons.bookmark_border,
-            color: Colors.white,
-            size: 20,
-          ),
-        ),
-      );
-    },
-  ),
-),*/
           ],
         ),
 
@@ -453,29 +407,201 @@ Positioned(
 
                     // --- EINKAUFEN Button ---
                     _ActionButton(
-  icon: Icons.shopping_bag,
-  label: 'Einkaufen',
-  onTap: () {
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (_) => ing.RecipeIngredientScreen(
-          recipeId: widget.recipeId,
-          title: widget.title,
-          imagePath: widget.imagePath,
-          autoSelectNonStorageCat1: true,   // ← WICHTIG!
-        ),
-      ),
-    );
-  },
-),
-
-
+                      icon: Icons.shopping_bag,
+                      label: 'Einkaufen',
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (_) => ing.RecipeIngredientScreen(
+                              recipeId: widget.recipeId,
+                              title: widget.title,
+                              imagePath: widget.imagePath,
+                              autoSelectNonStorageCat1: true,   // ← WICHTIG!
+                            ),
+                          ),
+                        );
+                      },
+                    ),
                     // --- PLAN Button (vor Kochen) ---
                     _ActionButton(
                       icon: Icons.event,
-                      label: 'Plan',
-                      onTap: () {},
+                      label: 'Planen',
+                      onTap: () async {
+                        // ===== 1) Rezept laden =====
+                        final recipe = await (appDb.select(appDb.recipes)
+                              ..where((r) => r.id.equals(widget.recipeId)))
+                            .getSingleOrNull();
+                        if (recipe == null) return;
+
+                        final portion = recipe.portionNumber ?? 1;
+
+                        // ===== 2) PreparationList anlegen =====
+                        final prepId = await appDb.into(appDb.preparationList).insert(
+                              PreparationListCompanion.insert(
+                                recipeId: widget.recipeId,
+                                recipePortionNumberBase: d.Value(portion),
+                                recipePortionNumberLeft: d.Value(portion),
+                                timePrepared: const d.Value(null),
+                              ),
+                            );
+
+                        if (!mounted) return;
+
+                        // ===== 3) Multi-Day Picker =====
+                        final selectedDays = await MultiDayPicker.showMealPlan(
+                          context,
+                          portionLimit: portion,
+                        );
+
+                        if (selectedDays == null || selectedDays.isEmpty) return;
+
+                        // ===== 4) Neuer Dialog: Kategorie + Portionszuweisung =====
+                        final assignment = await showDialog<MealPlanAssignmentResult>(
+                          context: context,
+                          barrierDismissible: false,
+                          builder: (ctx) {
+                            return MealPlanAssignDialog(
+                              selectedDays: selectedDays,
+                              recipeId: recipe.id,
+                              recipePortionNumber: portion,
+                            );
+                          },
+                        );
+
+                        if (assignment == null) return;
+
+                        // ===== 5) Insert: Meals erzeugen =====
+
+                        // Zutaten des Rezepts laden
+                        final ingRows = await (appDb.select(appDb.recipeIngredients)
+                              ..where((t) => t.recipeId.equals(recipe.id)))
+                            .get();
+
+                        // Wichtig: Rezeptbasisportionen (recipe.portion_number)
+                        final basePortions = recipe.portionNumber ?? 1;
+
+                        // NEU: Portionseinheit aus dem Rezept
+                        final portionUnit = recipe.portionUnit;   // z.B. "g", "ml", "Stk"
+
+                        // Für jeden Tag aus dem Assignment:
+                        for (final entry in assignment.entries) {
+                          
+                          final plannedPortions = entry.portions;         // z.B. 1 → 2 Portionen
+                          final categoryId = entry.categoryId;            // MealCategory.id
+                          final day = entry.date;                         // Datum
+
+                          // Jede Zutat erzeugt eine Meal-Zeile
+                          for (final ing in ingRows) {
+
+                            final recipeAmount = ing.amount ?? 0;         // Menge im Rezept
+                            final unit = ing.unitCode;                    // Einheit der Zutat
+
+                            // Skalierung: (geplante Portionen / Basisportionen) * Rezeptmenge
+                            final scaledAmount =
+                                (plannedPortions / basePortions) * recipeAmount;
+
+                            await appDb.into(appDb.meal).insert(
+                              MealCompanion.insert(
+                                date: d.Value(day),
+                                mealCategoryId: d.Value(categoryId),
+
+                                // FK auf Rezept
+                                recipeId: d.Value(recipe.id),
+
+                                // ✔ geplante Portionen → meal.recipe_portion_number
+                                recipePortionNumber: d.Value(plannedPortions),
+
+                                // ✔ NEU: Portionseinheit des Rezepts übernehmen
+                                recipePortionUnit: d.Value(portionUnit),
+
+                                // preparation_list_id
+                                preparationListId: d.Value(prepId),
+
+                                // Zutaten
+                                ingredientId: d.Value(ing.ingredientId),
+                                ingredientUnitCode: d.Value(unit),
+                                ingredientAmount: d.Value(scaledAmount),
+
+                                // Status
+                                prepared: const d.Value(false),
+                                timeConsumed: const d.Value(null),
+                              ),
+                            );
+                          }
+                        }
+
+
+
+                        // ===== 6) Frage: Zutaten zur Einkaufsliste hinzufügen? =====
+                        final addToShopping = await showDialog<bool>(
+                          context: context,
+                          barrierDismissible: false,
+                          builder: (ctx) => AlertDialog(
+                            backgroundColor: Colors.black87,
+                            title: const Text("Zutaten hinzufügen?",
+                                style: TextStyle(color: Colors.white)),
+                            content: const Text(
+                              "Sollen die benötigten Zutaten zu einer Einkaufsliste hinzugefügt werden?",
+                              style: TextStyle(color: Colors.white70),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(ctx, false),
+                                child: const Text("Nein", style: TextStyle(color: Colors.white)),
+                              ),
+                              TextButton(
+                                onPressed: () => Navigator.pop(ctx, true),
+                                child: const Text("Ja", style: TextStyle(color: Colors.greenAccent)),
+                              ),
+                            ],
+                          ),
+                        );
+
+                        // Bei Nein → direkt schließen (keine weitere Meldung)
+                        if (addToShopping != true) return;
+
+                        // ===== 7) Auswahl der Einkaufsliste =====
+                        final targetShoppingListId = await showDialog<int>(
+                          context: context,
+                          builder: (_) => _SelectTargetShoppingListDialog(),
+                        );
+
+                        if (targetShoppingListId == null) return;
+
+                        // ===== 8) Zutaten hinzufügen =====
+                        for (final ing in ingRows) {
+                          await appDb.into(appDb.shoppingListIngredient).insert(
+                                ShoppingListIngredientCompanion.insert(
+                                  shoppingListId: targetShoppingListId,
+                                  ingredientIdNominal: d.Value(ing.ingredientId),
+                                  ingredientAmountNominal: d.Value(ing.amount),
+                                  ingredientUnitCodeNominal: d.Value(ing.unitCode),
+                                ),
+                              );
+                        }
+
+                        // ===== 9) Abschlussdialog =====
+                        await showDialog(
+                          context: context,
+                          builder: (_) => AlertDialog(
+                            backgroundColor: Colors.black,
+                            title: const Text("Hinzugefügt", style: TextStyle(color: Colors.white)),
+                            content: const Text(
+                              "Zutaten wurden erfolgreich hinzugefügt.",
+                              style: TextStyle(color: Colors.white70),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(context),
+                                child: const Text("OK", style: TextStyle(color: Colors.greenAccent)),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
                     ),
+
+
 
                     // --- KOCHEN Button: nur Zähler, kein Datum ---
                     GestureDetector(
@@ -1106,4 +1232,143 @@ class _SeasonBarSkeleton12 extends StatelessWidget {
       ),
     );
   }
+}
+
+
+class _SelectMealCategoryDialog extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<MealCategoryData>>(
+      future: (appDb.select(appDb.mealCategory)
+            ..orderBy([(t) => d.OrderingTerm(expression: t.id)]))
+          .get(),
+      builder: (ctx, snap) {
+        final cats = snap.data ?? [];
+
+        return AlertDialog(
+          backgroundColor: Colors.black87,
+          title: const Text(
+            "Kategorie wählen",
+            style: TextStyle(color: Colors.white),
+          ),
+          content: SizedBox(
+            width: double.maxFinite,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (final c in cats)
+                  GestureDetector(
+                    onTap: () => Navigator.pop(context, c.id),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 12),
+                      margin: const EdgeInsets.symmetric(vertical: 4),
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              c.name,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ),
+
+                          // Bild komplett entfernt → nichts mehr hier
+                        ],
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+
+class _SelectTargetShoppingListDialog extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<ShoppingListData>>(
+      future: (appDb.select(appDb.shoppingList)
+            ..where((t) => t.done.equals(false)))
+          .get(),
+      builder: (ctx, snap) {
+        final lists = snap.data ?? [];
+
+        return AlertDialog(
+          backgroundColor: Colors.black87,
+          title: const Text("Einkaufsliste wählen",
+              style: TextStyle(color: Colors.white)),
+          content: SizedBox(
+            width: double.maxFinite,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (final sl in lists)
+                  GestureDetector(
+                    onTap: () => Navigator.pop(context, sl.id),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 12),
+                      margin: const EdgeInsets.symmetric(vertical: 6),
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              sl.name,
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 16),
+                            ),
+                          ),
+                          if (sl.marketId != null) _buildMarketIconSmall(sl.marketId!)
+                        ],
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+// Kleine Hilfsfunktion aus deinem Shopping-Code
+Widget _buildMarketIconSmall(int marketId) {
+  return FutureBuilder<Market?>(
+    future: (appDb.select(appDb.markets)
+          ..where((m) => m.id.equals(marketId)))
+        .getSingleOrNull(),
+    builder: (ctx, snap) {
+      final m = snap.data;
+      if (m == null) return const SizedBox(width: 32);
+      return Container(
+        width: 32,
+        height: 32,
+        decoration: BoxDecoration(
+          color: _parseHexColor(m.color),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Image.asset(m.picture ?? "assets/images/shop/placeholder.png",
+              fit: BoxFit.cover),
+        ),
+      );
+    },
+  );
 }

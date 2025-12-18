@@ -1,0 +1,1000 @@
+﻿﻿id;age_group_id;is_pregnant;is_breastfeeding;gender_id;nutrient_id;activity_level_id;unit_id;lower_limit;target;upper_limit;description;foot_note
+1;1;0;0;2;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+2;1;0;0;1;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+3;2;0;0;2;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+4;2;0;0;1;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+5;3;0;0;2;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+6;3;0;0;1;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+7;4;0;0;2;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+8;4;0;0;1;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+9;5;0;0;2;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+10;5;0;0;1;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+11;6;0;0;2;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+12;6;0;0;1;133;;;;;0;Kinder und Jugendliche sollen keinen Alkohol trinken.;
+13;7;0;0;2;133;;;;;0;Es gibt keine potenziell gesundheitsfördernde und sichere Alkoholmenge für einen unbedenklichen Konsum. Die DGE empfiehlt daher, auf alkoholische Getränke zu verzichten.;
+14;7;0;0;1;133;;;;;0;Es gibt keine potenziell gesundheitsfördernde und sichere Alkoholmenge für einen unbedenklichen Konsum. Die DGE empfiehlt daher, auf alkoholische Getränke zu verzichten.;
+15;8;0;0;2;133;;;;;0;Es gibt keine potenziell gesundheitsfördernde und sichere Alkoholmenge für einen unbedenklichen Konsum. Die DGE empfiehlt daher, auf alkoholische Getränke zu verzichten.;
+16;8;0;0;1;133;;;;;0;Es gibt keine potenziell gesundheitsfördernde und sichere Alkoholmenge für einen unbedenklichen Konsum. Die DGE empfiehlt daher, auf alkoholische Getränke zu verzichten.;
+17;9;0;0;2;133;;;;;0;Es gibt keine potenziell gesundheitsfördernde und sichere Alkoholmenge für einen unbedenklichen Konsum. Die DGE empfiehlt daher, auf alkoholische Getränke zu verzichten.;
+18;9;0;0;1;133;;;;;0;Es gibt keine potenziell gesundheitsfördernde und sichere Alkoholmenge für einen unbedenklichen Konsum. Die DGE empfiehlt daher, auf alkoholische Getränke zu verzichten.;
+19;10;0;0;2;133;;;;;0;Es gibt keine potenziell gesundheitsfördernde und sichere Alkoholmenge für einen unbedenklichen Konsum. Die DGE empfiehlt daher, auf alkoholische Getränke zu verzichten.;
+20;10;0;0;1;133;;;;;0;Es gibt keine potenziell gesundheitsfördernde und sichere Alkoholmenge für einen unbedenklichen Konsum. Die DGE empfiehlt daher, auf alkoholische Getränke zu verzichten.;
+21;8;1;0;1;133;;;;;0;Schwangere sollen keinen Alkohol trinken.;
+22;8;1;0;1;133;;;;;0;Schwangere sollen keinen Alkohol trinken.;
+23;8;1;0;1;133;;;;;0;Schwangere sollen keinen Alkohol trinken.;
+24;8;0;1;1;133;;;;;0;Stillende sollen keinen Alkohol trinken.;
+25;1;0;0;2;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+26;1;0;0;1;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+27;2;0;0;2;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+28;2;0;0;1;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+29;3;0;0;2;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+30;3;0;0;1;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+31;4;0;0;2;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+32;4;0;0;1;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+33;5;0;0;2;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+34;5;0;0;1;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+35;6;0;0;2;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+36;6;0;0;1;5;;;;;;Für diese Altersgruppe liegt kein Referenzwert vor.;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+37;7;0;0;2;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+38;7;0;0;1;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+39;8;0;0;2;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+40;8;0;0;1;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+41;9;0;0;2;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+42;9;0;0;1;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+43;10;0;0;2;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+44;10;0;0;1;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+45;8;1;0;1;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+46;8;1;0;1;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+47;8;1;0;1;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+48;8;0;1;1;5;;g;30;;;;"Der Richtwert für die Ballaststoffzufuhr gilt für Frauen und Männer gleichermaßen; die Ableitung eines geschlechtsspezifischen Richtwerts ist derzeit nicht möglich. Frauen und Männer sollten dieselbe Ballaststoffzufuhr pro 1000 kcal (Ballaststoffdichte) anstreben. Bei einer mittleren Energiezufuhr von 2050 kcal/Tag – dem Mittel aus Zufuhrwerten für Energie für 25–50-jährige Männer (2300 kcal/Tag) und Frauen (1800 kcal/Tag) mit einem PAL-Wert von 1,4 – entspricht dies einer anzustrebenden Ballaststoffdichte von etwa 14,6 g/1000 kcal bzw. 3,5 g/MJ."
+49;1;0;0;2;19;;ug;;20;;;
+50;1;0;0;1;19;;ug;;20;;;
+51;2;0;0;2;19;;ug;;25;;;
+52;2;0;0;1;19;;ug;;25;;;
+53;3;0;0;2;19;;ug;;25;;;
+54;3;0;0;1;19;;ug;;25;;;
+55;4;0;0;2;19;;ug;;35;;;
+56;4;0;0;1;19;;ug;;35;;;
+57;5;0;0;2;19;;ug;;35;;;
+58;5;0;0;1;19;;ug;;35;;;
+59;6;0;0;2;19;;ug;;40;;;
+60;6;0;0;1;19;;ug;;40;;;
+61;7;0;0;2;19;;ug;;40;;;
+62;7;0;0;1;19;;ug;;40;;;
+63;8;0;0;2;19;;ug;;40;;;
+64;8;0;0;1;19;;ug;;40;;;
+65;9;0;0;2;19;;ug;;40;;;
+66;9;0;0;1;19;;ug;;40;;;
+67;10;0;0;2;19;;ug;;40;;;
+68;10;0;0;1;19;;ug;;40;;;
+69;8;1;0;1;19;;ug;;40;;;
+70;8;1;0;1;19;;ug;;40;;;
+71;8;1;0;1;19;;ug;;40;;;
+72;8;0;1;1;19;;ug;;45;;;
+73;1;0;0;2;28;;mg;;600;;;
+74;1;0;0;1;28;;mg;;600;;;
+75;2;0;0;2;28;;mg;;750;;;
+76;2;0;0;1;28;;mg;;750;;;
+77;3;0;0;2;28;;mg;;900;;;
+78;3;0;0;1;28;;mg;;900;;;
+79;4;0;0;2;28;;mg;;1100;;;
+80;4;0;0;1;28;;mg;;1100;;;
+81;5;0;0;2;28;;mg;;1200;;;
+82;5;0;0;1;28;;mg;;1200;;;
+83;6;0;0;2;28;;mg;;1200;;;
+84;6;0;0;1;28;;mg;;1200;;;
+85;7;0;0;2;28;;mg;;1000;;;
+86;7;0;0;1;28;;mg;;1000;;;
+87;8;0;0;2;28;;mg;;1000;;;
+88;8;0;0;1;28;;mg;;1000;;;
+89;9;0;0;2;28;;mg;;1000;;;
+90;9;0;0;1;28;;mg;;1000;;;
+91;10;0;0;2;28;;mg;;1000;;;
+92;10;0;0;1;28;;mg;;1000;;;
+93;8;1;0;1;28;;mg;;1000;;;Schwangere und Stillende < 19 Jahre 1200 mg
+94;8;1;0;1;28;;mg;;1000;;;Schwangere und Stillende < 19 Jahre 1200 mg
+95;8;1;0;1;28;;mg;;1000;;;Schwangere und Stillende < 19 Jahre 1200 mg
+96;8;0;1;1;28;;mg;;1000;;;Schwangere und Stillende < 19 Jahre 1200 mg
+97;1;0;0;2;32;;mg;;600;;;
+98;1;0;0;1;32;;mg;;600;;;
+99;2;0;0;2;32;;mg;;750;;;
+100;2;0;0;1;32;;mg;;750;;;
+101;3;0;0;2;32;;mg;;1150;;;
+102;3;0;0;1;32;;mg;;1150;;;
+103;4;0;0;2;32;;mg;;1700;;;
+104;4;0;0;1;32;;mg;;1700;;;
+105;5;0;0;2;32;;mg;;2150;;;
+106;5;0;0;1;32;;mg;;2150;;;
+107;6;0;0;2;32;;mg;;2300;;;
+108;6;0;0;1;32;;mg;;2300;;;
+109;7;0;0;2;32;;mg;;2300;;;
+110;7;0;0;1;32;;mg;;2300;;;
+111;8;0;0;2;32;;mg;;2300;;;
+112;8;0;0;1;32;;mg;;2300;;;
+113;9;0;0;2;32;;mg;;2300;;;
+114;9;0;0;1;32;;mg;;2300;;;
+115;10;0;0;2;32;;mg;;2300;;;
+116;10;0;0;1;32;;mg;;2300;;;
+117;8;1;0;1;32;;mg;;2300;;;
+118;8;1;0;1;32;;mg;;2300;;;
+119;8;1;0;1;32;;mg;;2300;;;
+120;8;0;1;1;32;;mg;;2300;;;
+121;1;0;0;2;;;ug;20;;60;;
+122;1;0;0;1;;;ug;20;;60;;
+123;2;0;0;2;;;ug;20;;80;;
+124;2;0;0;1;;;ug;20;;80;;
+125;3;0;0;2;;;ug;20;;100;;
+126;3;0;0;1;;;ug;20;;100;;
+127;4;0;0;2;;;ug;20;;100;;
+128;4;0;0;1;;;ug;20;;100;;
+129;5;0;0;2;;;ug;20;;100;;
+130;5;0;0;1;;;ug;20;;100;;
+131;6;0;0;2;;;ug;30;;100;;
+132;6;0;0;1;;;ug;30;;100;;
+133;7;0;0;2;;;ug;30;;100;;
+134;7;0;0;1;;;ug;30;;100;;
+135;8;0;0;2;;;ug;30;;100;;
+136;8;0;0;1;;;ug;30;;100;;
+137;9;0;0;2;;;ug;30;;100;;
+138;9;0;0;1;;;ug;30;;100;;
+139;10;0;0;2;;;ug;30;;100;;
+140;10;0;0;1;;;ug;30;;100;;
+141;8;1;0;1;;;ug;30;;100;;
+142;8;1;0;1;;;ug;30;;100;;
+143;8;1;0;1;;;ug;30;;100;;
+144;8;0;1;1;;;ug;30;;100;;
+145;1;0;0;2;104;;%;10;;;;
+146;1;0;0;1;104;;%;10;;;;
+147;2;0;0;2;104;;%;10;;;;
+148;2;0;0;1;104;;%;10;;;;
+149;3;0;0;2;104;;%;10;;;;
+150;3;0;0;1;104;;%;10;;;;
+151;4;0;0;2;104;;%;10;;;;
+152;4;0;0;1;104;;%;10;;;;
+153;5;0;0;2;104;;%;10;;;;
+154;5;0;0;1;104;;%;10;;;;
+155;6;0;0;2;104;;%;10;;;;
+156;6;0;0;1;104;;%;10;;;;
+157;7;0;0;2;104;;%;10;;;;
+158;7;0;0;1;104;;%;10;;;;
+159;8;0;0;2;104;;%;10;;;;
+160;8;0;0;1;104;;%;10;;;;
+161;9;0;0;2;104;;%;10;;;;
+162;9;0;0;1;104;;%;10;;;;
+163;10;0;0;2;104;;%;10;;;;
+164;10;0;0;1;104;;%;10;;;;
+165;8;1;0;1;104;;%;10;;;;
+166;8;1;0;1;104;;%;10;;;;
+167;8;1;0;1;104;;%;10;;;;
+168;8;0;1;1;104;;%;10;;;;
+169;1;0;0;2;33;;mg;;7;;;
+170;1;0;0;1;33;;mg;;7;;;
+171;2;0;0;2;33;;mg;;7;;;
+172;2;0;0;1;33;;mg;;7;;;
+173;3;0;0;2;33;;mg;;10;;;
+174;3;0;0;1;33;;mg;;10;;;
+175;4;0;0;2;33;;mg;;14;;;
+176;4;0;0;1;33;;mg;;14;;;Bei frühzeitiger Menarche müssen menstruelle Eisenverluste ersetzt werden, wenn Menstruationsstärke und -zyklus bereits regelmäßig sind. Der physiologische Eisenbedarf entspricht in diesem Fall dem von prämenopausalen Frauen, wodurch sich eine empfohlene Zufuhr von 16 mg Eisen/Tag ergibt.
+177;5;0;0;2;33;;mg;;11;;;
+178;5;0;0;1;33;;mg;;16;;;Bei Jugendlichen und Frauen, die nicht menstruieren (u. a. aufgrund der Verwendung von oralen Kontrazeptiva, die durchgängig ohne Pause eingenommen werden, frühere Perimenopause) wird basierend auf den Werten für Männer eine empfohlene Zufuhr von 11 mg Eisen/Tag angegeben. Für Schwangere und für Frauen nach einer Geburt gelten die jeweiligen Referenzwerte.
+179;6;0;0;2;33;;mg;;11;;;Bei Jugendlichen und Frauen, die nicht menstruieren (u. a. aufgrund der Verwendung von oralen Kontrazeptiva, die durchgängig ohne Pause eingenommen werden, frühere Perimenopause) wird basierend auf den Werten für Männer eine empfohlene Zufuhr von 11 mg Eisen/Tag angegeben. Für Schwangere und für Frauen nach einer Geburt gelten die jeweiligen Referenzwerte.
+180;6;0;0;1;33;;mg;;16;;;Bei Jugendlichen und Frauen, die nicht menstruieren (u. a. aufgrund der Verwendung von oralen Kontrazeptiva, die durchgängig ohne Pause eingenommen werden, frühere Perimenopause) wird basierend auf den Werten für Männer eine empfohlene Zufuhr von 11 mg Eisen/Tag angegeben. Für Schwangere und für Frauen nach einer Geburt gelten die jeweiligen Referenzwerte.
+181;7;0;0;2;33;;mg;;11;;;Bei Jugendlichen und Frauen, die nicht menstruieren (u. a. aufgrund der Verwendung von oralen Kontrazeptiva, die durchgängig ohne Pause eingenommen werden, frühere Perimenopause) wird basierend auf den Werten für Männer eine empfohlene Zufuhr von 11 mg Eisen/Tag angegeben. Für Schwangere und für Frauen nach einer Geburt gelten die jeweiligen Referenzwerte.
+182;7;0;0;1;33;;mg;;16;;;Bei Jugendlichen und Frauen, die nicht menstruieren (u. a. aufgrund der Verwendung von oralen Kontrazeptiva, die durchgängig ohne Pause eingenommen werden, frühere Perimenopause) wird basierend auf den Werten für Männer eine empfohlene Zufuhr von 11 mg Eisen/Tag angegeben. Für Schwangere und für Frauen nach einer Geburt gelten die jeweiligen Referenzwerte.
+183;8;0;0;2;33;;mg;;11;;;Bei Jugendlichen und Frauen, die nicht menstruieren (u. a. aufgrund der Verwendung von oralen Kontrazeptiva, die durchgängig ohne Pause eingenommen werden, frühere Perimenopause) wird basierend auf den Werten für Männer eine empfohlene Zufuhr von 11 mg Eisen/Tag angegeben. Für Schwangere und für Frauen nach einer Geburt gelten die jeweiligen Referenzwerte.
+184;8;0;0;1;33;;mg;;16;;;Bei Jugendlichen und Frauen, die nicht menstruieren (u. a. aufgrund der Verwendung von oralen Kontrazeptiva, die durchgängig ohne Pause eingenommen werden, frühere Perimenopause) wird basierend auf den Werten für Männer eine empfohlene Zufuhr von 11 mg Eisen/Tag angegeben. Für Schwangere und für Frauen nach einer Geburt gelten die jeweiligen Referenzwerte.
+185;9;0;0;2;33;;mg;;11;;;Bei Jugendlichen und Frauen, die nicht menstruieren (u. a. aufgrund der Verwendung von oralen Kontrazeptiva, die durchgängig ohne Pause eingenommen werden, frühere Perimenopause) wird basierend auf den Werten für Männer eine empfohlene Zufuhr von 11 mg Eisen/Tag angegeben. Für Schwangere und für Frauen nach einer Geburt gelten die jeweiligen Referenzwerte.
+186;9;0;0;1;33;;mg;;16;;;Bei Jugendlichen und Frauen, die nicht menstruieren (u. a. aufgrund der Verwendung von oralen Kontrazeptiva, die durchgängig ohne Pause eingenommen werden, frühere Perimenopause) wird basierend auf den Werten für Männer eine empfohlene Zufuhr von 11 mg Eisen/Tag angegeben. Für Schwangere und für Frauen nach einer Geburt gelten die jeweiligen Referenzwerte.
+187;10;0;0;2;33;;mg;;11;;;
+188;10;0;0;1;33;;mg;;14;;;
+189;8;1;0;1;33;;mg;;27;;;
+190;8;1;0;1;33;;mg;;27;;;
+191;8;1;0;1;33;;mg;;27;;;
+192;8;0;1;1;33;;mg;;16;;;Diese Angabe gilt für stillende und nicht stillende Frauen nach der Geburt zum Ausgleich der Verluste während der Schwangerschaft.
+193;8;1;0;1;1;;kcal;;250;;Richtwert für die zusätzliche Energiezufuhr für Stillende bei ausschließlichem Stillen während der ersten 4 bis 6 Monate;Diese Angaben gelten nur bei Normalgewicht vor der Schwangerschaft, bei einer wünschenswerten Gewichtsentwicklung während der Schwangerschaft (Körpergewichtszunahme von 12 kg bis Ende der Schwangerschaft) und bei unverminderter körperlicher Aktivität.
+194;8;1;0;1;1;;kcal;;500;;Richtwert für die zusätzliche Energiezufuhr für Stillende bei ausschließlichem Stillen während der ersten 4 bis 6 Monate;Diese Angaben gelten nur bei Normalgewicht vor der Schwangerschaft, bei einer wünschenswerten Gewichtsentwicklung während der Schwangerschaft (Körpergewichtszunahme von 12 kg bis Ende der Schwangerschaft) und bei unverminderter körperlicher Aktivität.
+195;8;0;1;1;1;;kcal;;500;;Richtwert für die zusätzliche Energiezufuhr für Stillende bei ausschließlichem Stillen während der ersten 4 bis 6 Monate;
+196;1;0;0;2;1;1,4;kcal;;1200;;;
+197;1;0;0;1;1;1,4;kcal;;1100;;;
+198;2;0;0;2;1;1,4;kcal;;1400;;;
+199;2;0;0;1;1;1,4;kcal;;1300;;;
+200;3;0;0;2;1;1,4;kcal;;1700;;;
+201;3;0;0;1;1;1,4;kcal;;1500;;;
+202;4;0;0;2;1;1,4;kcal;;1900;;;
+203;4;0;0;1;1;1,4;kcal;;1700;;;
+204;5;0;0;2;1;1,4;kcal;;2300;;;
+205;5;0;0;1;1;1,4;kcal;;1900;;;
+206;6;0;0;2;1;1,4;kcal;;2600;;;
+207;6;0;0;1;1;1,4;kcal;;2000;;;
+208;7;0;0;2;1;1,4;kcal;;2400;;;
+209;7;0;0;1;1;1,4;kcal;;1900;;;
+210;8;0;0;2;1;1,4;kcal;;2300;;;
+211;8;0;0;1;1;1,4;kcal;;1800;;;
+212;9;0;0;2;1;1,4;kcal;;2200;;;
+213;9;0;0;1;1;1,4;kcal;;1700;;;
+214;10;0;0;2;1;1,4;kcal;;2100;;;
+215;10;0;0;1;1;1,4;kcal;;1700;;;
+216;1;0;0;2;1;1,6;kcal;;1300;;;
+217;1;0;0;1;1;1,6;kcal;;1200;;;
+218;2;0;0;2;1;1,6;kcal;;1600;;;
+219;2;0;0;1;1;1,6;kcal;;1500;;;
+220;3;0;0;2;1;1,6;kcal;;1900;;;
+221;3;0;0;1;1;1,6;kcal;;1800;;;
+222;4;0;0;2;1;1,6;kcal;;2200;;;
+223;4;0;0;1;1;1,6;kcal;;2000;;;
+224;5;0;0;2;1;1,6;kcal;;2600;;;
+225;5;0;0;1;1;1,6;kcal;;2200;;;
+226;6;0;0;2;1;1,6;kcal;;3000;;;
+227;6;0;0;1;1;1,6;kcal;;2300;;;
+228;7;0;0;2;1;1,6;kcal;;2800;;;
+229;7;0;0;1;1;1,6;kcal;;2200;;;
+230;8;0;0;2;1;1,6;kcal;;2700;;;
+231;8;0;0;1;1;1,6;kcal;;2100;;;
+232;9;0;0;2;1;1,6;kcal;;2500;;;
+233;9;0;0;1;1;1,6;kcal;;2000;;;
+234;10;0;0;2;1;1,6;kcal;;2500;;;
+235;10;0;0;1;1;1,6;kcal;;1900;;;
+236;2;0;0;2;1;1,8;kcal;;1800;;;
+237;2;0;0;1;1;1,8;kcal;;1700;;;
+238;3;0;0;2;1;1,8;kcal;;2100;;;
+239;3;0;0;1;1;1,8;kcal;;2000;;;
+240;4;0;0;2;1;1,8;kcal;;2400;;;
+241;4;0;0;1;1;1,8;kcal;;2200;;;
+242;5;0;0;2;1;1,8;kcal;;2900;;;
+243;5;0;0;1;1;1,8;kcal;;2500;;;
+244;6;0;0;2;1;1,8;kcal;;3400;;;
+245;6;0;0;1;1;1,8;kcal;;2600;;;
+246;7;0;0;2;1;1,8;kcal;;3100;;;
+247;7;0;0;1;1;1,8;kcal;;2500;;;
+248;8;0;0;2;1;1,8;kcal;;3000;;;
+249;8;0;0;1;1;1,8;kcal;;2400;;;
+250;9;0;0;2;1;1,8;kcal;;2800;;;
+251;9;0;0;1;1;1,8;kcal;;2200;;;
+252;10;0;0;2;1;1,8;kcal;;2800;;;
+253;10;0;0;1;1;1,8;kcal;;2100;;;
+254;1;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+255;1;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+256;2;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+257;2;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+258;3;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+259;3;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+260;4;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+261;4;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+262;5;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+263;5;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+264;6;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+265;6;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+266;7;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+267;7;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+268;8;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+269;8;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+270;9;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+271;9;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+272;10;0;0;2;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+273;10;0;0;1;114;;mg;;83,3333333;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+274;1;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+275;1;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+276;2;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+277;2;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+278;3;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+279;3;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+280;4;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+281;4;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+282;5;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+283;5;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+284;6;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+285;6;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+286;7;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+287;7;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+288;8;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+289;8;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+290;9;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+291;9;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+292;10;0;0;2;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+293;10;0;0;1;119;;mg;;166,666667;;Für die primäre Prävention der koronaren Herzkrankheit wird in der Literatur eine Zufuhr von 250 mg langkettigen n-3 Fettsäuren/Tag als angemessen geschätzt.;
+294;8;1;0;1;119;;mg;;200;;Supplementationshinweis beachten;Schwangeren ohne regelmäßigen Verzehr von fettreichem Seefisch wird empfohlen, DHA zu supplementieren. Quelle: https://www.gesund-ins-leben.de/fuer-fachkreise/familien-vor-und-in-der-schwangerschaft/handlungsempfehlungen/supplemente/weitere-supplemente/
+295;8;1;0;1;119;;mg;;200;;Supplementationshinweis beachten;Schwangeren ohne regelmäßigen Verzehr von fettreichem Seefisch wird empfohlen, DHA zu supplementieren. Quelle: https://www.gesund-ins-leben.de/fuer-fachkreise/familien-vor-und-in-der-schwangerschaft/handlungsempfehlungen/supplemente/weitere-supplemente/
+296;8;1;0;1;119;;mg;;200;;Supplementationshinweis beachten;Schwangeren ohne regelmäßigen Verzehr von fettreichem Seefisch wird empfohlen, DHA zu supplementieren. Quelle: https://www.gesund-ins-leben.de/fuer-fachkreise/familien-vor-und-in-der-schwangerschaft/handlungsempfehlungen/supplemente/weitere-supplemente/
+297;8;0;1;1;119;;mg;;200;;Supplementationshinweis beachten;
+298;1;0;0;2;37;;mg;;0,7;;Supplementationshinweis beachten;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen. Kombiniert mit der Vitamin-D-Gabe sollen täglich 0,25 mg Fluorid zur Kariesprophylaxe gegeben werden. Bei einer in Deutschland selten vorliegenden erhöhten Fluoridkonzentration im Trinkwasser über 0,3 mg/l soll eine Dosisanpassung erfolgen. Wenn das Trinkwasser mehr als 0,7 mg Fluorid/l enthält, sollen keine Fluoridsupplemente gegeben werden. Die Fluoridgabe soll so lange fortgesetzt werden, bis im Kleinkindalter die altersgerechte Anwendung einer fluoridhaltigen Zahnpasta erfolgen kann. Quelle: https://www.gesund-ins-leben.de/fuer-fachkreise/bestens-unterstuetzt-durchs-1-lebensjahr/handlungsempfehlungen/beikost/naehrstoffsupplemente-im-1-lebensjahr/
+299;1;0;0;1;37;;mg;;0,7;;Supplementationshinweis beachten;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen. Kombiniert mit der Vitamin-D-Gabe sollen täglich 0,25 mg Fluorid zur Kariesprophylaxe gegeben werden. Bei einer in Deutschland selten vorliegenden erhöhten Fluoridkonzentration im Trinkwasser über 0,3 mg/l soll eine Dosisanpassung erfolgen. Wenn das Trinkwasser mehr als 0,7 mg Fluorid/l enthält, sollen keine Fluoridsupplemente gegeben werden. Die Fluoridgabe soll so lange fortgesetzt werden, bis im Kleinkindalter die altersgerechte Anwendung einer fluoridhaltigen Zahnpasta erfolgen kann. Quelle: https://www.gesund-ins-leben.de/fuer-fachkreise/bestens-unterstuetzt-durchs-1-lebensjahr/handlungsempfehlungen/beikost/naehrstoffsupplemente-im-1-lebensjahr/
+300;2;0;0;2;37;;mg;;1,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+301;2;0;0;1;37;;mg;;1,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+302;3;0;0;2;37;;mg;;1,5;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+303;3;0;0;1;37;;mg;;1,5;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+304;4;0;0;2;37;;mg;;2,1;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+305;4;0;0;1;37;;mg;;2,1;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+306;5;0;0;2;37;;mg;;2,8;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+307;5;0;0;1;37;;mg;;2,7;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+308;6;0;0;2;37;;mg;;3,5;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+309;6;0;0;1;37;;mg;;3,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+310;7;0;0;2;37;;mg;;3,5;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+311;7;0;0;1;37;;mg;;3,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+312;8;0;0;2;37;;mg;;3,5;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+313;8;0;0;1;37;;mg;;3,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+314;9;0;0;2;37;;mg;;3,5;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+315;9;0;0;1;37;;mg;;3,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+316;10;0;0;2;37;;mg;;3,5;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+317;10;0;0;1;37;;mg;;3,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+318;8;1;0;1;37;;mg;;3,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+319;8;1;0;1;37;;mg;;3,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+320;8;1;0;1;37;;mg;;3,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+321;8;0;1;1;37;;mg;;3,0;;;Sicherheitshinweis: Bei einer Fluoridkonzentration im Trinkwasser > 0,7 mg/l soll weder für Kinder noch für Erwachsene Fluoridtabletten oder fluoridiertes Speisesalz verwendet werden. Die jeweilige Fluoridkonzentration im Trinkwasser kann beim zuständigen Gesundheitsamt erfragt werden. Fluoridzufuhr aus Lebensmitteln einschließlich fluoridiertem Speisesalz und Getränken inkl. Trink- und Mineralwasser sowie Supplementen. Fluoridierte Zahnpflegeprodukte zur Kariesprävention tragen bei Verschlucken ebenfalls zur Gesamtzufuhr bei. Bei einer längeren Überschreitung der tolerierbaren Gesamtzufuhrmengen (etwa 0,1 mg/kg/Tag), besonders bei Kindern im Alter von 2 bis 8 Jahren, ist mit einem erhöhten Risiko für das Auftreten von Zahnschmelzflecken (Zahnfluorose) zu rechnen.
+322;1;0;0;2;20;;ug;;120;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+323;1;0;0;1;20;;ug;;120;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+324;2;0;0;2;20;;ug;;140;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+325;2;0;0;1;20;;ug;;140;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+326;3;0;0;2;20;;ug;;180;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+327;3;0;0;1;20;;ug;;180;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+328;4;0;0;2;20;;ug;;240;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+329;4;0;0;1;20;;ug;;240;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+330;5;0;0;2;20;;ug;;300;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+331;5;0;0;1;20;;ug;;300;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+332;6;0;0;2;20;;ug;;300;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+333;6;0;0;1;20;;ug;;300;;Supplementationshinweis beachten;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure Frauen, die schwanger werden wollen oder könnten, sollten zusätzlich zu einer Vitamin B9 gesamte Folsäurereichen Ernährung 400 µg synthetische Folsäure/Tag oder äquivalente Dosen anderer Vitamin B9 gesamte Folsäuree in Form eines Präparats einnehmen, um Neuralrohrdefekten vorzubeugen. Diese zusätzliche Einnahme eines Folsäure- oder Vitamin B9 gesamte Folsäurepräparats sollte mindestens 4 Wochen vor Beginn der Schwangerschaft anfangen und während des 1. Drittels der Schwangerschaft beibehalten werden.
+334;7;0;0;2;20;;ug;;300;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+335;7;0;0;1;20;;ug;;300;;Supplementationshinweis beachten;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure Frauen, die schwanger werden wollen oder könnten, sollten zusätzlich zu einer Vitamin B9 gesamte Folsäurereichen Ernährung 400 µg synthetische Folsäure/Tag oder äquivalente Dosen anderer Vitamin B9 gesamte Folsäuree in Form eines Präparats einnehmen, um Neuralrohrdefekten vorzubeugen. Diese zusätzliche Einnahme eines Folsäure- oder Vitamin B9 gesamte Folsäurepräparats sollte mindestens 4 Wochen vor Beginn der Schwangerschaft anfangen und während des 1. Drittels der Schwangerschaft beibehalten werden.
+336;8;0;0;2;20;;ug;;300;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+337;8;0;0;1;20;;ug;;300;;Supplementationshinweis beachten;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure Frauen, die schwanger werden wollen oder könnten, sollten zusätzlich zu einer Vitamin B9 gesamte Folsäurereichen Ernährung 400 µg synthetische Folsäure/Tag oder äquivalente Dosen anderer Vitamin B9 gesamte Folsäuree in Form eines Präparats einnehmen, um Neuralrohrdefekten vorzubeugen. Diese zusätzliche Einnahme eines Folsäure- oder Vitamin B9 gesamte Folsäurepräparats sollte mindestens 4 Wochen vor Beginn der Schwangerschaft anfangen und während des 1. Drittels der Schwangerschaft beibehalten werden.
+338;9;0;0;2;20;;ug;;300;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+339;9;0;0;1;20;;ug;;300;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+340;10;0;0;2;20;;ug;;300;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+341;10;0;0;1;20;;ug;;300;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+342;8;1;0;1;20;;ug;;550;;Supplementationshinweis beachten;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure Frauen, die schwanger werden wollen oder könnten, sollten zusätzlich zu einer Vitamin B9 gesamte Folsäurereichen Ernährung 400 µg synthetische Folsäure/Tag oder äquivalente Dosen anderer Vitamin B9 gesamte Folsäuree in Form eines Präparats einnehmen, um Neuralrohrdefekten vorzubeugen. Diese zusätzliche Einnahme eines Folsäure- oder Vitamin B9 gesamte Folsäurepräparats sollte mindestens 4 Wochen vor Beginn der Schwangerschaft anfangen und während des 1. Drittels der Schwangerschaft beibehalten werden.
+343;8;1;0;1;20;;ug;;550;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+344;8;1;0;1;20;;ug;;550;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+345;8;0;1;1;20;;ug;;450;;;Berechnet nach der Summe Vitamin B9 gesamte Folsäurewirksamer Verbindungen in der üblichen Nahrung (Vitamin B9 gesamte Folsäure-Äquivalente): 1µg Vitamin B9 gesamte Folsäure-Äquivalent = 1µg NahrungsVitamin B9 gesamte Folsäure = 0,5 µg synthetische Folsäure
+346;1;0;0;2;2;;%;30;;40;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+347;1;0;0;1;2;;%;30;;40;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+348;2;0;0;2;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+349;2;0;0;1;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+350;3;0;0;2;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+351;3;0;0;1;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+352;4;0;0;2;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+353;4;0;0;1;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+354;5;0;0;2;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+355;5;0;0;1;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+356;6;0;0;2;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Personen mit erhöhtem Energiebedarf (PAL > 1,7) können höhere Prozentsätze benötigen."
+357;6;0;0;1;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Personen mit erhöhtem Energiebedarf (PAL > 1,7) können höhere Prozentsätze benötigen."
+358;7;0;0;2;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Personen mit erhöhtem Energiebedarf (PAL > 1,7) können höhere Prozentsätze benötigen. Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+359;7;0;0;1;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Personen mit erhöhtem Energiebedarf (PAL > 1,7) können höhere Prozentsätze benötigen. Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+360;8;0;0;2;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Personen mit erhöhtem Energiebedarf (PAL > 1,7) können höhere Prozentsätze benötigen. Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+361;8;0;0;1;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Personen mit erhöhtem Energiebedarf (PAL > 1,7) können höhere Prozentsätze benötigen. Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+362;9;0;0;2;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+363;9;0;0;1;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+364;10;0;0;2;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+365;10;0;0;1;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+366;8;1;0;1;2;;%;;30;;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Schwangere und Stillende sollten im Durchschnitt mindestens 200 mg Docosahexaensäure/Tag zuführen. Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+367;8;1;0;1;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Schwangere und Stillende sollten im Durchschnitt mindestens 200 mg Docosahexaensäure/Tag zuführen. Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+368;8;1;0;1;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Schwangere und Stillende sollten im Durchschnitt mindestens 200 mg Docosahexaensäure/Tag zuführen. Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+369;8;0;1;1;2;;%;30;;35;;"trans-Fettsäuren sollten in möglichst geringen Mengen in der Nahrung enthalten sein und weniger als 1 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf Schwangere und Stillende sollten im Durchschnitt mindestens 200 mg Docosahexaensäure/Tag zuführen. Die Cholesterolzufuhr mit der Nahrung sollte aus präventiven Gründen bis zu 300 mg/Tag betragen. Bei einer vollwertigen Ernährungsweise nach den 10 Regeln der DGE wird dies in der Regel problemlos eingehalten."
+370;1;0;0;2;95;;%;;;10;;
+371;1;0;0;1;95;;%;;;10;;
+372;2;0;0;2;95;;%;;;10;;
+373;2;0;0;1;95;;%;;;10;;
+374;3;0;0;2;95;;%;;;10;;
+375;3;0;0;1;95;;%;;;10;;
+376;4;0;0;2;95;;%;;;10;;
+377;4;0;0;1;95;;%;;;10;;
+378;5;0;0;2;95;;%;;;10;;
+379;5;0;0;1;95;;%;;;10;;
+380;6;0;0;2;95;;%;;;10;;
+381;6;0;0;1;95;;%;;;10;;
+382;7;0;0;2;95;;%;;;10;;
+383;7;0;0;1;95;;%;;;10;;
+384;8;0;0;2;95;;%;;;10;;
+385;8;0;0;1;95;;%;;;10;;
+386;9;0;0;2;95;;%;;;10;;
+387;9;0;0;1;95;;%;;;10;;
+388;10;0;0;2;95;;%;;;10;;
+389;10;0;0;1;95;;%;;;10;;
+390;8;1;0;1;95;;%;;;10;;
+391;8;1;0;1;95;;%;;;10;;
+392;8;1;0;1;95;;%;;;10;;
+393;8;0;1;1;95;;%;;;10;;
+394;1;0;0;2;38;;ug;;90;;;
+395;1;0;0;1;38;;ug;;90;;;
+396;2;0;0;2;38;;ug;;90;;;
+397;2;0;0;1;38;;ug;;90;;;
+398;3;0;0;2;38;;ug;;120;;;
+399;3;0;0;1;38;;ug;;120;;;
+400;4;0;0;2;38;;ug;;120;;;
+401;4;0;0;1;38;;ug;;120;;;
+402;5;0;0;2;38;;ug;;150;;;
+403;5;0;0;1;38;;ug;;150;;;
+404;6;0;0;2;38;;ug;;150;;;
+405;6;0;0;1;38;;ug;;150;;;
+406;7;0;0;2;38;;ug;;150;;;
+407;7;0;0;1;38;;ug;;150;;;
+408;8;0;0;2;38;;ug;;150;;;
+409;8;0;0;1;38;;ug;;150;;;
+410;9;0;0;2;38;;ug;;150;;;
+411;9;0;0;1;38;;ug;;150;;;
+412;10;0;0;2;38;;ug;;150;;;
+413;10;0;0;1;38;;ug;;150;;;
+414;8;1;0;1;38;;ug;;220;;Supplementationshinweis beachten;Zusätzlich zu einer ausgewogenen Ernährung mit Iodidiertem Speisesalz sollen Schwangere täglich ein Supplement mit 100 (bis 150) µg Iodid einnehmen. Bei Schilddrüsenerkrankungen soll vor der Supplementation eine ärztliche Rücksprache erfolgen. Quelle: https://www.gesund-ins-leben.de/fuer-fachkreise/familien-vor-und-in-der-schwangerschaft/handlungsempfehlungen/supplemente/supplement-Iodid/
+415;8;1;0;1;38;;ug;;220;;Supplementationshinweis beachten;Zusätzlich zu einer ausgewogenen Ernährung mit Iodidiertem Speisesalz sollen Schwangere täglich ein Supplement mit 100 (bis 150) µg Iodid einnehmen. Bei Schilddrüsenerkrankungen soll vor der Supplementation eine ärztliche Rücksprache erfolgen. Quelle: https://www.gesund-ins-leben.de/fuer-fachkreise/familien-vor-und-in-der-schwangerschaft/handlungsempfehlungen/supplemente/supplement-Iodid/
+416;8;1;0;1;38;;ug;;220;;Supplementationshinweis beachten;Zusätzlich zu einer ausgewogenen Ernährung mit Iodidiertem Speisesalz sollen Schwangere täglich ein Supplement mit 100 (bis 150) µg Iodid einnehmen. Bei Schilddrüsenerkrankungen soll vor der Supplementation eine ärztliche Rücksprache erfolgen. Quelle: https://www.gesund-ins-leben.de/fuer-fachkreise/familien-vor-und-in-der-schwangerschaft/handlungsempfehlungen/supplemente/supplement-Iodid/
+417;8;0;1;1;38;;ug;;230;;Supplementationshinweis beachten;Während der Stillzeit sollten zusätzlich zu einer ausgewogenen Ernährung mit Iodidiertem Speisesalz ein Supplement  mit 100 µg Iodid/Tag eingenommen werden. Quelle: https://www.gesund-ins-leben.de/fuer-fachkreise/bestens-unterstuetzt-durchs-1-lebensjahr/handlungsempfehlungen/empfehlungen-fuer-die-mutter/naehrstoffsupplemente-in-der-stillzeit/
+418;1;0;0;2;27;;mg;;1100;;;
+419;1;0;0;1;27;;mg;;1100;;;
+420;2;0;0;2;27;;mg;;1300;;;
+421;2;0;0;1;27;;mg;;1300;;;
+422;3;0;0;2;27;;mg;;2000;;;
+423;3;0;0;1;27;;mg;;2000;;;
+424;4;0;0;2;27;;mg;;2900;;;
+425;4;0;0;1;27;;mg;;2900;;;
+426;5;0;0;2;27;;mg;;3600;;;
+427;5;0;0;1;27;;mg;;3600;;;
+428;6;0;0;2;27;;mg;;4000;;;
+429;6;0;0;1;27;;mg;;4000;;;
+430;7;0;0;2;27;;mg;;4000;;;
+431;7;0;0;1;27;;mg;;4000;;;
+432;8;0;0;2;27;;mg;;4000;;;
+433;8;0;0;1;27;;mg;;4000;;;
+434;9;0;0;2;27;;mg;;4000;;;
+435;9;0;0;1;27;;mg;;4000;;;
+436;10;0;0;2;27;;mg;;4000;;;
+437;10;0;0;1;27;;mg;;4000;;;
+438;8;1;0;1;27;;mg;;4000;;;
+439;8;1;0;1;27;;mg;;4000;;;
+440;8;1;0;1;27;;mg;;4000;;;
+441;8;0;1;1;27;;mg;;4400;;;
+442;1;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+443;1;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+444;2;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+445;2;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+446;3;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+447;3;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+448;4;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+449;4;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+450;5;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+451;5;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+452;6;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+453;6;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+454;7;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+455;7;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+456;8;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+457;8;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+458;9;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+459;9;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+460;10;0;0;2;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+461;10;0;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+462;8;1;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+463;8;1;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+464;8;1;0;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+465;8;0;1;1;4;;%;50;;;;"Freie Zucker sollten in möglichst geringen Mengen zugeführt werden und max. 10 % der Nahrungsenergie liefern. Unter den in der DGE-Position ""Richtwerte für die Energiezufuhr aus Kohlenhydraten und Fett"" genannten Voraussetzungen kann von diesen Richtwerten abgewichen werden. Quelle: https://www.dge.de//fileadmin/dok/wissenschaft/positionen/DGE-Positionspapier-Richtwerte-Energiezufuhr-KH-und-Fett.pdf"
+466;1;0;0;2;35;;mg;0,5;;1;;
+467;1;0;0;1;35;;mg;0,5;;1;;
+468;2;0;0;2;35;;mg;0,5;;1;;
+469;2;0;0;1;35;;mg;0,5;;1;;
+470;3;0;0;2;35;;mg;1;;1,5;;
+471;3;0;0;1;35;;mg;1;;1,5;;
+472;4;0;0;2;35;;mg;1;;1,5;;
+473;4;0;0;1;35;;mg;1;;1,5;;
+474;5;0;0;2;35;;mg;1;;1,5;;
+475;5;0;0;1;35;;mg;1;;1,5;;
+476;6;0;0;2;35;;mg;1;;1,5;;
+477;6;0;0;1;35;;mg;1;;1,5;;
+478;7;0;0;2;35;;mg;1;;1,5;;
+479;7;0;0;1;35;;mg;1;;1,5;;
+480;8;0;0;2;35;;mg;1;;1,5;;
+481;8;0;0;1;35;;mg;1;;1,5;;
+482;9;0;0;2;35;;mg;1;;1,5;;
+483;9;0;0;1;35;;mg;1;;1,5;;
+484;10;0;0;2;35;;mg;1;;1,5;;
+485;10;0;0;1;35;;mg;1;;1,5;;
+486;8;1;0;1;35;;mg;1;;1,5;;
+487;8;1;0;1;35;;mg;1;;1,5;;
+488;8;1;0;1;35;;mg;1;;1,5;;
+489;8;0;1;1;35;;mg;1;;1,5;;
+490;1;0;0;2;107;;%;;3,0;;;
+491;1;0;0;1;107;;%;;3,0;;;
+492;2;0;0;2;107;;%;;2,5;;;
+493;2;0;0;1;107;;%;;2,5;;;
+494;3;0;0;2;107;;%;;2,5;;;
+495;3;0;0;1;107;;%;;2,5;;;
+496;4;0;0;2;107;;%;;2,5;;;
+497;4;0;0;1;107;;%;;2,5;;;
+498;5;0;0;2;107;;%;;2,5;;;
+499;5;0;0;1;107;;%;;2,5;;;
+500;6;0;0;2;107;;%;;2,5;;;
+501;6;0;0;1;107;;%;;2,5;;;
+502;7;0;0;2;107;;%;;2,5;;;
+503;7;0;0;1;107;;%;;2,5;;;
+504;8;0;0;2;107;;%;;2,5;;;
+505;8;0;0;1;107;;%;;2,5;;;
+506;9;0;0;2;107;;%;;2,5;;;
+507;9;0;0;1;107;;%;;2,5;;;
+508;10;0;0;2;107;;%;;2,5;;;
+509;10;0;0;1;107;;%;;2,5;;;
+510;8;1;0;1;107;;%;;2,5;;;
+511;8;1;0;1;107;;%;;2,5;;;
+512;8;1;0;1;107;;%;;2,5;;;
+513;8;0;1;1;107;;%;;2,5;;;
+514;1;0;0;2;29;;mg;;170;;;
+515;1;0;0;1;29;;mg;;170;;;
+516;2;0;0;2;29;;mg;;190;;;
+517;2;0;0;1;29;;mg;;190;;;
+518;3;0;0;2;29;;mg;;240;;;
+519;3;0;0;1;29;;mg;;240;;;
+520;4;0;0;2;29;;mg;;260;;;
+521;4;0;0;1;29;;mg;;230;;;
+522;5;0;0;2;29;;mg;;280;;;
+523;5;0;0;1;29;;mg;;240;;;
+524;6;0;0;2;29;;mg;;330;;;
+525;6;0;0;1;29;;mg;;260;;;
+526;7;0;0;2;29;;mg;;350;;;
+527;7;0;0;1;29;;mg;;300;;;
+528;8;0;0;2;29;;mg;;350;;;
+529;8;0;0;1;29;;mg;;300;;;
+530;9;0;0;2;29;;mg;;350;;;
+531;9;0;0;1;29;;mg;;300;;;
+532;10;0;0;2;29;;mg;;350;;;
+533;10;0;0;1;29;;mg;;300;;;
+534;8;1;0;1;29;;mg;;300;;;
+535;8;1;0;1;29;;mg;;300;;;
+536;8;1;0;1;29;;mg;;300;;;
+537;8;0;1;1;29;;mg;;300;;;
+538;1;0;0;2;36;;mg;1;;1,5;;
+539;1;0;0;1;36;;mg;1;;1,5;;
+540;2;0;0;2;36;;mg;1,5;;2;;
+541;2;0;0;1;36;;mg;1,5;;2;;
+542;3;0;0;2;36;;mg;2;;3;;
+543;3;0;0;1;36;;mg;2;;3;;
+544;4;0;0;2;36;;mg;2;;5;;
+545;4;0;0;1;36;;mg;2;;5;;
+546;5;0;0;2;36;;mg;2;;5;;
+547;5;0;0;1;36;;mg;2;;5;;
+548;6;0;0;2;36;;mg;2;;5;;
+549;6;0;0;1;36;;mg;2;;5;;
+550;7;0;0;2;36;;mg;2;;5;;
+551;7;0;0;1;36;;mg;2;;5;;
+552;8;0;0;2;36;;mg;2;;5;;
+553;8;0;0;1;36;;mg;2;;5;;
+554;9;0;0;2;36;;mg;2;;5;;
+555;9;0;0;1;36;;mg;2;;5;;
+556;10;0;0;2;36;;mg;2;;5;;
+557;10;0;0;1;36;;mg;2;;5;;
+558;8;1;0;1;36;;mg;2;;5;;
+559;8;1;0;1;36;;mg;2;;5;;
+560;8;1;0;1;36;;mg;2;;5;;
+561;8;0;1;1;36;;mg;2;;5;;
+562;1;0;0;2;120;;%;7;;10;;
+563;1;0;0;1;120;;%;7;;10;;
+564;2;0;0;2;120;;%;7;;10;;
+565;2;0;0;1;120;;%;7;;10;;
+566;3;0;0;2;120;;%;7;;10;;
+567;3;0;0;1;120;;%;7;;10;;
+568;4;0;0;2;120;;%;7;;10;;
+569;4;0;0;1;120;;%;7;;10;;
+570;5;0;0;2;120;;%;7;;10;;
+571;5;0;0;1;120;;%;7;;10;;
+572;6;0;0;2;120;;%;7;;10;;
+573;6;0;0;1;120;;%;7;;10;;
+574;7;0;0;2;120;;%;7;;10;;
+575;7;0;0;1;120;;%;7;;10;;
+576;8;0;0;2;120;;%;7;;10;;
+577;8;0;0;1;120;;%;7;;10;;
+578;9;0;0;2;120;;%;7;;10;;
+579;9;0;0;1;120;;%;7;;10;;
+580;10;0;0;2;120;;%;7;;10;;
+581;10;0;0;1;120;;%;7;;10;;
+582;8;1;0;1;120;;%;7;;10;;
+583;8;1;0;1;120;;%;7;;10;;
+584;8;1;0;1;120;;%;7;;10;;
+585;8;0;1;1;120;;%;7;;10;;
+586;1;0;0;2;;;ug;25;;50;;
+587;1;0;0;1;;;ug;25;;50;;
+588;2;0;0;2;;;ug;30;;75;;
+589;2;0;0;1;;;ug;30;;75;;
+590;3;0;0;2;;;ug;40;;80;;
+591;3;0;0;1;;;ug;40;;80;;
+592;4;0;0;2;;;ug;50;;100;;
+593;4;0;0;1;;;ug;50;;100;;
+594;5;0;0;2;;;ug;50;;100;;
+595;5;0;0;1;;;ug;50;;100;;
+596;6;0;0;2;;;ug;50;;100;;
+597;6;0;0;1;;;ug;50;;100;;
+598;7;0;0;2;;;ug;50;;100;;
+599;7;0;0;1;;;ug;50;;100;;
+600;8;0;0;2;;;ug;50;;100;;
+601;8;0;0;1;;;ug;50;;100;;
+602;9;0;0;2;;;ug;50;;100;;
+603;9;0;0;1;;;ug;50;;100;;
+604;10;0;0;2;;;ug;50;;100;;
+605;10;0;0;1;;;ug;50;;100;;
+606;8;1;0;1;;;ug;50;;100;;
+607;8;1;0;1;;;ug;50;;100;;
+608;8;1;0;1;;;ug;50;;100;;
+609;8;0;1;1;;;ug;50;;100;;
+610;1;0;0;2;26;;mg;;400;;;
+611;1;0;0;1;26;;mg;;400;;;
+612;2;0;0;2;26;;mg;;500;;;
+613;2;0;0;1;26;;mg;;500;;;
+614;3;0;0;2;26;;mg;;750;;;
+615;3;0;0;1;26;;mg;;750;;;
+616;4;0;0;2;26;;mg;;1100;;;
+617;4;0;0;1;26;;mg;;1100;;;
+618;5;0;0;2;26;;mg;;1400;;;
+619;5;0;0;1;26;;mg;;1400;;;
+620;6;0;0;2;26;;mg;;1500;;;
+621;6;0;0;1;26;;mg;;1500;;;
+622;7;0;0;2;26;;mg;;1500;;;
+623;7;0;0;1;26;;mg;;1500;;;
+624;8;0;0;2;26;;mg;;1500;;;
+625;8;0;0;1;26;;mg;;1500;;;
+626;9;0;0;2;26;;mg;;1500;;;
+627;9;0;0;1;26;;mg;;1500;;;
+628;10;0;0;2;26;;mg;;1500;;;
+629;10;0;0;1;26;;mg;;1500;;;
+630;8;1;0;1;26;;mg;;1500;;;
+631;8;1;0;1;26;;mg;;1500;;;
+632;8;1;0;1;26;;mg;;1500;;;
+633;8;0;1;1;26;;mg;;1500;;;
+634;1;0;0;2;15;;mg;;8;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+635;1;0;0;1;15;;mg;;8;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+636;2;0;0;2;15;;mg;;9;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+637;2;0;0;1;15;;mg;;9;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+638;3;0;0;2;15;;mg;;11;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+639;3;0;0;1;15;;mg;;10;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+640;4;0;0;2;15;;mg;;13;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+641;4;0;0;1;15;;mg;;11;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+642;5;0;0;2;15;;mg;;15;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+643;5;0;0;1;15;;mg;;13;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+644;6;0;0;2;15;;mg;;17;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+645;6;0;0;1;15;;mg;;13;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+646;7;0;0;2;15;;mg;;16;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+647;7;0;0;1;15;;mg;;13;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+648;8;0;0;2;15;;mg;;15;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+649;8;0;0;1;15;;mg;;12;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+650;9;0;0;2;15;;mg;;15;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+651;9;0;0;1;15;;mg;;11;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+652;10;0;0;2;15;;mg;;14;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+653;10;0;0;1;15;;mg;;11;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+654;8;1;0;1;15;;mg;;13;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan
+655;8;1;0;1;15;;mg;;14;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Unter Berücksichtigung des Richtwerts für Frauen von 19 bis unter 25 Jahren (PAL-Wert 1,4) und Zulage von 250 kcal/Tag während des 2. Trimesters und von 500 kcal/Tag während des 3. Trimesters der Schwangerschaft.
+656;8;1;0;1;15;;mg;;16;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Unter Berücksichtigung des Richtwerts für Frauen von 19 bis unter 25 Jahren (PAL-Wert 1,4) und Zulage von 250 kcal/Tag während des 2. Trimesters und von 500 kcal/Tag während des 3. Trimesters der Schwangerschaft.
+657;8;0;1;1;15;;mg;;16;;;1 mg Vitamin B3 Niacin, Nicotinsäure-Äquivalent = 1 mg Vitamin B3 Niacin, Nicotinsäure = 60 mg Tryptophan Unter Berücksichtigung des Richtwerts für Frauen von 19 bis unter 25 Jahren (PAL-Wert 1,4) und Zulage von 500 kcal/Tag für ausschließliches Stillen während der ersten 4 bis 6 Monate.
+658;1;0;0;2;17;;mg;;4;;;
+659;1;0;0;1;17;;mg;;4;;;
+660;2;0;0;2;17;;mg;;4;;;
+661;2;0;0;1;17;;mg;;4;;;
+662;3;0;0;2;17;;mg;;4;;;
+663;3;0;0;1;17;;mg;;4;;;
+664;4;0;0;2;17;;mg;;5;;;
+665;4;0;0;1;17;;mg;;5;;;
+666;5;0;0;2;17;;mg;;5;;;
+667;5;0;0;1;17;;mg;;5;;;
+668;6;0;0;2;17;;mg;;5;;;
+669;6;0;0;1;17;;mg;;5;;;
+670;7;0;0;2;17;;mg;;5;;;
+671;7;0;0;1;17;;mg;;5;;;
+672;8;0;0;2;17;;mg;;5;;;
+673;8;0;0;1;17;;mg;;5;;;
+674;9;0;0;2;17;;mg;;5;;;
+675;9;0;0;1;17;;mg;;5;;;
+676;10;0;0;2;17;;mg;;5;;;
+677;10;0;0;1;17;;mg;;5;;;
+678;8;1;0;1;17;;mg;;5;;;
+679;8;1;0;1;17;;mg;;5;;;
+680;8;1;0;1;17;;mg;;5;;;
+681;8;0;1;1;17;;mg;;7;;;
+682;1;0;0;2;30;;mg;;330;;;
+683;1;0;0;1;30;;mg;;330;;;
+684;2;0;0;2;30;;mg;;410;;;
+685;2;0;0;1;30;;mg;;410;;;
+686;3;0;0;2;30;;mg;;500;;;
+687;3;0;0;1;30;;mg;;500;;;
+688;4;0;0;2;30;;mg;;610;;;
+689;4;0;0;1;30;;mg;;610;;;
+690;5;0;0;2;30;;mg;;660;;;
+691;5;0;0;1;30;;mg;;660;;;
+692;6;0;0;2;30;;mg;;660;;;
+693;6;0;0;1;30;;mg;;660;;;
+694;7;0;0;2;30;;mg;;550;;;
+695;7;0;0;1;30;;mg;;550;;;
+696;8;0;0;2;30;;mg;;550;;;
+697;8;0;0;1;30;;mg;;550;;;
+698;9;0;0;2;30;;mg;;550;;;
+699;9;0;0;1;30;;mg;;550;;;
+700;10;0;0;2;30;;mg;;550;;;
+701;10;0;0;1;30;;mg;;550;;;
+702;8;1;0;1;30;;mg;;550;;;Schwangere und Stillende < 19 Jahre 660 mg
+703;8;1;0;1;30;;mg;;550;;;Schwangere und Stillende < 19 Jahre 660 mg
+704;8;1;0;1;30;;mg;;550;;;Schwangere und Stillende < 19 Jahre 660 mg
+705;8;0;1;1;30;;mg;;550;;;Schwangere und Stillende < 19 Jahre 660 mg
+706;1;0;0;2;3;;g/kg KG;;1,0;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+707;1;0;0;1;3;;g/kg KG;;1,0;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+708;2;0;0;2;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+709;2;0;0;1;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+710;3;0;0;2;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+711;3;0;0;1;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+712;4;0;0;2;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+713;4;0;0;1;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+714;5;0;0;2;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+715;5;0;0;1;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+716;6;0;0;2;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+717;6;0;0;1;3;;g/kg KG;;0,8;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+718;7;0;0;2;3;;g/kg KG;;0,8;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+719;7;0;0;1;3;;g/kg KG;;0,8;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+720;8;0;0;2;3;;g/kg KG;;0,8;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+721;8;0;0;1;3;;g/kg KG;;0,8;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+722;9;0;0;2;3;;g/kg KG;;0,8;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+723;9;0;0;1;3;;g/kg KG;;0,8;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+724;10;0;0;2;3;;g/kg KG;;1,0;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+725;10;0;0;1;3;;g/kg KG;;1,0;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+726;8;1;0;1;3;;g/kg KG;;0,8;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+727;8;1;0;1;3;;g/kg KG;;0,9;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+728;8;1;0;1;3;;g/kg KG;;1,0;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+729;8;0;1;1;3;;g/kg KG;;1,2;;;"KG = Körpergewicht; Die Angaben beziehen sich auf Normalgewicht; bei Übergewicht (BMI > 25 kg/m2 bei Erwachsenen) sollte das Normalgewicht für die Berechnung zugrunde gelegt werden."
+730;1;0;0;2;14;;mg;;0,7;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+731;1;0;0;1;14;;mg;;0,7;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+732;2;0;0;2;14;;mg;;0,8;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+733;2;0;0;1;14;;mg;;0,8;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+734;3;0;0;2;14;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+735;3;0;0;1;14;;mg;;0,9;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+736;4;0;0;2;14;;mg;;1,1;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+737;4;0;0;1;14;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+738;5;0;0;2;14;;mg;;1,4;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+739;5;0;0;1;14;;mg;;1,1;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+740;6;0;0;2;14;;mg;;1,6;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+741;6;0;0;1;14;;mg;;1,2;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+742;7;0;0;2;14;;mg;;1,4;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+743;7;0;0;1;14;;mg;;1,1;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+744;8;0;0;2;14;;mg;;1,4;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+745;8;0;0;1;14;;mg;;1,1;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+746;9;0;0;2;14;;mg;;1,3;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+747;9;0;0;1;14;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+748;10;0;0;2;14;;mg;;1,3;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+749;10;0;0;1;14;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+750;8;1;0;1;14;;mg;;1,1;;;
+751;8;1;0;1;14;;mg;;1,3;;;Unter Berücksichtigung des Richtwerts für Frauen von 19 bis unter 25 Jahren (PAL-Wert 1,4) und Zulage von 250 kcal/Tag während des 2. Trimesters und von 500 kcal/Tag während des 3. Trimesters der Schwangerschaft.
+752;8;1;0;1;14;;mg;;1,4;;;Unter Berücksichtigung des Richtwerts für Frauen von 19 bis unter 25 Jahren (PAL-Wert 1,4) und Zulage von 250 kcal/Tag während des 2. Trimesters und von 500 kcal/Tag während des 3. Trimesters der Schwangerschaft.
+753;8;0;1;1;14;;mg;;1,4;;;Unter Berücksichtigung des Richtwerts für Frauen von 19 bis unter 25 Jahren (PAL-Wert 1,4) und Zulage von 500 kcal/Tag für ausschließliches Stillen während der ersten 4 bis 6 Monate.
+754;1;0;0;2;;;ug;;15;;;
+755;1;0;0;1;;;ug;;15;;;
+756;2;0;0;2;;;ug;;20;;;
+757;2;0;0;1;;;ug;;20;;;
+758;3;0;0;2;;;ug;;30;;;
+759;3;0;0;1;;;ug;;30;;;
+760;4;0;0;2;;;ug;;45;;;
+761;4;0;0;1;;;ug;;45;;;
+762;5;0;0;2;;;ug;;60;;;
+763;5;0;0;1;;;ug;;60;;;
+764;6;0;0;2;;;ug;;70;;;
+765;6;0;0;1;;;ug;;60;;;
+766;7;0;0;2;;;ug;;70;;;
+767;7;0;0;1;;;ug;;60;;;
+768;8;0;0;2;;;ug;;70;;;
+769;8;0;0;1;;;ug;;60;;;
+770;9;0;0;2;;;ug;;70;;;
+771;9;0;0;1;;;ug;;60;;;
+772;10;0;0;2;;;ug;;70;;;
+773;10;0;0;1;;;ug;;60;;;
+774;8;1;0;1;;;ug;;60;;;
+775;8;1;0;1;;;ug;;60;;;
+776;8;1;0;1;;;ug;;60;;;
+777;8;0;1;1;;;ug;;75;;;
+778;1;0;0;2;13;;mg;;0,6;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+779;1;0;0;1;13;;mg;;0,6;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+780;2;0;0;2;13;;mg;;0,7;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+781;2;0;0;1;13;;mg;;0,7;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+782;3;0;0;2;13;;mg;;0,9;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+783;3;0;0;1;13;;mg;;0,8;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+784;4;0;0;2;13;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+785;4;0;0;1;13;;mg;;0,9;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+786;5;0;0;2;13;;mg;;1,2;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+787;5;0;0;1;13;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+788;6;0;0;2;13;;mg;;1,4;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+789;6;0;0;1;13;;mg;;1,1;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+790;7;0;0;2;13;;mg;;1,3;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+791;7;0;0;1;13;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+792;8;0;0;2;13;;mg;;1,2;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+793;8;0;0;1;13;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+794;9;0;0;2;13;;mg;;1,2;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+795;9;0;0;1;13;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+796;10;0;0;2;13;;mg;;1,1;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+797;10;0;0;1;13;;mg;;1,0;;;Zugrunde gelegt wurden die alters- und geschlechtsspezifischen Richtwerte für die Energiezufuhr (PAL-Wert 1,4).
+798;8;1;0;1;13;;mg;;1,0;;;
+799;8;1;0;1;13;;mg;;1,2;;;Unter Berücksichtigung des Richtwerts für Frauen von 19 bis unter 25 Jahren (PAL-Wert 1,4) und Zulage von 250 kcal/Tag während des 2. Trimesters und von 500 kcal/Tag während des 3. Trimesters der Schwangerschaft.
+800;8;1;0;1;13;;mg;;1,3;;;Unter Berücksichtigung des Richtwerts für Frauen von 19 bis unter 25 Jahren (PAL-Wert 1,4) und Zulage von 250 kcal/Tag während des 2. Trimesters und von 500 kcal/Tag während des 3. Trimesters der Schwangerschaft.
+801;8;0;1;1;13;;mg;;1,3;;;Unter Berücksichtigung des Richtwerts für Frauen von 19 bis unter 25 Jahren (PAL-Wert 1,4) und Zulage von 500 kcal/Tag für ausschließliches Stillen während der ersten 4 bis 6 Monate.
+802;1;0;0;2;9;;ug;;300;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+803;1;0;0;1;9;;ug;;300;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+804;2;0;0;2;9;;ug;;350;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+805;2;0;0;1;9;;ug;;350;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+806;3;0;0;2;9;;ug;;450;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+807;3;0;0;1;9;;ug;;450;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+808;4;0;0;2;9;;ug;;600;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+809;4;0;0;1;9;;ug;;600;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+810;5;0;0;2;9;;ug;;800;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+811;5;0;0;1;9;;ug;;700;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+812;6;0;0;2;9;;ug;;950;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+813;6;0;0;1;9;;ug;;800;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+814;7;0;0;2;9;;ug;;850;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+815;7;0;0;1;9;;ug;;700;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+816;8;0;0;2;9;;ug;;850;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+817;8;0;0;1;9;;ug;;700;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+818;9;0;0;2;9;;ug;;850;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+819;9;0;0;1;9;;ug;;700;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+820;10;0;0;2;9;;ug;;800;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+821;10;0;0;1;9;;ug;;700;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+822;8;1;0;1;9;;ug;;800;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+823;8;1;0;1;9;;ug;;800;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+824;8;1;0;1;9;;ug;;800;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+825;8;0;1;1;9;;ug;;1300;;;Berechnungsgrundlage: 1 µg Retinolaktivitätsäquivalent (retinol activity equivalent, RAE) = 1 µg Retinol = 12 µg β-Carotin = 24 µg andere Provitamin-A-Carotinoide.
+826;1;0;0;2;21;;ug;;1,5;;;
+827;1;0;0;1;21;;ug;;1,5;;;
+828;2;0;0;2;21;;ug;;2,0;;;
+829;2;0;0;1;21;;ug;;2,0;;;
+830;3;0;0;2;21;;ug;;2,5;;;
+831;3;0;0;1;21;;ug;;2,5;;;
+832;4;0;0;2;21;;ug;;3,5;;;
+833;4;0;0;1;21;;ug;;3,5;;;
+834;5;0;0;2;21;;ug;;4,0;;;
+835;5;0;0;1;21;;ug;;4,0;;;
+836;6;0;0;2;21;;ug;;4,0;;;
+837;6;0;0;1;21;;ug;;4,0;;;
+838;7;0;0;2;21;;ug;;4,0;;;
+839;7;0;0;1;21;;ug;;4,0;;;
+840;8;0;0;2;21;;ug;;4,0;;;
+841;8;0;0;1;21;;ug;;4,0;;;
+842;9;0;0;2;21;;ug;;4,0;;;
+843;9;0;0;1;21;;ug;;4,0;;;
+844;10;0;0;2;21;;ug;;4,0;;;
+845;10;0;0;1;21;;ug;;4,0;;;
+846;8;1;0;1;21;;ug;;4,5;;;
+847;8;1;0;1;21;;ug;;4,5;;;
+848;8;1;0;1;21;;ug;;4,5;;;
+849;8;0;1;1;21;;ug;;5,5;;;
+850;1;0;0;2;18;;mg;;0,6;;;
+851;1;0;0;1;18;;mg;;0,6;;;
+852;2;0;0;2;18;;mg;;0,7;;;
+853;2;0;0;1;18;;mg;;0,7;;;
+854;3;0;0;2;18;;mg;;1,0;;;
+855;3;0;0;1;18;;mg;;1,0;;;
+856;4;0;0;2;18;;mg;;1,2;;;
+857;4;0;0;1;18;;mg;;1,2;;;
+858;5;0;0;2;18;;mg;;1,5;;;
+859;5;0;0;1;18;;mg;;1,4;;;
+860;6;0;0;2;18;;mg;;1,6;;;
+861;6;0;0;1;18;;mg;;1,4;;;
+862;7;0;0;2;18;;mg;;1,6;;;
+863;7;0;0;1;18;;mg;;1,4;;;
+864;8;0;0;2;18;;mg;;1,6;;;
+865;8;0;0;1;18;;mg;;1,4;;;
+866;9;0;0;2;18;;mg;;1,6;;;
+867;9;0;0;1;18;;mg;;1,4;;;
+868;10;0;0;2;18;;mg;;1,6;;;
+869;10;0;0;1;18;;mg;;1,4;;;
+870;8;1;0;1;18;;mg;;1,5;;;
+871;8;1;0;1;18;;mg;;1,8;;;
+872;8;1;0;1;18;;mg;;1,8;;;
+873;8;0;1;1;18;;mg;;1,6;;;
+874;1;0;0;2;22;;mg;;20;;;
+875;1;0;0;1;22;;mg;;20;;;
+876;2;0;0;2;22;;mg;;30;;;
+877;2;0;0;1;22;;mg;;30;;;
+878;3;0;0;2;22;;mg;;45;;;
+879;3;0;0;1;22;;mg;;45;;;
+880;4;0;0;2;22;;mg;;65;;;
+881;4;0;0;1;22;;mg;;65;;;
+882;5;0;0;2;22;;mg;;85;;;
+883;5;0;0;1;22;;mg;;85;;;
+884;6;0;0;2;22;;mg;;105;;;
+885;6;0;0;1;22;;mg;;90;;;
+886;7;0;0;2;22;;mg;;110;;;Raucher 155 mg/Tag
+887;7;0;0;1;22;;mg;;95;;;Raucherinnen 135 mg/Tag
+888;8;0;0;2;22;;mg;;110;;;Raucher 155 mg/Tag
+889;8;0;0;1;22;;mg;;95;;;Raucherinnen 135 mg/Tag
+890;9;0;0;2;22;;mg;;110;;;Raucher 155 mg/Tag
+891;9;0;0;1;22;;mg;;95;;;Raucherinnen 135 mg/Tag
+892;10;0;0;2;22;;mg;;110;;;Raucher 155 mg/Tag
+893;10;0;0;1;22;;mg;;95;;;Raucherinnen 135 mg/Tag
+894;8;1;0;1;22;;mg;;95;;;
+895;8;1;0;1;22;;mg;;105;;;
+896;8;1;0;1;22;;mg;;105;;;
+897;8;0;1;1;22;;mg;;125;;;
+898;1;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+899;1;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+900;2;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+901;2;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+902;3;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+903;3;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+904;4;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+905;4;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+906;5;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+907;5;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+908;6;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+909;6;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+910;7;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+911;7;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+912;8;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+913;8;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+914;9;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+915;9;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+916;10;0;0;2;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+917;10;0;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+918;8;1;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+919;8;1;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+920;8;1;0;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+921;8;0;1;1;23;;ug;;20;;bei fehlender endogener Synthese;"1 µg = 40 Internationale Einheiten (IE); 1 IE = 0,025 µg Sicherheitshinweis: Bei Supplementation ist die tägliche tolerierbare Gesamtzufuhrmenge (Upper Intake Level) von 25 µg für Säuglinge, 50 µg für Kinder bis 10 Jahre sowie 100 µg für Kinder ab 11 Jahre, Jugendliche und Erwachsene zu beachten."
+922;1;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+923;1;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+924;2;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+925;2;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+926;3;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+927;3;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+928;4;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+929;4;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+930;5;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+931;5;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+932;6;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+933;6;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+934;7;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+935;7;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+936;8;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+937;8;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+938;9;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+939;9;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+940;10;0;0;2;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+941;10;0;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+942;8;1;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+943;8;1;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+944;8;1;0;1;24;;mg;;8;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+945;8;0;1;1;24;;mg;;13;;;angegeben in RRR-α-Tocopherol (1 mg RRR-α-Tocopherol =  2 mg all-rac-α-Tocopherol)
+946;1;0;0;2;25;;ug;;15;;;
+947;1;0;0;1;25;;ug;;15;;;
+948;2;0;0;2;25;;ug;;20;;;
+949;2;0;0;1;25;;ug;;20;;;
+950;3;0;0;2;25;;ug;;30;;;
+951;3;0;0;1;25;;ug;;30;;;
+952;4;0;0;2;25;;ug;;40;;;
+953;4;0;0;1;25;;ug;;40;;;
+954;5;0;0;2;25;;ug;;50;;;
+955;5;0;0;1;25;;ug;;50;;;
+956;6;0;0;2;25;;ug;;70;;;
+957;6;0;0;1;25;;ug;;60;;;
+958;7;0;0;2;25;;ug;;70;;;
+959;7;0;0;1;25;;ug;;60;;;
+960;8;0;0;2;25;;ug;;70;;;
+961;8;0;0;1;25;;ug;;60;;;
+962;9;0;0;2;25;;ug;;80;;;
+963;9;0;0;1;25;;ug;;65;;;
+964;10;0;0;2;25;;ug;;80;;;
+965;10;0;0;1;25;;ug;;65;;;
+966;8;1;0;1;25;;ug;;60;;;
+967;8;1;0;1;25;;ug;;60;;;
+968;8;1;0;1;25;;ug;;60;;;
+969;8;0;1;1;25;;ug;;60;;;
+970;1;0;0;2;8;;ml;;820;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+971;1;0;0;1;8;;ml;;820;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+972;2;0;0;2;8;;ml;;940;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+973;2;0;0;1;8;;ml;;940;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+974;3;0;0;2;8;;ml;;970;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+975;3;0;0;1;8;;ml;;970;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+976;4;0;0;2;8;;ml;;1170;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+977;4;0;0;1;8;;ml;;1170;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+978;5;0;0;2;8;;ml;;1330;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+979;5;0;0;1;8;;ml;;1330;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+980;6;0;0;2;8;;ml;;1530;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+981;6;0;0;1;8;;ml;;1530;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+982;7;0;0;2;8;;ml;;1470;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+983;7;0;0;1;8;;ml;;1470;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+984;8;0;0;2;8;;ml;;1410;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+985;8;0;0;1;8;;ml;;1410;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+986;9;0;0;2;8;;ml;;1230;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+987;9;0;0;1;8;;ml;;1230;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+988;10;0;0;2;8;;ml;;1310;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+989;10;0;0;1;8;;ml;;1310;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+990;8;1;0;1;8;;ml;;1470;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+991;8;1;0;1;8;;ml;;1470;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+992;8;1;0;1;8;;ml;;1470;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+993;8;0;1;1;8;;ml;;1710;;;Hierbei handelt es sich um den Richtwert für die Wasserzufuhr durch Getränke.
+994;1;0;0;2;34;;mg;;3;;;
+995;1;0;0;1;34;;mg;;3;;;
+996;2;0;0;2;34;;mg;;4;;;
+997;2;0;0;1;34;;mg;;4;;;
+998;3;0;0;2;34;;mg;;6;;;
+999;3;0;0;1;34;;mg;;6;;;

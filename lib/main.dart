@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart' as painting;
 import 'package:flutter/scheduler.dart';
-import 'package:planty_flutter_starter/screens/Home_Screens/mobile_view.dart';
+import 'package:planty_flutter_starter/screens/Home_Screens/recipes.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/responsive_layout.dart';
 import 'package:planty_flutter_starter/design/layout.dart';
 import 'package:planty_flutter_starter/design/splash_screen.dart';
@@ -78,9 +78,9 @@ class _PlantyAppState extends State<PlantyApp> {
             );
           }
           return ResponsiveLayout(
-            mobileview: MobileView(),
-            tabletview: MobileView(),
-            desktopview: MobileView(),
+            mobileview: Recipes(),
+            tabletview: Recipes(),
+            desktopview: Recipes(),
           );
         },
       ),

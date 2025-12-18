@@ -16,6 +16,9 @@ import 'package:planty_flutter_starter/services/unit_conversion_service.dart';
 import 'package:planty_flutter_starter/services/ingredient_market_conversion_service.dart';
 import 'package:planty_flutter_starter/services/ingredient_nominal_selection.dart';
 
+import 'package:planty_flutter_starter/widgets/create_shopping_list_flow.dart';
+
+
 double _effectiveIngredientMarketAmount(double summedAmount, String? unitCodeRaw) {
   final unitCode = unitCodeRaw?.trim().toLowerCase() ?? '';
 
@@ -45,17 +48,31 @@ Color? _parseHexColor(String? hex) {
 
 
 class ShoppingListOverviewScreen extends StatefulWidget {
-  const ShoppingListOverviewScreen({super.key});
+  final int? initialListId;              // ① Neuer Parameter
+
+  const ShoppingListOverviewScreen({
+    super.key,
+    this.initialListId,                  // ② Annahme des Parameters
+  });
 
   @override
   State<ShoppingListOverviewScreen> createState() =>
       _ShoppingListOverviewScreenState();
 }
 
+
 class _ShoppingListOverviewScreenState
     extends State<ShoppingListOverviewScreen> {
   int? _activeListId;
   int? _activeRecipeId;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // ③ WICHTIG: initialListId in activeListId übernehmen!
+    _activeListId = widget.initialListId;
+  }
 
   // --------------------------------------------------
   // Multi-Select
@@ -657,35 +674,43 @@ class _ShoppingListOverviewScreenState
     }
 
     Navigator.of(context).push(
-      PageRouteBuilder(
-        transitionDuration: const Duration(milliseconds: 250),
-        reverseTransitionDuration:
-            const Duration(milliseconds: 250),
-        pageBuilder: (_, __, ___) => RecipeDetailScreen(
-          recipeId: recipe.recipeId,
-          title: recipe.name,
-          imagePath: recipe.picture,
+  PageRouteBuilder(
+    transitionDuration: const Duration(milliseconds: 260),
+    reverseTransitionDuration: const Duration(milliseconds: 220),
+    opaque: false,
+    barrierColor: Colors.transparent,
+    pageBuilder: (_, __, ___) => RecipeDetailScreen(
+      recipeId: recipe.recipeId,
+      title: recipe.name,
+      imagePath: recipe.picture,
+    ),
+    transitionsBuilder: (_, animation, __, child) {
+      final slide = Tween<Offset>(
+        begin: const Offset(0, 0.05),
+        end: Offset.zero,
+      ).animate(
+        CurvedAnimation(
+          parent: animation,
+          curve: Curves.easeOutCubic,
         ),
-        transitionsBuilder: (_, animation, __, child) {
-          final offset = Tween<Offset>(
-            begin: const Offset(0, 0.05),
-            end: Offset.zero,
-          ).animate(
-            CurvedAnimation(
-              parent: animation,
-              curve: Curves.easeOutCubic,
-            ),
-          );
-          return FadeTransition(
-            opacity: animation,
-            child: SlideTransition(
-              position: offset,
-              child: child,
-            ),
-          );
-        },
-      ),
-    );
+      );
+
+      final fade = Tween<double>(
+        begin: 0.7,
+        end: 1.0,
+      ).animate(animation);
+
+      return FadeTransition(
+        opacity: fade,
+        child: SlideTransition(
+          position: slide,
+          child: child,
+        ),
+      );
+    },
+  ),
+);
+
   }
 
   void _onRecipeLongPress(_OverviewRecipeModel recipe) {
@@ -1605,7 +1630,7 @@ Future<int?> _selectTargetShoppingList(int currentListId) async {
                 onTap: () async {
                   Navigator.pop(ctx); // Dialog schließen
 
-                  final newListId = await _createShoppingListFlow();
+                  final newListId = await CreateShoppingListFlow.start(context);
                   if (newListId != null) {
                     // Neue Liste direkt als Ziel verwenden
                     await _moveListContentTo(currentListId, newListId);
@@ -1630,191 +1655,6 @@ Future<int?> _selectTargetShoppingList(int currentListId) async {
     },
   );
 }
-
-Future<int?> _createShoppingListFlow() async {
-  // --------------------------------------
-  // Schritt 1: Datum auswählen
-  // --------------------------------------
-  DateTime selectedDate = DateTime.now();
-
-  final pickedDate = await showDialog<DateTime>(
-    context: Navigator.of(context, rootNavigator: true).context,
-    builder: (ctx) {
-      return StatefulBuilder(
-        builder: (ctx, setStateDialog) {
-          return AlertDialog(
-            backgroundColor: Colors.black87,
-            title: const Text(
-              "Datum wählen",
-              style: TextStyle(color: Colors.white),
-            ),
-            content: SizedBox(
-              width: double.maxFinite,
-              child: Theme(
-                data: Theme.of(context).copyWith(
-                  colorScheme: const ColorScheme.dark(
-                    primary: Colors.green,
-                    onPrimary: Colors.white,
-                    onSurface: Colors.white,
-                    surface: Colors.black,
-                  ),
-                ),
-                child: CalendarDatePicker(
-                  initialDate: selectedDate,
-                  firstDate: DateTime.now().subtract(
-                    const Duration(days: 365),
-                  ),
-                  lastDate: DateTime.now().add(
-                    const Duration(days: 365),
-                  ),
-                  onDateChanged: (d) {
-                    setStateDialog(() => selectedDate = d);
-                  },
-                ),
-              ),
-            ),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(ctx),
-                child: const Text(
-                  "Abbrechen",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              TextButton(
-                onPressed: () => Navigator.pop(ctx, selectedDate),
-                child: const Text(
-                  "Weiter",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ],
-          );
-        },
-      );
-    },
-  );
-
-  if (pickedDate == null) return null;
-  final DateTime date = pickedDate;
-
-  // --------------------------------------
-  // Schritt 2: Markt auswählen
-  // --------------------------------------
-  final markets = await (appDb.select(appDb.markets)
-        ..orderBy([(m) => d.OrderingTerm(expression: m.id)]))
-      .get();
-
-  if (markets.isEmpty) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text("Keine Märkte vorhanden.")),
-    );
-    return null;
-  }
-
-  Market? defaultMarket;
-  final fav = markets.where((m) => m.favorite == true).toList()
-    ..sort((a, b) => a.id.compareTo(b.id));
-
-  defaultMarket = fav.isNotEmpty ? fav.first : markets.first;
-
-  final chosenMarket = await showDialog<Market>(
-    context: Navigator.of(context, rootNavigator: true).context,
-    builder: (ctx) {
-      return AlertDialog(
-        backgroundColor: Colors.black87,
-        title: const Text(
-          "Markt wählen",
-          style: TextStyle(color: Colors.white),
-        ),
-        content: SizedBox(
-          width: double.maxFinite,
-          height: 300,
-          child: ListView.builder(
-            itemCount: markets.length,
-            itemBuilder: (context, index) {
-              final m = markets[index];
-              return GestureDetector(
-                onTap: () => Navigator.pop(ctx, m),
-                child: Container(
-                  margin: const EdgeInsets.symmetric(vertical: 6),
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 45,
-                        height: 45,
-                        decoration: BoxDecoration(
-                          color: _parseHexColor(m.color),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            m.picture ?? "assets/images/shop/placeholder.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          m.name,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              );
-            },
-          ),
-        ),
-      );
-    },
-  );
-
-  final Market market = chosenMarket ?? defaultMarket;
-
-  // --------------------------------------
-  // Schritt 3: Neue Liste erstellen
-  // --------------------------------------
-  const weekdayNames = [
-    "",
-    "Montag",
-    "Dienstag",
-    "Mittwoch",
-    "Donnerstag",
-    "Freitag",
-    "Samstag",
-    "Sonntag",
-  ];
-
-  final name =
-      "${weekdayNames[date.weekday]}, ${date.day.toString().padLeft(2, '0')}."
-      "${date.month.toString().padLeft(2, '0')}.";
-
-  final newId = await appDb.into(appDb.shoppingList).insert(
-        ShoppingListCompanion.insert(
-          name: name,
-          dateCreated: d.Value(DateTime.now()),
-          lastEdited: d.Value(DateTime.now()),
-          marketId: d.Value(market.id),
-          dateShopping: d.Value(date),
-        ),
-      );
-
-  return newId;
-}
-
 
   void _onMenuSelected(String value, ShoppingListData list) {
   switch (value) {
@@ -2140,14 +1980,42 @@ Future<List<String>> _loadIngredientMarketCountryImages(int id) async {
           IconButton(
             icon: const Icon(Icons.history),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => const ShoppingListHistoryScreen(),
+              Navigator.of(context).push(
+                PageRouteBuilder(
+                  transitionDuration: const Duration(milliseconds: 260),
+                  reverseTransitionDuration: const Duration(milliseconds: 220),
+                  opaque: false,
+                  barrierColor: Colors.transparent,
+                  pageBuilder: (_, __, ___) => const ShoppingListHistoryScreen(),
+                  transitionsBuilder: (_, animation, __, child) {
+                    final slide = Tween<Offset>(
+                      begin: const Offset(0, 0.04),
+                      end: Offset.zero,
+                    ).animate(
+                      CurvedAnimation(
+                        parent: animation,
+                        curve: Curves.easeOutCubic,
+                      ),
+                    );
+
+                    final fade = Tween<double>(
+                      begin: 0.8,   // verhindert Weiß-Aufblitzen
+                      end: 1.0,
+                    ).animate(animation);
+
+                    return FadeTransition(
+                      opacity: fade,
+                      child: SlideTransition(
+                        position: slide,
+                        child: child,
+                      ),
+                    );
+                  },
                 ),
               );
             },
-          ),
+          )
+
         ],
       ),
       body: Stack(
@@ -3577,12 +3445,39 @@ class _IngredientTileState extends State<_IngredientTile> {
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (_) => ShoppingListIngredientScreen(
+        Navigator.of(context).push(
+          PageRouteBuilder(
+            transitionDuration: const Duration(milliseconds: 260),
+            reverseTransitionDuration: const Duration(milliseconds: 220),
+            opaque: false,
+            barrierColor: Colors.transparent,
+            pageBuilder: (_, __, ___) => ShoppingListIngredientScreen(
               shoppingListIngredientId: widget.ing.id,
             ),
+            transitionsBuilder: (_, animation, __, child) {
+              final slide = Tween<Offset>(
+                begin: const Offset(0, 0.04),   // kleiner = smoother
+                end: Offset.zero,
+              ).animate(
+                CurvedAnimation(
+                  parent: animation,
+                  curve: Curves.easeOutCubic,
+                ),
+              );
+
+              final fade = Tween<double>(
+                begin: 0.8,   // startet leicht sichtbar → kein Flash
+                end: 1.0,
+              ).animate(animation);
+
+              return FadeTransition(
+                opacity: fade,
+                child: SlideTransition(
+                  position: slide,
+                  child: child,
+                ),
+              );
+            },
           ),
         );
       },

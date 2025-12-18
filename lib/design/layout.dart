@@ -25,6 +25,11 @@ var middlewhite = TextStyle(color: Colors.white, fontWeight: FontWeight.bold);
 //Zeiten
 var Slidetime = const Duration(milliseconds: 500);
 
+// Abstände
+const double spacing = 8.0;
+
+
+
 class _DesignState extends State<Design> {
   @override
   Widget build(BuildContext context) {

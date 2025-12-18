@@ -1,10 +1,15 @@
 // lib/design/drawer.dart
 import 'package:flutter/material.dart';
-import 'package:planty_flutter_starter/screens/Home_Screens/mobile_view.dart';
+import 'package:planty_flutter_starter/screens/Home_Screens/recipes.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/ingredients.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/shopping.dart';
 import 'package:planty_flutter_starter/screens/Home_Screens/nutrition.dart';
-import 'package:planty_flutter_starter/screens/Home_Screens/settings.dart';
+import 'package:planty_flutter_starter/screens/Home_Screens/meals.dart';
+
+import 'package:planty_flutter_starter/db/app_db.dart' as dbt;
+import 'package:planty_flutter_starter/db/db_singleton.dart' as db;
+import 'package:planty_flutter_starter/screens/user/user.dart';
+
 
 // DB-/Admin-Screens
 import 'package:planty_flutter_starter/screens/data_manager/month_manager_screen.dart';
@@ -57,48 +62,58 @@ class AppDrawer extends StatelessWidget {
           textColor: Colors.white,
           child: ListView(
             children: [
-              const DrawerHeader(
+              /*const DrawerHeader(
                 decoration: BoxDecoration(color: Colors.black),
-                child: Text('Menu',
+                child: Text('Menü',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
-              ),
+              ),*/
+
+              //const SizedBox(height: 8),
+              _UserSelectorRow(),
+              const SizedBox(height: 8),
+
 
               // Hauptnavigation
               ListTile(
-                leading: const Icon(Icons.list_alt),
-                title: const Text('Rezepte'),
-                selected: currentIndex == 0,
-                selectedTileColor: Colors.white10,
-                onTap: () => _go(context, const MobileView()),
-              ),
-              ListTile(
                 leading: const Icon(Icons.eco),
                 title: const Text('Zutaten'),
-                selected: currentIndex == 1,
+                selected: currentIndex == 0,
                 selectedTileColor: Colors.white10,
                 onTap: () => _go(context, const Ingredients()),
               ),
+
               ListTile(
                 leading: const Icon(Icons.shopping_bag),
                 title: const Text('Einkauf'),
-                selected: currentIndex == 2,
+                selected: currentIndex == 1,
                 selectedTileColor: Colors.white10,
                 onTap: () => _go(context, const Shopping()),
               ),
+
               ListTile(
-                leading: const Icon(Icons.incomplete_circle_rounded),
-                title: const Text('Nährwerte'),
+                leading: const Icon(Icons.list_alt),
+                title: const Text('Rezepte'),
+                selected: currentIndex == 2,
+                selectedTileColor: Colors.white10,
+                onTap: () => _go(context, const Recipes()),
+              ),
+
+              ListTile(
+                leading: const Icon(Icons.calendar_month),
+                title: const Text('Planung'),
                 selected: currentIndex == 3,
+                selectedTileColor: Colors.white10,
+                onTap: () => _go(context, const Meals()),
+              ),
+
+              ListTile(
+                leading: const Icon(Icons.stacked_bar_chart),
+                title: const Text('Nährwerte'),
+                selected: currentIndex == 4,
                 selectedTileColor: Colors.white10,
                 onTap: () => _go(context, const Nutrition()),
               ),
-              ListTile(
-                leading: const Icon(Icons.settings),
-                title: const Text('Einstellungen'),
-                selected: currentIndex == 4,
-                selectedTileColor: Colors.white10,
-                onTap: () => _go(context, const Settings()),
-              ),
+
 
               divider,
               divider,
@@ -231,23 +246,22 @@ class AppDrawer extends StatelessWidget {
                       },
                     ),
                     _DbTile(
-  icon: Icons.flag_rounded,
-  label: 'Länder verwalten',
-  onTap: () {
-    Navigator.pop(context);
-    Navigator.push(
-      context,
-      PageRouteBuilder(
-        pageBuilder: (_, __, ___) => const CountriesManagerScreen(),
-        transitionDuration: const Duration(milliseconds: 220),
-        reverseTransitionDuration: const Duration(milliseconds: 220),
-        transitionsBuilder: (_, a, __, child) =>
-            FadeTransition(opacity: a, child: child),
-      ),
-    );
-  },
-),
-
+                      icon: Icons.flag_rounded,
+                      label: 'Länder verwalten',
+                      onTap: () {
+                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (_, __, ___) => const CountriesManagerScreen(),
+                            transitionDuration: const Duration(milliseconds: 220),
+                            reverseTransitionDuration: const Duration(milliseconds: 220),
+                            transitionsBuilder: (_, a, __, child) =>
+                                FadeTransition(opacity: a, child: child),
+                          ),
+                        );
+                      },
+                    ),
                     _DbTile(
                       icon: Icons.category,
                       label: 'Nährstoff-Kategorien',
@@ -443,3 +457,89 @@ class _DbTile extends StatelessWidget {
     );
   }
 }
+
+class _UserSelectorRow extends StatelessWidget {
+  const _UserSelectorRow();
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<dbt.UserData>>(
+      future: db.appDb.select(db.appDb.user).get(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          return const SizedBox.shrink();
+        }
+
+        final users = snapshot.data!;
+
+        return SizedBox(
+          height: 110,
+          child: LayoutBuilder(
+            builder: (context, c) {
+              final itemWidth = c.maxWidth / 2;
+
+              return ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: users.length,
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                itemBuilder: (context, i) {
+                  final u = users[i];
+
+                  return SizedBox(
+                    width: users.length == 1 ? c.maxWidth : itemWidth,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (_, __, ___) =>
+                                UserEditScreen(userId: u.id),
+                            transitionDuration:
+                                const Duration(milliseconds: 220),
+                            reverseTransitionDuration:
+                                const Duration(milliseconds: 220),
+                            transitionsBuilder: (_, a, __, child) =>
+                                FadeTransition(opacity: a, child: child),
+                          ),
+                        );
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            radius: 32,
+                            backgroundColor: Colors.white24,
+                            backgroundImage:
+                                (u.picture != null && u.picture!.isNotEmpty)
+                                    ? AssetImage(u.picture!)
+                                    : null,
+                            child: (u.picture == null || u.picture!.isEmpty)
+                                ? const Icon(Icons.person,
+                                    color: Colors.white54, size: 32)
+                                : null,
+                          ),
+                          const SizedBox(height: 6),
+                          Text(
+                            u.name,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              color: Colors.white70,
+                              fontSize: 11,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+          ),
+        );
+      },
+    );
+  }
+}
+

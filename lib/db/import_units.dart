@@ -3481,10 +3481,12 @@ Future<int> importIngredientStorageFromCsv({
 
 
 /// ----------------------------------------------------------
+/// ----------------------------------------------------------
 /// Stock-Import
 /// CSV: assets/data/stock.csv
 /// Header:
-/// id;ingredient_id;storage_id;shopping_list_id;date_entry;amount;unit_code
+/// id;ingredient_id;storage_id;shopping_list_id;self-production;meal_id;date_entry;amount;unit_code;sign
+///
 /// Upsert via id
 /// ----------------------------------------------------------
 Future<int> importStockFromCsv({
@@ -3502,7 +3504,6 @@ Future<int> importStockFromCsv({
     } catch (_) {
       text = latin1.decode(bytes);
     }
-
     if (text.startsWith('\uFEFF')) text = text.substring(1);
 
     final lines = const LineSplitter()
@@ -3517,19 +3518,25 @@ Future<int> importStockFromCsv({
         .map((s) => s.trim().toLowerCase())
         .toList();
 
-    final idxId           = header.indexOf('id');
-    final idxIng          = header.indexOf('ingredient_id');
-    final idxStorage      = header.indexOf('storage_id');
-    final idxShoppingList = header.indexOf('shopping_list_id');   // NEU
-    final idxDate         = header.indexOf('date_entry');
-    final idxAmount       = header.indexOf('amount');
-    final idxUnitCode     = header.indexOf('unit_code');
+    // ---- Indexe der Spalten ----
+    final idxId              = header.indexOf('id');
+    final idxIng             = header.indexOf('ingredient_id');
+    final idxStorage         = header.indexOf('storage_id');
+    final idxShoppingList    = header.indexOf('shopping_list_id');
+    final idxSelfProd        = header.indexOf('self-production');
+    final idxMealId          = header.indexOf('meal_id');
+    final idxDate            = header.indexOf('date_entry');
+    final idxAmount          = header.indexOf('amount');
+    final idxUnitCode        = header.indexOf('unit_code');
+    final idxSign            = header.indexOf('sign');
 
     if (idxId < 0 || idxIng < 0 || idxStorage < 0 || idxDate < 0) {
-      print('[stock import] Ungültiger Header, erwartet: id;ingredient_id;storage_id;shopping_list_id;date_entry;amount;unit_code');
+      print('[stock import] Ungültiger Header, erwartet: '
+          'id;ingredient_id;storage_id;shopping_list_id;self-production;meal_id;date_entry;amount;unit_code;sign');
       return 0;
     }
 
+    // ---- Helper ----
     double? _parseNum(String s) {
       final t = s.trim().replaceAll(',', '.');
       return double.tryParse(t);
@@ -3557,6 +3564,13 @@ Future<int> importStockFromCsv({
       return null;
     }
 
+    bool? _parseBool(String v) {
+      v = v.trim().toLowerCase();
+      if (v == '1' || v == 'true') return true;
+      if (v == '0' || v == 'false') return false;
+      return null;
+    }
+
     await appDb.transaction(() async {
       for (int i = 1; i < lines.length; i++) {
         final raw = _splitSmart(lines[i]);
@@ -3564,22 +3578,33 @@ Future<int> importStockFromCsv({
 
         while (raw.length < header.length) raw.add('');
 
-        final id            = int.tryParse(raw[idxId].trim());
-        final ingId         = int.tryParse(raw[idxIng].trim());
-        final storageId     = int.tryParse(raw[idxStorage].trim());
-        final shoppingListId = idxShoppingList >= 0
+        final id               = int.tryParse(raw[idxId].trim());
+        final ingId            = int.tryParse(raw[idxIng].trim());
+        final storageId        = int.tryParse(raw[idxStorage].trim());
+        final shoppingListId   = idxShoppingList >= 0
             ? int.tryParse(raw[idxShoppingList].trim())
             : null;
-        final dateEntry     = _parseDate(raw[idxDate].trim());
-        final amount        = idxAmount >= 0 ? _parseNum(raw[idxAmount]) : null;
-        final unitCode      = idxUnitCode >= 0 ? raw[idxUnitCode].trim() : null;
+
+        final selfProduction   = idxSelfProd >= 0
+            ? _parseBool(raw[idxSelfProd].trim())
+            : null;
+
+        final mealId           = idxMealId >= 0
+            ? raw[idxMealId].trim()
+            : null;
+
+        final dateEntry        = _parseDate(raw[idxDate].trim());
+        final amount           = idxAmount >= 0 ? _parseNum(raw[idxAmount]) : null;
+        final unitCode         = idxUnitCode >= 0 ? raw[idxUnitCode].trim() : null;
+
+        final sign             = idxSign >= 0 ? raw[idxSign].trim() : null;
 
         if (id == null || ingId == null || storageId == null || dateEntry == null) {
           print('[stock import] Zeile ${i + 1} übersprungen');
           continue;
         }
 
-        // FK: ingredient
+        // ---- FK ingredient ----
         final ingExists = await (appDb.select(appDb.ingredients)
               ..where((t) => t.id.equals(ingId)))
             .getSingleOrNull();
@@ -3588,7 +3613,7 @@ Future<int> importStockFromCsv({
           continue;
         }
 
-        // FK: storage
+        // ---- FK storage ----
         final storageExists = await (appDb.select(appDb.storage)
               ..where((t) => t.id.equals(storageId)))
             .getSingleOrNull();
@@ -3597,7 +3622,7 @@ Future<int> importStockFromCsv({
           continue;
         }
 
-        // NEU: FK: shopping_list_id
+        // ---- FK shopping_list ----
         if (shoppingListId != null) {
           final slExists = await (appDb.select(appDb.shoppingList)
                 ..where((t) => t.id.equals(shoppingListId)))
@@ -3608,7 +3633,7 @@ Future<int> importStockFromCsv({
           }
         }
 
-        // FK: unit_code
+        // ---- FK unit_code ----
         if (unitCode != null && unitCode.isNotEmpty) {
           final unitExists = await (appDb.select(appDb.units)
                 ..where((t) => t.code.equals(unitCode)))
@@ -3619,15 +3644,24 @@ Future<int> importStockFromCsv({
           }
         }
 
+        // ---- Check sign ----
+        if (sign != null && sign.isNotEmpty && sign != '+' && sign != '-') {
+          print('[stock import] sign="$sign" ungültig (Z${i + 1})');
+          continue;
+        }
+
         await appDb.into(appDb.stock).insertOnConflictUpdate(
           StockCompanion(
             id: d.Value(id),
             ingredientId: d.Value(ingId),
             storageId: d.Value(storageId),
             shoppingListId: d.Value(shoppingListId),
+            selfProduction: d.Value(selfProduction),
+            mealId: d.Value(mealId?.isEmpty == true ? null : mealId),
             dateEntry: d.Value(dateEntry),
             amount: d.Value(amount),
             unitCode: d.Value(unitCode?.isEmpty == true ? null : unitCode),
+            sign: d.Value(sign?.isEmpty == true ? null : sign),
           ),
         );
 
@@ -3646,11 +3680,798 @@ Future<int> importStockFromCsv({
 
 
 
+
+
+/// ----------------------------------------------------------
+/// MealCategory-Import
+/// Header: id;name;color;image;favorite
+/// ----------------------------------------------------------
+Future<int> importMealCategoryFromCsv({
+  String assetPath = 'assets/data/meal_category.csv',
+}) async {
+  int affected = 0;
+
+  try {
+    final data = await rootBundle.load(assetPath);
+    final bytes = data.buffer.asUint8List();
+
+    String text;
+    try {
+      text = utf8.decode(bytes);
+    } catch (_) {
+      text = latin1.decode(bytes);
+    }
+    if (text.startsWith('\uFEFF')) text = text.substring(1);
+
+    final lines = const LineSplitter()
+        .convert(text)
+        .where((l) => l.trim().isNotEmpty && !l.trimLeft().startsWith('#'))
+        .toList();
+    if (lines.isEmpty) return 0;
+
+    final header =
+        _splitSmart(lines.first).map((s) => s.trim().toLowerCase()).toList();
+
+    final idxId = header.indexOf('id');
+    final idxName = header.indexOf('name');
+    final idxColor = header.indexOf('color');
+    final idxImage = header.indexOf('image');
+    final idxFavorite = header.indexOf('favorite');
+
+
+    if (idxId < 0 || idxName < 0) {
+      print('[meal_category import] Header ungültig.');
+      return 0;
+    }
+
+    double? _parseNum(String s) =>
+        double.tryParse(s.trim().replaceAll(',', '.'));
+
+    await appDb.transaction(() async {
+      for (int i = 1; i < lines.length; i++) {
+        final raw = _splitSmart(lines[i]);
+        while (raw.length < header.length) raw.add('');
+
+        final id = int.tryParse(raw[idxId].trim());
+        final name = raw[idxName].trim();
+        final color = idxColor >= 0 ? raw[idxColor].trim() : '';
+        final image = idxImage >= 0 ? raw[idxImage].trim() : null;
+        final favorite =
+            idxFavorite >= 0 ? _parseNum(raw[idxFavorite])?.toInt() ?? 0 : 0;
+
+
+        if (id == null || name.isEmpty) {
+          print('[meal_category import] Zeile ${i + 1} übersprungen.');
+          continue;
+        }
+
+        await appDb.into(appDb.mealCategory).insertOnConflictUpdate(
+              MealCategoryCompanion(
+                id: d.Value(id),
+                name: d.Value(name),
+                color: d.Value(color),
+                image: d.Value(image?.isEmpty == true ? null : image),
+                favorite: d.Value(favorite == 1),
+              ),
+            );
+
+        affected++;
+      }
+    });
+
+    print('[meal_category import] Fertig: $affected Zeilen');
+    return affected;
+  } catch (e, st) {
+    print('[meal_category import] Fehler: $e\n$st');
+    return 0;
+  }
+}
+
+
+/// ----------------------------------------------------------
+/// PreparationList-Import
+/// ----------------------------------------------------------
+Future<int> importPreparationListFromCsv({
+  String assetPath = 'assets/data/preparation_list.csv',
+}) async {
+  int affected = 0;
+
+  try {
+    final data = await rootBundle.load(assetPath);
+    final bytes = data.buffer.asUint8List();
+
+    String text;
+    try {
+      text = utf8.decode(bytes);
+    } catch (_) {
+      text = latin1.decode(bytes);
+    }
+    if (text.startsWith('\uFEFF')) text = text.substring(1);
+
+    final lines = const LineSplitter()
+        .convert(text)
+        .where((l) => l.trim().isNotEmpty && !l.trimLeft().startsWith('#'))
+        .toList();
+    if (lines.isEmpty) return 0;
+
+    final header =
+        _splitSmart(lines.first).map((s) => s.trim().toLowerCase()).toList();
+
+    final idxId = header.indexOf('id');
+    final idxRecipe = header.indexOf('recipe_id');
+    final idxBase = header.indexOf('recipe_portion_number_base');
+    final idxTime = header.indexOf('time_prepared');
+    final idxLeft = header.indexOf('recipe_portion_number_left');
+
+    if (idxId < 0 || idxRecipe < 0) {
+      print('[prep_list import] Header ungültig.');
+      return 0;
+    }
+
+    double? _parse(String s) =>
+        double.tryParse(s.trim().replaceAll(',', '.'));
+
+    DateTime? _parseDate(String s) {
+      final t = s.trim();
+      if (t.isEmpty) return null;
+      return DateTime.tryParse(t);
+    }
+
+    await appDb.transaction(() async {
+      for (int i = 1; i < lines.length; i++) {
+        final raw = _splitSmart(lines[i]);
+        while (raw.length < header.length) raw.add('');
+
+        final id = int.tryParse(raw[idxId].trim());
+        final recipeId = int.tryParse(raw[idxRecipe].trim());
+
+        if (id == null || recipeId == null) {
+          print('[prep_list import] Zeile ${i + 1} übersprungen.');
+          continue;
+        }
+
+        final base = idxBase >= 0 ? _parse(raw[idxBase])?.toInt() : null;
+        final left = idxLeft >= 0 ? _parse(raw[idxLeft])?.toInt() : null;
+        final timePrepared =
+            idxTime >= 0 ? _parseDate(raw[idxTime]) : null;
+
+        // FK check: recipe_id
+        final rec =
+            await (appDb.select(appDb.recipes)
+                  ..where((t) => t.id.equals(recipeId)))
+                .getSingleOrNull();
+        if (rec == null) {
+          print('[prep_list import] Rezept $recipeId existiert nicht.');
+          continue;
+        }
+
+        await appDb.into(appDb.preparationList).insertOnConflictUpdate(
+              PreparationListCompanion(
+                id: d.Value(id),
+                recipeId: d.Value(recipeId),
+                recipePortionNumberBase: d.Value(base),
+                timePrepared: d.Value(timePrepared),
+                recipePortionNumberLeft: d.Value(left),
+              ),
+            );
+
+        affected++;
+      }
+    });
+
+    print('[prep_list import] Fertig: $affected Zeilen');
+    return affected;
+  } catch (e, st) {
+    print('[prep_list import] Fehler: $e\n$st');
+    return 0;
+  }
+}
+
+
+/// ----------------------------------------------------------
+/// Meal-Import
+/// ----------------------------------------------------------
+Future<int> importMealFromCsv({
+  String assetPath = 'assets/data/meal.csv',
+}) async {
+  int affected = 0;
+
+  try {
+    final data = await rootBundle.load(assetPath);
+    final bytes = data.buffer.asUint8List();
+
+    String text;
+    try {
+      text = utf8.decode(bytes);
+    } catch (_) {
+      text = latin1.decode(bytes);
+    }
+    if (text.startsWith('\uFEFF')) text = text.substring(1);
+
+    final lines = const LineSplitter()
+        .convert(text)
+        .where((l) => l.trim().isNotEmpty && !l.trimLeft().startsWith('#'))
+        .toList();
+    if (lines.isEmpty) return 0;
+
+    final header =
+        _splitSmart(lines.first).map((s) => s.trim().toLowerCase()).toList();
+
+    final idxId = header.indexOf('id');
+    final idxDate = header.indexOf('date');
+    final idxCat = header.indexOf('meal_category_id');
+    final idxRecipe = header.indexOf('recipe_id');
+    final idxPort = header.indexOf('recipe_portion_number');
+    final idxPortUnit = header.indexOf('recipe_portion_unit');        // ⭐ NEU
+    final idxPrepList = header.indexOf('preparation_list_id');
+    final idxPrepared = header.indexOf('prepared');
+    final idxIng = header.indexOf('ingredient_id');
+    final idxUnit = header.indexOf('ingredient_unit_code');
+    final idxAmount = header.indexOf('ingredient_amount');
+    final idxTimeConsumed = header.indexOf('time_consumed');
+
+    if (idxId < 0 || idxDate < 0) {
+      print('[meal import] Header ungültig.');
+      return 0;
+    }
+
+    double? _parse(String s) =>
+        double.tryParse(s.trim().replaceAll(',', '.'));
+
+    DateTime? _parseDate(String s) {
+      final t = s.trim();
+      if (t.isEmpty) return null;
+      return DateTime.tryParse(t);
+    }
+
+    await appDb.transaction(() async {
+      for (int i = 1; i < lines.length; i++) {
+        final raw = _splitSmart(lines[i]);
+        while (raw.length < header.length) raw.add('');
+
+        final id = int.tryParse(raw[idxId].trim());
+        if (id == null) continue;
+
+        final date = _parseDate(raw[idxDate]);
+
+        final mealCat =
+            idxCat >= 0 ? int.tryParse(raw[idxCat].trim()) : null;
+
+        final recipeId =
+            idxRecipe >= 0 ? int.tryParse(raw[idxRecipe].trim()) : null;
+
+        final portion =
+            idxPort >= 0 ? _parse(raw[idxPort])?.toInt() : null;
+
+        final portionUnit =
+            idxPortUnit >= 0 ? raw[idxPortUnit].trim() : null; // ⭐ NEU
+
+        final prepListId =
+            idxPrepList >= 0 ? int.tryParse(raw[idxPrepList].trim()) : null;
+
+        final prepared =
+            idxPrepared >= 0 ? (_parse(raw[idxPrepared])?.toInt() == 1) : false;
+
+        final ingId =
+            idxIng >= 0 ? int.tryParse(raw[idxIng].trim()) : null;
+
+        final unitCode =
+            idxUnit >= 0 ? raw[idxUnit].trim() : null;
+
+        final amount =
+            idxAmount >= 0 ? _parse(raw[idxAmount]) : null;
+
+        final timeConsumed =
+            idxTimeConsumed >= 0 ? _parseDate(raw[idxTimeConsumed]) : null;
+
+        // ===================================================
+        // FK-CHECKS OPTIONAL
+        // ===================================================
+
+        if (mealCat != null) {
+          final exists = await (appDb.select(appDb.mealCategory)
+                ..where((t) => t.id.equals(mealCat)))
+              .getSingleOrNull();
+          if (exists == null) {
+            print('[meal import] Warnung: meal_category_id=$mealCat nicht gefunden.');
+            continue;
+          }
+        }
+
+        if (recipeId != null) {
+          final exists = await (appDb.select(appDb.recipes)
+                ..where((t) => t.id.equals(recipeId)))
+              .getSingleOrNull();
+          if (exists == null) {
+            print('[meal import] Warnung: recipe_id=$recipeId nicht gefunden.');
+            continue;
+          }
+        }
+
+        if (prepListId != null) {
+          final exists = await (appDb.select(appDb.preparationList)
+                ..where((t) => t.id.equals(prepListId)))
+              .getSingleOrNull();
+          if (exists == null) {
+            print('[meal import] Warnung: preparation_list_id=$prepListId nicht gefunden.');
+            continue;
+          }
+        }
+
+        if (unitCode != null && unitCode.isNotEmpty) {
+          final exists = await (appDb.select(appDb.units)
+                ..where((t) => t.code.equals(unitCode)))
+              .getSingleOrNull();
+          if (exists == null) {
+            print('[meal import] Warnung: ingredient_unit_code="$unitCode" nicht gefunden.');
+            continue;
+          }
+        }
+
+        // ⭐ NEU: Prüfe recipe_portion_unit
+        if (portionUnit != null && portionUnit.isNotEmpty) {
+          final exists = await (appDb.select(appDb.units)
+                ..where((t) => t.code.equals(portionUnit)))
+              .getSingleOrNull();
+          if (exists == null) {
+            print('[meal import] Warnung: recipe_portion_unit="$portionUnit" nicht gefunden.');
+            continue;
+          }
+        }
+
+        // ===================================================
+        // INSERT / UPDATE
+        // ===================================================
+        await appDb.into(appDb.meal).insertOnConflictUpdate(
+              MealCompanion(
+                id: d.Value(id),
+                date: d.Value(date),
+                mealCategoryId: d.Value(mealCat),
+                recipeId: d.Value(recipeId),
+                recipePortionNumber: d.Value(portion),
+                recipePortionUnit: d.Value(portionUnit),            
+                preparationListId: d.Value(prepListId),
+                prepared: d.Value(prepared),
+                ingredientId: d.Value(ingId),
+                ingredientUnitCode: d.Value(unitCode),
+                ingredientAmount: d.Value(amount),
+                timeConsumed: d.Value(timeConsumed),
+              ),
+            );
+
+        affected++;
+      }
+    });
+
+    print('[meal import] Fertig: $affected Zeilen');
+    return affected;
+
+  } catch (e, st) {
+    print('[meal import] Fehler: $e\n$st');
+    return 0;
+  }
+}
+
+/// ----------------------------------------------------------
+/// Gender-Import
+/// ----------------------------------------------------------
+Future<int> importGendersFromCsv({
+  String assetPath = 'assets/data/gender.csv',
+}) async {
+  int affected = 0;
+
+  try {
+    final data = await rootBundle.load(assetPath);
+    final bytes = data.buffer.asUint8List();
+
+    String text;
+    try {
+      text = utf8.decode(bytes);
+    } catch (_) {
+      text = latin1.decode(bytes);
+    }
+    if (text.startsWith('\uFEFF')) text = text.substring(1);
+
+    final lines = const LineSplitter()
+        .convert(text)
+        .where((l) => l.trim().isNotEmpty && !l.trimLeft().startsWith('#'))
+        .toList();
+    if (lines.length <= 1) return 0;
+
+    final header =
+        _splitSmart(lines.first).map((e) => e.trim().toLowerCase()).toList();
+
+    double? _parse(String s) =>
+        double.tryParse(s.trim().replaceAll(',', '.'));
+
+    await appDb.transaction(() async {
+      for (var i = 1; i < lines.length; i++) {
+        final row = _splitSmart(lines[i]);
+        while (row.length < header.length) row.add('');
+
+        final id = int.tryParse(row[header.indexOf('id')]);
+        if (id == null) continue;
+
+        await appDb.into(appDb.gender).insertOnConflictUpdate(
+              GenderCompanion(
+                id: d.Value(id),
+                name: d.Value(row[header.indexOf('name')].trim()),
+                color: d.Value(row[header.indexOf('color')].trim()),
+                image: d.Value(row[header.indexOf('image')].trim()),
+                baseEnergyWeightFactor:
+                    d.Value(_parse(row[header.indexOf('base_energy_weight_factor')]) ?? 0),
+                baseEnergyAgePlus:
+                    d.Value(_parse(row[header.indexOf('base_energy_age_plus')]) ?? 0),
+                baseEnergyAgeFactor:
+                    d.Value(_parse(row[header.indexOf('base_energy_age_factor')]) ?? 0),
+                baseEnergyPlusAdd:
+                    d.Value(_parse(row[header.lastIndexOf('base_energy_plus_add')]) ?? 0),
+                baseEnergyMultiplikator:
+                    d.Value(_parse(row[header.indexOf('base_energy_multiplikator')]) ?? 1),
+              ),
+            );
+        affected++;
+      }
+    });
+
+    print('[gender import] Fertig: $affected Zeilen');
+    return affected;
+  } catch (e, st) {
+    print('[gender import] Fehler: $e\n$st');
+    return 0;
+  }
+}
+
+/// ----------------------------------------------------------
+/// AgeGroup-Import
+/// ----------------------------------------------------------
+Future<int> importAgeGroupsFromCsv({
+  String assetPath = 'assets/data/age_group.csv',
+}) async {
+  int affected = 0;
+
+  try {
+    final text = utf8.decode(
+        (await rootBundle.load(assetPath)).buffer.asUint8List());
+
+    final lines = const LineSplitter().convert(text);
+    final header = _splitSmart(lines.first);
+
+    await appDb.transaction(() async {
+      for (var i = 1; i < lines.length; i++) {
+        final r = _splitSmart(lines[i]);
+        if (r.length < 3) continue;
+
+        final id = int.tryParse(r[0]);
+        if (id == null) continue;
+
+        await appDb.into(appDb.ageGroup).insertOnConflictUpdate(
+              AgeGroupCompanion(
+                id: d.Value(id),
+                lowerLimit: d.Value(int.parse(r[1])),
+                upperLimit: d.Value(int.parse(r[2])),
+              ),
+            );
+        affected++;
+      }
+    });
+
+    print('[age_group import] Fertig: $affected Zeilen');
+    return affected;
+  } catch (e, st) {
+    print('[age_group import] Fehler: $e\n$st');
+    return 0;
+  }
+}
+
+/// ----------------------------------------------------------
+/// ActivityLevel-Import
+/// ----------------------------------------------------------
+Future<int> importActivityLevelsFromCsv({
+  String assetPath = 'assets/data/activity_level.csv',
+}) async {
+  int affected = 0;
+
+  try {
+    final text = utf8.decode(
+        (await rootBundle.load(assetPath)).buffer.asUint8List());
+
+    final lines = const LineSplitter().convert(text);
+
+    double? _parse(String s) =>
+        double.tryParse(s.trim().replaceAll(',', '.'));
+
+    await appDb.transaction(() async {
+      for (var i = 1; i < lines.length; i++) {
+        final r = _splitSmart(lines[i]);
+        if (r.length < 3) continue;
+
+        final id = int.tryParse(r[0]);
+        if (id == null) continue;
+
+        await appDb.into(appDb.activityLevel).insertOnConflictUpdate(
+              ActivityLevelCompanion(
+                id: d.Value(id),
+                name: d.Value(r[1].trim()),
+                palValue: d.Value(_parse(r[2]) ?? 1.0),
+                color: d.Value(r.length > 3 ? r[3].trim() : null),
+              ),
+            );
+        affected++;
+      }
+    });
+
+    print('[activity_level import] Fertig: $affected Zeilen');
+    return affected;
+  } catch (e, st) {
+    print('[activity_level import] Fehler: $e\n$st');
+    return 0;
+  }
+}
+
+/// ----------------------------------------------------------
+/// NutritionReference-Import
+/// ----------------------------------------------------------
+Future<int> importNutritionReferencesFromCsv({
+  String assetPath = 'assets/data/nutrition_reference.csv',
+}) async {
+  int affected = 0;
+
+  try {
+    final text = utf8.decode(
+        (await rootBundle.load(assetPath)).buffer.asUint8List());
+
+    final lines = const LineSplitter().convert(text);
+    final header =
+        _splitSmart(lines.first).map((e) => e.trim().toLowerCase()).toList();
+
+    double? _parse(String s) {
+      final v = s.trim();
+      if (v.isEmpty) return null;
+      return double.tryParse(v.replaceAll(',', '.'));
+    }
+
+    await appDb.transaction(() async {
+      for (var i = 1; i < lines.length; i++) {
+        final r = _splitSmart(lines[i]);
+        while (r.length < header.length) r.add('');
+
+        final id = int.tryParse(r[header.indexOf('id')]);
+        if (id == null) continue;
+
+        final unitRaw = r[header.indexOf('unit_id')].trim();
+        final alRaw = r[header.indexOf('activity_level_id')].trim();
+
+        await appDb.into(appDb.nutritionReference).insertOnConflictUpdate(
+          NutritionReferenceCompanion(
+            id: d.Value(id),
+
+            ageGroupId: d.Value(
+              int.tryParse(r[header.indexOf('age_group_id')]) ?? 0,
+            ),
+
+            isPregnant:
+                d.Value(r[header.indexOf('is_pregnant')] == '1'),
+
+            isBreastfeeding:
+                d.Value(r[header.indexOf('is_breastfeeding')] == '1'),
+
+            genderId: d.Value(
+              int.tryParse(r[header.indexOf('gender_id')]) ?? 0,
+            ),
+
+            nutrientId: d.Value(
+              int.tryParse(r[header.indexOf('nutrient_id')]) ?? 0,
+            ),
+
+            activityLevelId: alRaw.isEmpty
+                ? const d.Value(null)
+                : d.Value(int.tryParse(alRaw)),
+
+            unitCode: unitRaw.isEmpty
+                ? const d.Value(null)
+                : d.Value(unitRaw),
+
+            lowerLimit: d.Value(_parse(r[header.indexOf('lower_limit')])),
+            target: d.Value(_parse(r[header.indexOf('target')])),
+            upperLimit: d.Value(_parse(r[header.indexOf('upper_limit')])),
+
+            description:
+                d.Value(r[header.indexOf('description')]),
+            footNote:
+                d.Value(r[header.indexOf('foot_note')]),
+          ),
+        );
+
+        affected++;
+      }
+    });
+
+    print('[nutrition_reference import] Fertig: $affected Zeilen');
+    return affected;
+  } catch (e, st) {
+    print('[nutrition_reference import] Fehler: $e\n$st');
+    return 0;
+  }
+}
+
+
+/// ----------------------------------------------------------
+/// User-Import (erweitert)
+/// ----------------------------------------------------------
+Future<int> importUsersFromCsv({
+  String assetPath = 'assets/data/user.csv',
+}) async {
+  int affected = 0;
+
+  try {
+    final data = await rootBundle.load(assetPath);
+    final bytes = data.buffer.asUint8List();
+
+    String text;
+    try {
+      text = utf8.decode(bytes);
+    } catch (_) {
+      text = latin1.decode(bytes);
+    }
+    if (text.startsWith('\uFEFF')) text = text.substring(1);
+
+    final lines = const LineSplitter()
+        .convert(text)
+        .where((l) => l.trim().isNotEmpty && !l.trimLeft().startsWith('#'))
+        .toList();
+    if (lines.length <= 1) return 0;
+
+    final header =
+        _splitSmart(lines.first).map((e) => e.trim().toLowerCase()).toList();
+
+    double? _parse(String s) =>
+        double.tryParse(s.trim().replaceAll(',', '.'));
+
+    DateTime? _parseDate(String s) =>
+        s.trim().isEmpty ? null : DateTime.tryParse(s.trim());
+
+    await appDb.transaction(() async {
+      for (int i = 1; i < lines.length; i++) {
+        final r = _splitSmart(lines[i]);
+        while (r.length < header.length) r.add('');
+
+        final id = int.tryParse(r[header.indexOf('id')]);
+        if (id == null) continue;
+
+        await appDb.into(appDb.user).insertOnConflictUpdate(
+              UserCompanion(
+                id: d.Value(id),
+                name: d.Value(r[header.indexOf('name')]),
+                genderId: d.Value(
+                    int.parse(r[header.indexOf('gender_id')])),
+                weight: d.Value(_parse(r[header.indexOf('weight')])),
+                height: d.Value(_parse(r[header.indexOf('height')])),
+                dateOfBirth:
+                    d.Value(_parseDate(r[header.indexOf('date_of_birth')])),
+                palValue:
+                    d.Value(_parse(r[header.indexOf('pal_value')])),
+                isPregnant:
+                    d.Value(r[header.indexOf('is_pregnant')] == '1'),
+                dateChildBirth:
+                    d.Value(_parseDate(r[header.indexOf('date_child_birth')])),
+                isBreastfeeding:
+                    d.Value(r[header.indexOf('is_breastfeeding')] == '1'),
+                portionSize:
+                    d.Value(_parse(r[header.indexOf('portion_size')])),
+                color:
+                    d.Value(r[header.indexOf('color')].trim()),
+                picture:
+                    d.Value(r[header.indexOf('picture')].trim()),
+                countryId:
+                    d.Value(int.tryParse(r[header.indexOf('country_id')])),
+                profileCreated:
+                    d.Value(_parseDate(r[header.indexOf('profile_created')])),
+              ),
+            );
+
+        affected++;
+      }
+    });
+
+    print('[user import] Fertig: $affected Zeilen');
+    return affected;
+  } catch (e, st) {
+    print('[user import] Fehler: $e\n$st');
+    return 0;
+  }
+}
+
+/// ----------------------------------------------------------
+/// UserCustomNutrition-Import
+/// ----------------------------------------------------------
+Future<int> importUserCustomNutritionFromCsv({
+  String assetPath = 'assets/data/user_custom_nutrition.csv',
+}) async {
+  int affected = 0;
+
+  try {
+    final data = await rootBundle.load(assetPath);
+    final bytes = data.buffer.asUint8List();
+
+    String text;
+    try {
+      text = utf8.decode(bytes);
+    } catch (_) {
+      text = latin1.decode(bytes);
+    }
+    if (text.startsWith('\uFEFF')) text = text.substring(1);
+
+    final lines = const LineSplitter()
+        .convert(text)
+        .where((l) => l.trim().isNotEmpty && !l.trimLeft().startsWith('#'))
+        .toList();
+    if (lines.length <= 1) return 0;
+
+    final header =
+        _splitSmart(lines.first).map((e) => e.trim().toLowerCase()).toList();
+
+    double? _parse(String s) =>
+        double.tryParse(s.trim().replaceAll(',', '.'));
+
+    DateTime? _parseDate(String s) =>
+        s.trim().isEmpty ? null : DateTime.tryParse(s.trim());
+
+    await appDb.transaction(() async {
+      for (int i = 1; i < lines.length; i++) {
+        final r = _splitSmart(lines[i]);
+        while (r.length < header.length) r.add('');
+
+        final id = int.tryParse(r[header.indexOf('id')]);
+        if (id == null) continue;
+
+        await appDb.into(appDb.userCustomNutrition).insertOnConflictUpdate(
+              UserCustomNutritionCompanion(
+                id: d.Value(id),
+                userId:
+                    d.Value(int.parse(r[header.indexOf('user_id')])),
+                dateStart:
+                    d.Value(_parseDate(r[header.indexOf('date_start')])),
+                dateEnd:
+                    d.Value(_parseDate(r[header.indexOf('date_end')])),
+                nutrientId:
+                    d.Value(int.parse(r[header.indexOf('nutrient_id')])),
+                unitCode:
+                    d.Value(r[header.indexOf('unit_id')]),
+                lowerLimit:
+                    d.Value(_parse(r[header.indexOf('lower_limit')])),
+                target:
+                    d.Value(_parse(r[header.indexOf('target')])),
+                upperLimit:
+                    d.Value(_parse(r[header.indexOf('upper_limit')])),
+              ),
+            );
+
+        affected++;
+      }
+    });
+
+    print('[user_custom_nutrition import] Fertig: $affected Zeilen');
+    return affected;
+  } catch (e, st) {
+    print('[user_custom_nutrition import] Fehler: $e\n$st');
+    return 0;
+  }
+}
+
+
+
+
 /// ----------------------------------------------------------
 /// CSV-Helfer
 /// ----------------------------------------------------------
 List<String> _splitSmart(String line) {
-  final delim = line.contains(';') ? ';' : ',';
+  final delim = line.contains('\t')
+      ? '\t'
+      : line.contains(';')
+          ? ';'
+          : ',';
+
   final out = <String>[];
   final buf = StringBuffer();
   var inQuotes = false;
@@ -3674,6 +4495,7 @@ List<String> _splitSmart(String line) {
   out.add(buf.toString());
   return out;
 }
+
 
 /// Führt einen einmaligen Erstimport durch …
 Future<void> importInitialDataIfEmpty() async {
@@ -3718,8 +4540,15 @@ if (prefs.getBool(flag) == true) return;
   final storageCount = await appDb.customSelect('SELECT COUNT(*) c FROM storage').getSingle();
   final ingredientStorageCount = await appDb.customSelect('SELECT COUNT(*) c FROM ingredient_storage').getSingle();
   final stockCount = await appDb.customSelect('SELECT COUNT(*) c FROM stock').getSingle();
-
-
+  final mealCategoryCount = await appDb.customSelect('SELECT COUNT(*) c FROM meal_category').getSingle();
+  final preparationListCount = await appDb.customSelect('SELECT COUNT(*) c FROM preparation_list').getSingle();
+  final mealCount = await appDb.customSelect('SELECT COUNT(*) c FROM meal').getSingle();
+  final genderCount = await appDb.customSelect('SELECT COUNT(*) c FROM gender').getSingle();
+  final ageGroupCount = await appDb.customSelect('SELECT COUNT(*) c FROM age_group').getSingle();
+  final activityLevelCount = await appDb.customSelect('SELECT COUNT(*) c FROM activity_level').getSingle();
+  final nutritionRefCount = await appDb.customSelect('SELECT COUNT(*) c FROM nutrition_reference').getSingle();
+  final userCount = await appDb.customSelect('SELECT COUNT(*) c FROM user').getSingle();
+  final userCustomNutritionCount = await appDb.customSelect('SELECT COUNT(*) c FROM user_custom_nutrition').getSingle();
 
 
 
@@ -3760,11 +4589,18 @@ if (prefs.getBool(flag) == true) return;
   final hasStorage = parseCount(storageCount) > 0;
   final hasIngredientStorage = parseCount(ingredientStorageCount) > 0;
   final hasStock = parseCount(stockCount) > 0;
-  
+  final hasMealCategory = parseCount(mealCategoryCount) > 0;
+  final hasPreparationList = parseCount(preparationListCount) > 0;
+  final hasMeal = parseCount(mealCount) > 0;
+  final hasGenders = parseCount(genderCount) > 0;
+  final hasAgeGroups = parseCount(ageGroupCount) > 0;
+  final hasActivityLevels = parseCount(activityLevelCount) > 0;
+  final hasNutritionReferences = parseCount(nutritionRefCount) > 0;
+  final hasUsers = parseCount(userCount) > 0;
+  final hasUserCustomNutrition = parseCount(userCustomNutritionCount) > 0;
 
 
-
-
+    
 
   // Import-Chain (nur fehlende Teile)
   if (!hasMonths)    await seedMonthsIfEmpty();
@@ -3802,6 +4638,18 @@ if (prefs.getBool(flag) == true) return;
   if (!hasStorage) await importStorageFromCsv();
   if (!hasIngredientStorage) await importIngredientStorageFromCsv();
   if (!hasStock) await importStockFromCsv();
+  if (!hasMealCategory) await importMealCategoryFromCsv();
+  if (!hasPreparationList) await importPreparationListFromCsv();
+  if (!hasMeal) await importMealFromCsv();
+  if (!hasGenders) await importGendersFromCsv();
+  if (!hasAgeGroups) await importAgeGroupsFromCsv();
+  if (!hasActivityLevels) await importActivityLevelsFromCsv();
+  if (!hasNutritionReferences) await importNutritionReferencesFromCsv();
+  if (!hasUsers) await importUsersFromCsv();
+  if (!hasUserCustomNutrition) await importUserCustomNutritionFromCsv();
+
+
+
 
 
 
@@ -3846,5 +4694,16 @@ Future<void> reimportAllCsvs() async {
   await importStorageFromCsv();
   await importIngredientStorageFromCsv();
   await importStockFromCsv();
+  await importMealCategoryFromCsv();
+  await importPreparationListFromCsv();
+  await importMealFromCsv();
+  await importGendersFromCsv();
+  await importAgeGroupsFromCsv();
+  await importActivityLevelsFromCsv();
+  await importNutritionReferencesFromCsv();
+  await importUsersFromCsv();
+  await importUserCustomNutritionFromCsv();
+
+
 
 }

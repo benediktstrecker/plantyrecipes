@@ -1,0 +1,7 @@
+﻿﻿id;name;PAL_value;color
+1;Schlafen;0,95;
+2;Nur sitzen und liegen;1,2;
+3;Vorwiegend sitzende Tätigkeit;1,4;
+4;Teils sitzende, teils stehende/gehende Tätigkeit;1,6;
+5;Überwiegend stehende/ gehende Tätigkeiten;1,8;
+6;Körperlich anstrengende berufliche Tätigkeiten;2;
